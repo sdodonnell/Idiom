@@ -8,7 +8,7 @@ const mstp = state => ({
 })
 
 const mdtp = () => dispatch => ({
-    login: id => dispatch(login(id))
+    action: id => dispatch(login(id))
 })
 
 export default connect(mstp, mdtp)(SessionForm)
