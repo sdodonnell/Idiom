@@ -1,9 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './frontend/Idiom.jsx',
+  context: __dirname,
+  entry: './frontend/idiom.jsx',
   output: {
-    filename: './bundle.js',
+    path: path.join(__dirname, 'app', 'assets', 'javascripts'),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
