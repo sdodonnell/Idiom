@@ -1,13 +1,13 @@
-import { connect } from "redux";
+import { connect } from "react-redux";
 import SessionForm from '../components/session_form'
 import { signup } from '../actions/session_actions'
 
-const mstp = state => ({
-    errors: state.errors,
+const mstp = ({errors}) => ({
+    errors,
     formType: 'Sign Up'
 })
 
-const mdtp = () => dispatch => ({
+const mdtp = dispatch => ({
     action: user => dispatch(signup(user))
 })
 
