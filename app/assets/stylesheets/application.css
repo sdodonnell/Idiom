@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+/* Break these up into smaller files -S */
+
+
+* {
+    background-color: rgb(248, 247, 236);
+    font-family: 'PT Serif', serif;
+}
+
+h1 {
+    color: black;
+ }
+
+a:visited {
+    text-transform: none;
+}
+
+.nav-bar-link {
+    padding: 7px 10px;
+    border: 1px solid rgb(209, 190, 164);
+    margin: 0 5px;
+    border-radius: 7px;
+}

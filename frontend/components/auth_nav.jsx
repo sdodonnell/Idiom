@@ -5,8 +5,8 @@ const AuthNav = ({currentUser, logout}) => {
     if (!currentUser) {
         return(
             <div>
-                <Link to='/login'>Login</Link>
-                <Link to='/signup'>Signup</Link>
+                <Link to='/login' className='nav-bar-link'>Login</Link>
+                <Link to='/signup' className='nav-bar-link'>Signup</Link>
             </div>
         )
     } else {

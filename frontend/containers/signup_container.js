@@ -3,7 +3,7 @@ import SessionForm from '../components/session_form'
 import { signup } from '../actions/session_actions'
 
 const mstp = ({errors}) => ({
-    errors,
+    errors: errors.session,
     formType: 'Sign Up'
 })
 
