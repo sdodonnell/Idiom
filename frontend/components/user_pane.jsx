@@ -21,8 +21,12 @@ class UserPane extends React.Component {
     render(){
         return (
             <div className={`user-pane-${this.state.display}`}>
-                <h2></h2>
-                <button onClick={this.props.logout}>Logout</button>
+                <p>{this.props.currentUser.username}</p>
+                <a>New Story</a>
+                <a>Stories</a>
+                <a>Reading List</a>
+                <a>Profile</a>
+                <a onClick={this.props.logout}>Sign Out</a>
             </div>
         )
     }

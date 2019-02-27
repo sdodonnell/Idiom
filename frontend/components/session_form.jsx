@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 class SessionForm extends React.Component {
 
@@ -33,7 +34,9 @@ class SessionForm extends React.Component {
 
     render() {
         return(
-            <div className="session-modal">
+            <>
+                <Link to="/" className="session-modal">
+                </Link>
                 <div className="session-form-box">
                     <form className="session-form" onSubmit={this.handleSubmit}>
                         <ul>
@@ -54,7 +57,7 @@ class SessionForm extends React.Component {
                         <button>{this.props.formType}</button>
                     </form>
                 </div>
-            </div>
+            </>
         )
     }
 }

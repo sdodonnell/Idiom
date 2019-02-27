@@ -6,17 +6,17 @@ class AuthNav extends React.Component {
     
     constructor(props) {
         super(props);
-        this.currentUser = this.props.currentUser
-        this.logout = this.props.logout
         this.toggleUserPane = this.toggleUserPane.bind(this)
     }
+
+
 
     toggleUserPane() {
         this.userPane.toggle()
     }
 
     render() {
-        if (!this.currentUser) {
+        if (!this.props.currentUser) {
             return(
                 <div className="auth-nav">
                     <Link to='/login' className='nav-bar-link'>Sign In</Link>
@@ -33,11 +33,11 @@ class AuthNav extends React.Component {
                         <button 
                             id="user-icon"
                             onClick={this.toggleUserPane}
-                            >{this.currentUser.username[0]}</button>
+                            >{this.props.currentUser.username[0]}</button>
                     </div>
                     <UserPane
                         ref={node=>{this.userPane = node}}
-                        currentUser={this.currentUser}
+                        currentUser={this.props.currentUser}
                         logout={this.logout}
                         />
                 </div>
