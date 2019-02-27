@@ -46,6 +46,14 @@ class SessionForm extends React.Component {
         }
     }
 
+    renderDemoButton() {
+        if (this.props.formType === 'Log In') {
+            return null
+        } else {
+            return (<button onClick={this.handleDemoClick}>Demo Login</button>)
+        }
+    }
+
     render() {
         return(
             <>
@@ -65,6 +73,7 @@ class SessionForm extends React.Component {
                         </label>
                         
                         <button>{this.props.formType}</button>
+                        {this.renderDemoButton}
                     </form>
                         <ul>
                             {this.renderErrors()}
