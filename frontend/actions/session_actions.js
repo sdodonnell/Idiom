@@ -22,5 +22,5 @@ export const logout = () => dispatch => (
 )
 
 export const signup = user => dispatch => (
-    SessionApiUtil.login(user).then( user => dispatch(receiveCurrentUser(user)))
+    SessionApiUtil.signup(user).then( user => dispatch(receiveCurrentUser(user)))
 )
