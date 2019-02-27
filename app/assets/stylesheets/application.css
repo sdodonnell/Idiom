@@ -18,8 +18,16 @@
 
 
 * {
-    background-color: rgb(255, 255, 255);
-    font-family: 'PT Serif', serif;
+    background-color: inherit;
+    font-family: 'Open Sans';
+}
+
+h1, h2, h3, p, a {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Vesper Libre'
 }
 
 #site-title {

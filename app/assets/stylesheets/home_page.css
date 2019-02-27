@@ -1,10 +1,11 @@
 .wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: [row1-start] 400px [row1-end] 1600px [third-line] auto [last-line];
-    grid-gap: 1em;
+    grid-template-rows: [row1-start] 400px [row1-end] 350px [third-line] 1600px [fourth-line] auto [last-line];
+    grid-gap: 1.5rem;
     justify-items: stretch;
     padding: 1em 5rem;
+    background-color: rgb(255, 255, 255)
 }
 
 .home-page-section {
@@ -14,3 +15,61 @@
 .featured {
     grid-column: 1 / 4;
 }
+
+.welcome {
+    grid-column: 1 / 4;
+    background-color: rgb(205, 233, 152);
+    background-image: url("./images/brain.png");
+    background-repeat: no-repeat;
+    background-position: 100% 30%;
+    background-size: auto 175%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome div {
+    background-color: inherit;
+    width: 50%;
+    position: relative;
+    left: 30px;
+    padding-top: 20px;
+    
+}
+
+.welcome div h1 {
+    font-weight: bold;
+    font-size: 2.7rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.welcome div p {
+    margin: 0
+}
+
+.welcome-banner-button-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.welcome-banner-button {
+    padding: 10px 17px;
+    font-size: 12px;
+    border: 1px solid black;
+    margin: 0;
+    border-radius: 5px;
+    width: 155px;
+}
+
+.welcome-banner-button-container > :first-child {
+    background-color: black;
+    color: white
+}
+
+.welcome-banner-button-container > :second-child {
+    background-color: inherit;
+    color: black
+}
+

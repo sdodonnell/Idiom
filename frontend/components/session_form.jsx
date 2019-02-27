@@ -54,6 +54,26 @@ class SessionForm extends React.Component {
         }
     }
 
+    renderText() {
+        if (this.props.formType === 'Log In') {
+            return (
+                <div className="session-text">
+                <h1>Join Idiom</h1>
+                <p>Create an account to receive great stories in your inbox, 
+                   personalize your homepage, and follow authors and topics that you love.</p>
+                </div>
+            )
+        } else {
+            return (
+                <div className="session-text">
+                <h1>Welcome Back</h1>
+                <p>Sign in to get personalized story recommendations, 
+                    follow authors and topics you love, and interact with stories.</p>
+                </div>
+            )
+        }       
+    }
+
     render() {
         return(
             <>
@@ -61,19 +81,15 @@ class SessionForm extends React.Component {
                 </Link>
                 <div className="session-form-box">
                     <form className="session-form" onSubmit={this.handleSubmit}>
-                        <div></div>
-                        <label>Username
-                            <input type="text" onChange={this.handleChange("username")}/>
-                        </label>
+                        {this.renderText()}
+                        <input type="text" defaultValue="Username" onChange={this.handleChange("username")}/>
 
                         {this.renderEmail()}
 
-                        <label>Password
-                            <input type="password" onChange={this.handleChange("password")}/>
-                        </label>
+                        <input type="password" defaultValue="Password" onChange={this.handleChange("password")}/>
                         
                         <button>{this.props.formType}</button>
-                        {this.renderDemoButton}
+                        {this.renderDemoButton()}
                     </form>
                         <ul>
                             {this.renderErrors()}

@@ -8,7 +8,8 @@
     border: 1px solid rgb(40, 206, 137);
     margin: 0 5px;
     border-radius: 7px;
-    color: rgb(40, 206, 137)
+    color: rgb(40, 206, 137);
+    font-size: 14px;
 }
 
 .auth-nav-buttons button {
