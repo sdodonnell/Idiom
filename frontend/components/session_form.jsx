@@ -15,6 +15,10 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    componentDidMount() {
+        this.props.clearErrors()
+    }
+ 
     handleChange(field) {
         return (
             e => this.setState({[field]: e.target.value})
@@ -32,6 +36,16 @@ class SessionForm extends React.Component {
         )
     }
 
+    renderEmail() {
+        if (this.props.formType === 'Log In') {
+            return null
+        } else {
+            return (<label>Email
+            <input type="email" onChange={this.handleChange("email")}/>
+        </label>)
+        }
+    }
+
     render() {
         return(
             <>
@@ -39,16 +53,12 @@ class SessionForm extends React.Component {
                 </Link>
                 <div className="session-form-box">
                     <form className="session-form" onSubmit={this.handleSubmit}>
-                        <ul>
-                            {this.renderErrors()}
-                        </ul>
+                        <div></div>
                         <label>Username
                             <input type="text" onChange={this.handleChange("username")}/>
                         </label>
 
-                        <label>Email
-                            <input type="email" onChange={this.handleChange("email")}/>
-                        </label>
+                        {this.renderEmail()}
 
                         <label>Password
                             <input type="password" onChange={this.handleChange("password")}/>
@@ -56,6 +66,9 @@ class SessionForm extends React.Component {
                         
                         <button>{this.props.formType}</button>
                     </form>
+                        <ul>
+                            {this.renderErrors()}
+                        </ul>
                 </div>
             </>
         )

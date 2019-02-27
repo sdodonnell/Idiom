@@ -22,9 +22,10 @@
     font-family: 'PT Serif', serif;
 }
 
-h1 {
+#site-title {
     color: black;
-    margin: 0
+    margin: 0;
+    font-size: 1.75em;
 }
 
 button:link, button:visited, button:active, button:focus {

@@ -10,7 +10,7 @@ const App = () => (
     <>
         <div className="nav-bar">
             <NavLink to="/">
-                <h1>Idiom</h1>
+                <h1 id="site-title">Idiom</h1>
             </NavLink>
             <AuthNavContainer />
         </div>

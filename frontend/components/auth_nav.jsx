@@ -15,6 +15,7 @@ class AuthNav extends React.Component {
         this.userPane.toggle()
     }
 
+
     render() {
         if (!this.props.currentUser) {
             return(
@@ -38,7 +39,7 @@ class AuthNav extends React.Component {
                     <UserPane
                         ref={node=>{this.userPane = node}}
                         currentUser={this.props.currentUser}
-                        logout={this.logout}
+                        logout={this.props.logout}
                         />
                 </div>
             )

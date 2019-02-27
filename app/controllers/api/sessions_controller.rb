@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
             login!(@user)
             render 'api/users/show'
         else
-            render json: 'Could not find user with that username and password.'
+            render json: ['Could not find user with that username and password.'], status: 401
         end
     end
 

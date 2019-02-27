@@ -15,14 +15,16 @@
     width: 400px;
     height: 300px;
     z-index: 2;
-    margin: 0 auto
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .session-form {
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
     grid-row-gap: 1rem;
     justify-content: center;
+    justify-items: center;
     align-content: center;
 }
 
