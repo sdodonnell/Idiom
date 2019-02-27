@@ -1,0 +1,16 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: [row1-start] 400px [row1-end] 1600px [third-line] auto [last-line];
+    grid-gap: 1em;
+    justify-items: stretch;
+    padding: 1em 5rem;
+}
+
+.home-page-section {
+    border: 1px solid black;
+}
+
+.featured {
+    grid-column: 1 / 4;
+}

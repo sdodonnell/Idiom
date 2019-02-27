@@ -1,0 +1,42 @@
+.auth-nav {
+    justify-self: end;
+    display: inline-block;
+}
+
+.nav-bar-link {
+    padding: 7px 10px;
+    border: 1px solid rgb(40, 206, 137);
+    margin: 0 5px;
+    border-radius: 7px;
+    color: rgb(40, 206, 137)
+}
+
+.auth-nav-buttons button {
+    width: 40px;
+    height: 40px;
+    margin: 0 3px;
+    border: none;
+    padding: 0
+}
+
+.auth-nav-buttons button:active {
+    border: none;
+}
+
+button i {
+    font-size: 17px;
+    color: rgba(148, 147, 147, 0.63)
+}
+
+button i:hover {
+    color: rgb(148, 147, 147)
+}
+
+#user-icon {
+    background-color: rgb(103, 22, 196);
+    margin-left: 7px;
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 0.884);
+    font-size: 17px;
+    font-family: Helvetica;
+}

@@ -1,0 +1,11 @@
+.user-pane-hidden {
+    display: none;
+}
+
+.user-pane-visible {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    border: 1px solid black;
+}

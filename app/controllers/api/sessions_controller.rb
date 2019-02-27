@@ -6,13 +6,12 @@ class Api::SessionsController < ApplicationController
             login!(@user)
             render 'api/users/show'
         else
-            render json: @user.errors.full_messages
+            render json: 'Could not find user with that username and password.'
         end
     end
 
     def destroy
         logout
-        render '/'
     end
 
 end
