@@ -21,6 +21,19 @@
     box-shadow: 1px 1px 10px 7px rgba(223, 223, 223, 0.699)
 }
 
+.close-button {
+    width: 20px;
+    position: absolute;
+    z-index: 2;
+    right: 3px;
+    top: 5px;
+}
+
+.close-button i {
+    font-size: 17px;
+    color: rgba(128, 128, 128, 0.568);
+}
+
 .session-form {
     position: relative;
     overflow: hidden;

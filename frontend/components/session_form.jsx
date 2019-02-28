@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 class SessionForm extends React.Component {
 
@@ -98,6 +98,7 @@ class SessionForm extends React.Component {
                 <Link to="/" className="session-modal">
                 </Link>
                 <div className="session-form-box">
+                    <Link to="/" className="close-button"><i className="fas fa-times"></i></Link>
                     <form className="session-form" onSubmit={this.handleSubmit}>
                         {this.renderText()}
                         
