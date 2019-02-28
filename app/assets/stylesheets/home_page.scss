@@ -73,6 +73,7 @@
 .welcome-banner-button-container > :first-child:hover {
     background-color: rgb(40, 206, 137);
     border-color:  rgb(40, 206, 137);
+    cursor: pointer;
 }
 
 .welcome-banner-button-container > :nth-child(2) {
@@ -82,6 +83,7 @@
 
 .welcome-banner-button-container > :nth-child(2):hover {
     border-color: rgb(40, 206, 137);
-    color: rgba(0, 0, 0, 0.623)
+    color: rgba(0, 0, 0, 0.623);
+    cursor: pointer
 }
 

@@ -94,7 +94,13 @@
 }
 
 .signup-button {
-    justify-: start;
     background: white;
     width: 100px;
+}
+
+.session-error-list {
+    list-style: none;
+    color: red;
+    font-size: 12px;
+    text-align: center;
 }

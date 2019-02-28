@@ -110,7 +110,7 @@ class SessionForm extends React.Component {
                         <input type="password" onChange={this.handleChange("password")}/>
                         
                         <div className="errors-and-buttons">
-                            <ul style={{listStyle: "none"}}>
+                            <ul className="session-error-list">
                                 {this.renderErrors()}
                             </ul>
                             {this.renderButtons()}

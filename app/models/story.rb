@@ -12,4 +12,5 @@
 #
 
 class Story < ApplicationRecord
+    validates :title, :body, :user_id, presence: true
 end

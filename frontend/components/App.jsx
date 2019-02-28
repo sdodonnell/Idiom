@@ -1,10 +1,11 @@
 import React from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
 import SignupContainer from '../containers/signup_container';
 import LoginContainer from '../containers/login_container';
 import { AuthRoute } from '../util/auth_util';
 import AuthNavContainer from '../containers/auth_nav_container';
 import HomePage from './home_page'
+import StoryForm from './story_form';
 
 const App = () => (
     <>
@@ -14,9 +15,13 @@ const App = () => (
             </NavLink>
             <AuthNavContainer />
         </div>
-        <AuthRoute path="/signup" component={SignupContainer}/>
-        <AuthRoute path="/login" component={LoginContainer}/>
-        <Route exact path="/" component={HomePage}/>
+        <Switch>
+            <AuthRoute path="/signup" component={SignupContainer}/>
+            <AuthRoute path="/login" component={LoginContainer}/>
+            <Route exact path="/" component={HomePage}/>
+            <Route path="/stories/new" component={StoryForm}/>
+            <Redirect to="/"/>
+        </Switch>
     </>
 )
 

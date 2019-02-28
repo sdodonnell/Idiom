@@ -13,7 +13,8 @@
 }
 
 .nav-bar-link:hover {
-    border-color: rgb(34, 175, 116)
+    border-color: rgb(34, 175, 116);
+    cursor: pointer
 }
 
 .auth-nav button {
@@ -34,7 +35,8 @@ button i {
 }
 
 button i:hover {
-    color: rgb(148, 147, 147)
+    color: rgb(148, 147, 147);
+    cursor: pointer
 }
 
 #user-icon {
