@@ -1,3 +1,11 @@
+.nav-bar {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5rem;
+    margin-top: 1rem
+}
+
 .auth-nav {
     justify-self: end;
     display: inline-block;
@@ -23,6 +31,19 @@
     margin: 0 3px;
     border: none;
     padding: 0
+}
+
+.auth-nav button:first-child {
+    border: 1px solid rgb(40, 206, 137);
+    width: 110px;
+    border-radius: 10px;
+    height: 30px;
+    color: rgb(40, 206, 137);
+}
+
+.auth-nav button:first-child:hover {
+    border-color: rgb(34, 175, 116);
+    color: rgb(34, 175, 116)
 }
 
 .auth-nav-buttons button:active {

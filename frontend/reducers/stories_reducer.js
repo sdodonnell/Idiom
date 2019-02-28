@@ -1,7 +1,7 @@
 import { RECEIVE_STORIES, RECEIVE_STORY, REMOVE_STORY } from "../actions/story_actions";
 
 
-export const storiesReducer = (state={}, action) => {
+const storiesReducer = (state={}, action) => {
     Object.freeze(state)
     switch(action.type) {
         case RECEIVE_STORIES:
@@ -16,3 +16,5 @@ export const storiesReducer = (state={}, action) => {
             return state;
     }
 }
+
+export default storiesReducer

@@ -1,0 +1,49 @@
+.story-form {
+    display: grid;
+    min-height: 500px;
+    grid-template-rows: 1fr 4fr;
+    justify-items: center;
+    margin-top: 20px
+}
+
+.story-title-input, .story-body-input {
+    width: 60%;
+    border: none;
+    font-family: 'Pt Serif'
+}
+
+.story-title-input:focus, .story-body-input:focus {
+    outline: none;
+}
+
+.story-title-input {
+    font-size: 30px;
+}
+
+.story-body-input {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.555)
+}
+
+.story-modal {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.856);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    // height: 500px;
+    width: 70%
+}
+
+.story-modal-title {
+
+}
+
+.hidden {
+    // display: hidden
+}

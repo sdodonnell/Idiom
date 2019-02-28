@@ -1,14 +1,25 @@
+import React from 'react';
 import { updateStory } from '../actions/story_actions';
 import { connect } from 'redux';
 import StoryForm from '../components/story_form'
 
 const mstp = state => ({
     user: state.entities.users[state.session.id],
-    story: state.entities
+    story: state.entities,
+    formType: 'edit'
 })
 
 const mdtp = dispatch => ({
-    updateStory: story => dispatch(updateStory(story))
+    action: story => dispatch(updateStory(story))
 })
 
-export default connect(mstp, mdtp)(StoryForm)
+const EditStoryForm = props => (
+    <StoryForm 
+        user={props.user}
+        story={props.story}
+        formType={props.formType}
+        action={props.action}
+        />
+)
+
+export default connect(mstp, mdtp)(EditStoryForm)

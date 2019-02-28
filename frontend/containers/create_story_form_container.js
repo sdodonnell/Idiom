@@ -3,11 +3,14 @@ import { connect } from 'redux';
 import StoryForm from '../components/story_form'
 
 const mstp = state => ({
-    user: state.entities.users[state.session.id]
+    user: state.entities.users[state.session.id],
+    title: "",
+    body: "",
+    formType: 'create'
 })
 
 const mdtp = dispatch => ({
-    createStory: story => dispatch(createStory(story))
+    action: story => dispatch(createStory(story))
 })
 
 export default connect(mstp, mdtp)(StoryForm)

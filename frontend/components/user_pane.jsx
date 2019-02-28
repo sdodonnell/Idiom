@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 class UserPane extends React.Component {
     constructor(props) {
@@ -20,9 +21,9 @@ class UserPane extends React.Component {
     
     render(){
         return (
-            <div className={`user-pane-${this.state.display}`}>
+            <div onClick={this.props.toggleUserPane} className={`user-pane-${this.state.display}`}>
                 <p>{this.props.currentUser.username}</p>
-                <a>New Story</a>
+                <NavLink to="/stories/new">New Story</NavLink>
                 <a>Stories</a>
                 <a>Reading List</a>
                 <a>Profile</a>

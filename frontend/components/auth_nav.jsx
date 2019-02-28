@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
+import { Route, NavLink } from 'react-router-dom'
 import UserPane from './user_pane';
 
 class AuthNav extends React.Component {
@@ -28,7 +28,12 @@ class AuthNav extends React.Component {
         } else {
             return(
                 <div className="auth-nav">
+
                     <div className="auth-nav-buttons">
+                        <Route 
+                            path="/stories/new" 
+                            render={() => <button className="publish">Ready to publish?</button>}/>
+                        <Route path="/stories/edit" render={() => <button className="publish">Ready to publish?</button>}/>
                         <button><i className="fas fa-search"></i></button>
                         <button><i className="far fa-bookmark"></i></button>
                         <button><i className="far fa-bell"></i></button>
@@ -41,6 +46,7 @@ class AuthNav extends React.Component {
                         ref={node=>{this.userPane = node}}
                         currentUser={this.props.currentUser}
                         logout={this.props.logout}
+                        toggleUserPane={this.toggleUserPane}
                         />
                 </div>
             )
