@@ -60,11 +60,28 @@
     width: 200px
 }
 
+.errors-and-buttons {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background: none;
+    justify-items: center;
+    align-items: start;
+}
+
 .login-demo-buttons {
     height: 1.3rem;
+    align-self: stretch;
+}
+
+.login-demo-buttons > button {
+    height: 1.3rem;
     align-self: center;
+    margin: 0 5px;
+    border-radius: 5px;
 }
 
 .signup-button {
-    align-self: start
+    justify-: start;
+    background: white;
+    width: 100px;
 }
