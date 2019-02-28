@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
 
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemoLogin = this.handleDemoLogin.bind(this)
     }
 
     componentDidMount() {
@@ -40,25 +41,33 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Log In') {
             return null
         } else {
-            return (<label>Email
-            <input type="email" onChange={this.handleChange("email")}/>
-        </label>)
+            return (
+                <>
+                    <p>Email</p>
+                    <input type="email" onChange={this.handleChange("email")}/>
+                </>
+            )
         }
     }
 
-    renderDemoButton() {
-        if (this.props.formType === 'Log In') {
-            return null
+    renderButtons() {
+        if (this.props.formType === 'Sign Up') {
+            return (<button className="signup-button">{this.props.formType}</button>)
         } else {
-            return (<button onClick={this.handleDemoClick}>Demo Login</button>)
+            return (
+                <div className="login-demo-buttons">
+                    <button>{this.props.formType}</button>
+                    <button onClick={this.handleDemoLogin}>Demo Login</button>
+                </div>
+            )
         }
     }
 
     renderText() {
-        if (this.props.formType === 'Log In') {
+        if (this.props.formType === 'Sign Up') {
             return (
                 <div className="session-text">
-                <h1>Join Idiom</h1>
+                <h1>Join Idiom.</h1>
                 <p>Create an account to receive great stories in your inbox, 
                    personalize your homepage, and follow authors and topics that you love.</p>
                 </div>
@@ -66,12 +75,21 @@ class SessionForm extends React.Component {
         } else {
             return (
                 <div className="session-text">
-                <h1>Welcome Back</h1>
+                <h1>Welcome Back.</h1>
                 <p>Sign in to get personalized story recommendations, 
                     follow authors and topics you love, and interact with stories.</p>
                 </div>
             )
         }       
+    }
+
+    handleDemoLogin(e) {
+        e.preventDefault();
+        const demoUser = {
+            username: "MichelDeMontaigne",
+            password: "cannibalsrule"
+        };
+        this.props.action(demoUser)
     }
 
     render() {
@@ -82,14 +100,15 @@ class SessionForm extends React.Component {
                 <div className="session-form-box">
                     <form className="session-form" onSubmit={this.handleSubmit}>
                         {this.renderText()}
-                        <input type="text" defaultValue="Username" onChange={this.handleChange("username")}/>
+                        
+                        <p>Username</p>
+                        <input type="text" onChange={this.handleChange("username")}/>
 
                         {this.renderEmail()}
-
-                        <input type="password" defaultValue="Password" onChange={this.handleChange("password")}/>
+                        <p>Password</p>
+                        <input type="password" onChange={this.handleChange("password")}/>
                         
-                        <button>{this.props.formType}</button>
-                        {this.renderDemoButton()}
+                        {this.renderButtons()}
                     </form>
                         <ul>
                             {this.renderErrors()}

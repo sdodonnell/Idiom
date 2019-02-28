@@ -34,14 +34,13 @@
     position: relative;
     left: 30px;
     padding-top: 20px;
-    
 }
 
 .welcome div h1 {
     font-weight: bold;
     font-size: 2.7rem;
     line-height: 3rem;
-    margin-bottom: 1rem;
+    margin: 1rem 1rem 1rem 0;
 }
 
 .welcome div p {

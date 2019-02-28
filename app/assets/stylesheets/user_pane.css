@@ -4,30 +4,33 @@
 
 .user-pane-visible {
     position: absolute;
-    top: 60px;
+    top: 65px;
     right: 10px;
     width: 200px;
     border: 1px solid rgb(136, 135, 135);
     border-radius: 6px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
     z-index: 2;
-    color: rgb(167, 166, 164)
+    color: rgb(167, 166, 164);
+    background-color: rgba(255, 255, 255, 0.87);
 }
 
 .user-pane-visible a {
-    padding: 5px;
+    padding: 10px 15px;
     overflow: hidden;
     border-radius: inherit;
-    font-family: Hind
+    font-family: "Open Sans";
+    font-size: 14px;
 }
 
 .user-pane-visible p {
-    font-weight: bold;
+    padding: 10px 15px;
     color: black;
-    padding: 5px;
     overflow: hidden;
-    font-family: Hind
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .user-pane-visible:first-child {
