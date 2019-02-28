@@ -31,7 +31,7 @@
     grid-row-gap: .5rem;
     justify-content: center;
     justify-items: center;
-    background-image: url("./images/shells.png") , url("./images/bird.png");
+    background-image: image_url("./images/shells.png") , image_url("./images/bird.png");
     background-color: white;
     background-position: -15% 0%, 110% 115%;
     background-size: 45%, 60%;
