@@ -28,7 +28,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch --mode=development",
-    "postinstall": "webpack ./frontend/idiom.jsx"
+    "postinstall": "webpack"
   },
   "engines": {
     "node": "10.3.0",
