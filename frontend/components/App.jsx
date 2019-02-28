@@ -4,7 +4,7 @@ import SignupContainer from '../containers/signup_container';
 import LoginContainer from '../containers/login_container';
 import { AuthRoute } from '../util/auth_util';
 import AuthNavContainer from '../containers/auth_nav_container';
-import HomePage from '../components/home_page'
+import HomePage from './home_page'
 
 const App = () => (
     <>
