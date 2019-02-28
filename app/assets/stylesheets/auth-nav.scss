@@ -12,7 +12,11 @@
     font-size: 14px;
 }
 
-.auth-nav-buttons button {
+.nav-bar-link:hover {
+    border-color: rgb(34, 175, 116)
+}
+
+.auth-nav button {
     width: 40px;
     height: 40px;
     margin: 0 3px;
