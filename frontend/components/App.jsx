@@ -5,7 +5,8 @@ import LoginContainer from '../containers/login_container';
 import { AuthRoute } from '../util/auth_util';
 import AuthNavContainer from '../containers/auth_nav_container';
 import HomePage from './home_page'
-import StoryForm from './story_form';
+import CreateStoryContainer from '../containers/create_story_form_container';
+import EditStoryContainer from '../containers/edit_story_form_container'
 
 const App = () => (
     <>
@@ -19,7 +20,8 @@ const App = () => (
             <AuthRoute path="/signup" component={SignupContainer}/>
             <AuthRoute path="/login" component={LoginContainer}/>
             <Route exact path="/" component={HomePage}/>
-            <Route path="/stories/new" component={StoryForm}/>
+            <Route path="/stories/new" component={CreateStoryContainer}/>
+            <Route path="/stories/edit" component={EditStoryContainer}/>
             <Redirect to="/"/>
         </Switch>
     </>

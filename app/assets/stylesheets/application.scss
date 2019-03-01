@@ -39,6 +39,14 @@ button:link, button:visited, button:active, button:focus {
     outline: none;
 }
 
+input:link, input:visited, input:active, input:focus {
+    outline: none;
+}
+
+textarea:link, textarea:visited, textarea:active, textarea:focus {
+    outline: none;
+}
+
 a:hover, button:hover {
     cursor: pointer
 }

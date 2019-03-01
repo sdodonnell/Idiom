@@ -7,10 +7,11 @@ class StoryForm extends React.Component {
         this.state = {
             title: this.props.title,
             body: this.props.body,
-            modalClassName: ""
+            modalClassName: "hidden"
         }
         this.handleChange = this.handleChange.bind(this);
         this.togglePublishModal = this.togglePublishModal.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleChange(field) {
@@ -21,10 +22,12 @@ class StoryForm extends React.Component {
         })
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
+        e.preventDefault();
         this.props.action({
             title: this.state.title,
-            body: this.state.body
+            body: this.state.body,
+            user_id: this.props.user.id
         })
     }
 
@@ -37,7 +40,7 @@ class StoryForm extends React.Component {
     render() {
         return(
             <>
-            <form onSubmit={this.props.handleSubmit} className="story-form">
+            <form onSubmit={this.togglePublishModal} className="story-form">
                 <input 
                     placeholder="Title"
                     value={this.state.title} 
@@ -50,27 +53,30 @@ class StoryForm extends React.Component {
                     onChange={this.handleChange("body")}
                     type="text"
                     className="story-body-input"></textarea>
+                <button className="publish-button">Ready to publish?</button>
             </form>
-            <div 
-                className={`story-modal ${this.state.modalClassName}`}
-                onClick={this.togglePublishModal}
-                >
-            </div>
-            <form className={`story-modal-form ${this.state.modalClassName}`}>
-                <p>Story Preview</p> 
+            <div onClick={this.togglePublishModal} className={`story-modal ${this.state.modalClassName}`}></div>
+            <form onSubmit={this.handleSubmit} className={`story-modal-form ${this.state.modalClassName}`}>
+                <p id="story-modal-text-1">Story Preview</p> 
                 <input 
                     value={this.state.titlePreview}
                     onChange={this.handleChange("titlePreview")}
                     type="text"
-                    className="story-modal-title"/>
+                    id="story-modal-title"/>
                 <textarea 
                     value={this.state.bodyPreview}
                     onChange={this.handleChange("bodyPreview")}
                     type="text"
-                    className="story-modal-body">{this.state.bodyPreview}</textarea>
-                <p>Add or change tags...</p>
-                <input type="text"/>
-                <button>Publish Now</button>
+                    id="story-modal-body">
+                    {this.state.bodyPreview}
+                </textarea>
+                <p id="story-modal-text-2">Add or change tags...</p>
+                <input 
+                    value={this.state.tags}
+                    onChange={this.handleChange("tags")}
+                    type="text"
+                    id="story-modal-tags"/>
+                <button id="story-modal-button">Publish Now</button>
             </form>
             </>
         )

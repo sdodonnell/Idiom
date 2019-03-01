@@ -1,6 +1,6 @@
 import React from 'react';
 import { updateStory } from '../actions/story_actions';
-import { connect } from 'redux';
+import { connect } from 'react-redux';
 import StoryForm from '../components/story_form'
 
 const mstp = state => ({

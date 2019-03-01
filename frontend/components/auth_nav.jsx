@@ -28,12 +28,12 @@ class AuthNav extends React.Component {
                 <div className="auth-nav">
 
                     <div className="auth-nav-buttons">
-                        <Route 
+                        {/* <Route 
                             path="/stories/new" 
-                            render={() => <button className="publish">Ready to publish?</button>}/>
+                            render={() => <button onClick={this.props.openModal} className="publish">Ready to publish?</button>}/>
                         <Route 
                             path="/stories/edit" 
-                            render={() => <button className="publish">Ready to publish?</button>}/>
+                            render={() => <button onClick={this.props.openModal} className="publish">Ready to publish?</button>}/> */}
                         <button><i className="fas fa-search"></i></button>
                         <button><i className="far fa-bookmark"></i></button>
                         <button><i className="far fa-bell"></i></button>
