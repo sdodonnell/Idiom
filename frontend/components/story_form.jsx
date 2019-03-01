@@ -7,9 +7,10 @@ class StoryForm extends React.Component {
         this.state = {
             title: this.props.title,
             body: this.props.body,
-            modalClassName: "hidden"
+            modalClassName: ""
         }
         this.handleChange = this.handleChange.bind(this);
+        this.togglePublishModal = this.togglePublishModal.bind(this)
     }
 
     handleChange(field) {
@@ -27,9 +28,15 @@ class StoryForm extends React.Component {
         })
     }
 
+    togglePublishModal() {
+        this.setState({
+            modalClassName: this.state.modalClassName === "hidden" ? "" : "hidden"
+        })
+    }
+
     render() {
         return(
-            <div className="story-master">
+            <>
             <form onSubmit={this.props.handleSubmit} className="story-form">
                 <input 
                     placeholder="Title"
@@ -44,7 +51,12 @@ class StoryForm extends React.Component {
                     type="text"
                     className="story-body-input"></textarea>
             </form>
-            <form className={`story-modal ${this.state.modalClassName}`}>
+            <div 
+                className={`story-modal ${this.state.modalClassName}`}
+                onClick={this.togglePublishModal}
+                >
+            </div>
+            <form className={`story-modal-form ${this.state.modalClassName}`}>
                 <p>Story Preview</p> 
                 <input 
                     value={this.state.titlePreview}
@@ -58,8 +70,9 @@ class StoryForm extends React.Component {
                     className="story-modal-body">{this.state.bodyPreview}</textarea>
                 <p>Add or change tags...</p>
                 <input type="text"/>
+                <button>Publish Now</button>
             </form>
-            </div>
+            </>
         )
     }
 

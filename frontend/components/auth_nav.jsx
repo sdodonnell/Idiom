@@ -9,8 +9,6 @@ class AuthNav extends React.Component {
         this.toggleUserPane = this.toggleUserPane.bind(this)
     }
 
-
-
     toggleUserPane() {
         this.userPane.toggle()
     }
@@ -33,7 +31,9 @@ class AuthNav extends React.Component {
                         <Route 
                             path="/stories/new" 
                             render={() => <button className="publish">Ready to publish?</button>}/>
-                        <Route path="/stories/edit" render={() => <button className="publish">Ready to publish?</button>}/>
+                        <Route 
+                            path="/stories/edit" 
+                            render={() => <button className="publish">Ready to publish?</button>}/>
                         <button><i className="fas fa-search"></i></button>
                         <button><i className="far fa-bookmark"></i></button>
                         <button><i className="far fa-bell"></i></button>
