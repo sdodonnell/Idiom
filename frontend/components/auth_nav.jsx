@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import UserPane from './user_pane';
 
 class AuthNav extends React.Component {
@@ -19,8 +19,8 @@ class AuthNav extends React.Component {
             return(
                 <div className="auth-nav">
                     <button><i className="fas fa-search"></i></button>
-                    <NavLink to='/login' className='nav-bar-link' style={{color: "rgb(40, 206, 137)"}}>Sign In</NavLink>
-                    <NavLink to='/signup' className='nav-bar-link' style={{color: "rgb(40, 206, 137)"}}>Get Started</NavLink>
+                    <NavLink to='/login' className='nav-bar-link' id="signin-button">Sign In</NavLink>
+                    <NavLink to='/signup' className='nav-bar-link'>Get Started</NavLink>
                 </div>
             )
         } else {
@@ -28,12 +28,6 @@ class AuthNav extends React.Component {
                 <div className="auth-nav">
 
                     <div className="auth-nav-buttons">
-                        {/* <Route 
-                            path="/stories/new" 
-                            render={() => <button onClick={this.props.openModal} className="publish">Ready to publish?</button>}/>
-                        <Route 
-                            path="/stories/edit" 
-                            render={() => <button onClick={this.props.openModal} className="publish">Ready to publish?</button>}/> */}
                         <button><i className="fas fa-search"></i></button>
                         <button><i className="far fa-bookmark"></i></button>
                         <button><i className="far fa-bell"></i></button>

@@ -24,7 +24,7 @@ class UserPane extends React.Component {
             <div onClick={this.props.toggleUserPane} className={`user-pane-${this.state.display}`}>
                 <p>{this.props.currentUser.username}</p>
                 <NavLink to="/stories/new">New Story</NavLink>
-                <a>Stories</a>
+                <NavLink to={`/users/${this.props.currentUser.id}/stories`}>Stories</NavLink>
                 <a>Reading List</a>
                 <a>Profile</a>
                 <a onClick={this.props.logout}>Sign Out</a>

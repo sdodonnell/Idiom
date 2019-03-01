@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class StoryForm extends React.Component {
 
@@ -27,12 +27,15 @@ class StoryForm extends React.Component {
         this.props.action({
             title: this.state.title,
             body: this.state.body,
-            user_id: this.props.user.id
+            user_id: this.props.user.id,
+            title_preview: this.state.titlePreview,
+            body_preview: this.state.bodyPreview
         })
         this.props.history.push('/')
     }
 
-    togglePublishModal() {
+    togglePublishModal(e) {
+        e.preventDefault();
         this.setState({
             modalClassName: this.state.modalClassName === "hidden" ? "" : "hidden"
         })
@@ -41,6 +44,7 @@ class StoryForm extends React.Component {
     render() {
         return(
             <>
+            <a onClick={this.togglePublishModal} className="close-button"><i className="fas fa-times"></i></a>
             <form onSubmit={this.togglePublishModal} className="story-form">
                 <input 
                     placeholder="Title"

@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/Root';
 import { configureStore } from './store/store';
-import { signup } from './actions/session_actions'
+import { signup } from './actions/session_actions';
+import { fetchStories } from "./util/stories_api_util";
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.getState = store.getState
     window.dispatch = store.dispatch
     window.signup = signup
+    window.fetchStories = fetchStories
     // TESTING
 
     

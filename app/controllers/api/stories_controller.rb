@@ -1,11 +1,10 @@
 class Api::StoriesController < ApplicationController
 
-    def show
-        @story = Story.find(params[:id])
-    end
-
     def index
-        @stories = Story.all
+        # current_user.stories
+        debugger
+        @stories = Story.where(user_id: params[:story][:user_id])
+        render 'api/stories/index'
     end
 
     def create
@@ -29,7 +28,7 @@ class Api::StoriesController < ApplicationController
     private
 
     def story_params
-        params.require(:story).permit(:title, :body, :topic, :user_id)
+        params.require(:story).permit(:title, :body, :tags, :user_id, :title_preview, :body_preview)
     end
 
 end

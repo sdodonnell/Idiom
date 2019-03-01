@@ -5,11 +5,12 @@ export const fetchStory = id => (
     })
 )
 
-export const fetchStories = data => (
+
+export const fetchStories = userId => (
     $.ajax({
         method: 'GET',
         url: 'api/stories',
-        data
+        data: {story: {user_id: userId}}
     })
 )
 

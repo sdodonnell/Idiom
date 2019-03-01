@@ -18,7 +18,7 @@
 
 .welcome {
     grid-column: 1 / 4;
-    background-color: rgb(205, 233, 152);
+    background-color: #E8F3EC;
     background-image: image_url("./images/brain.png");
     background-repeat: no-repeat;
     background-position: 100% 30%;
@@ -71,9 +71,9 @@
 }
 
 .welcome-banner-button-container > :first-child:hover {
-    background-color: rgb(40, 206, 137);
-    border-color:  rgb(40, 206, 137);
+    background-color: #1B9963;
     cursor: pointer;
+    border: none;
 }
 
 .welcome-banner-button-container > :nth-child(2) {
@@ -82,7 +82,7 @@
 }
 
 .welcome-banner-button-container > :nth-child(2):hover {
-    border-color: rgb(40, 206, 137);
+    border-color: #1B9963;
     color: rgba(0, 0, 0, 0.623);
     cursor: pointer
 }

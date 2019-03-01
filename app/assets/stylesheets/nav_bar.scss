@@ -9,20 +9,25 @@
 .auth-nav {
     justify-self: end;
     display: inline-block;
+    color: #039E74;
 }
 
 .nav-bar-link {
     padding: 7px 10px;
-    border: 1px solid rgb(40, 206, 137);
+    border: 1px solid #039E74;
     margin: 0 5px;
     border-radius: 7px;
-    color: rgb(40, 206, 137);
     font-size: 14px;
 }
 
+#signin-button {
+    border: none;
+}
+
 .nav-bar-link:hover {
-    border-color: rgb(34, 175, 116);
-    cursor: pointer
+    border-color: rgb(20, 128, 97);
+    cursor: pointer;
+    color: rgb(20, 128, 97);
 }
 
 .auth-nav button {
