@@ -5,6 +5,11 @@ class Api::StoriesController < ApplicationController
         render 'api/stories/index'
     end
 
+    def show
+        @story = Story.find(params[:id])
+        render 'api/stories/show'
+    end
+
     def create
         @story = Story.new(story_params);
         if @story.save

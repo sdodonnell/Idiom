@@ -1,4 +1,5 @@
 import React from 'react';
+import { Prompt } from 'react-router-dom';
 
 class StoryForm extends React.Component {
 
@@ -44,7 +45,7 @@ class StoryForm extends React.Component {
     render() {
         return(
             <>
-            <a onClick={this.togglePublishModal} className="close-button"><i className="fas fa-times"></i></a>
+            <a onClick={this.togglePublishModal} className={`close-button ${this.state.modalClassName}`}><i className="fas fa-times"></i></a>
             <form onSubmit={this.togglePublishModal} className="story-form">
                 <input 
                     placeholder="Title"

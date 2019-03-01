@@ -6,6 +6,7 @@ const mstp = (state, ownProps) => {
     let storyId = ownProps.match.params.id
     return ({
         story: state.entities.stories[storyId],
+        storyId
     })
 }
 
