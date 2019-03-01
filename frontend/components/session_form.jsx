@@ -95,8 +95,7 @@ class SessionForm extends React.Component {
     render() {
         return(
             <>
-                <Link to="/" className="session-modal">
-                </Link>
+                <Link to="/" className="session-modal"></Link>
                 <div className="session-form-box">
                     <Link to="/" className="close-button"><i className="fas fa-times"></i></Link>
                     <form className="session-form" onSubmit={this.handleSubmit}>

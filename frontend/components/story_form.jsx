@@ -29,6 +29,7 @@ class StoryForm extends React.Component {
             body: this.state.body,
             user_id: this.props.user.id
         })
+        this.props.history.push('/')
     }
 
     togglePublishModal() {

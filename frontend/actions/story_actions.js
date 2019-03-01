@@ -6,9 +6,9 @@ export const CREATE_STORY = 'CREATE_STORY';
 export const REMOVE_STORY = 'REMOVE_STORY';
 export const UPDATE_STORY = 'UPDATE_STORY'
 
-const receiveStory = id => ({
+const receiveStory = story => ({
     type: RECEIVE_STORY,
-    storyId: id
+    story
 })
 
 const receiveStories = stories => ({
