@@ -1,8 +1,6 @@
 class Api::StoriesController < ApplicationController
 
     def index
-        # current_user.stories
-        debugger
         @stories = Story.where(user_id: params[:story][:user_id])
         render 'api/stories/index'
     end

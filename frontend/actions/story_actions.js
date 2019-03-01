@@ -1,4 +1,5 @@
-import * as StoryApiUtil from '../util/stories_api_util'
+import * as StoryApiUtil from '../util/stories_api_util';
+import { camelizeKeys } from 'humps';
 
 export const RECEIVE_STORIES = 'RECEIVE_STORIES';
 export const RECEIVE_STORY = 'RECEIVE_STORY';
@@ -8,12 +9,12 @@ export const UPDATE_STORY = 'UPDATE_STORY'
 
 const receiveStory = story => ({
     type: RECEIVE_STORY,
-    story
+    story: camelizeKeys(story)
 })
 
 const receiveStories = stories => ({
     type: RECEIVE_STORIES,
-    stories
+    stories: camelizeKeys(stories)
 })
 
 const removeStory = id => ({

@@ -18,4 +18,9 @@ class Story < ApplicationRecord
         primary_key: :id,
         foreign_key: :user_id,
         class_name: :User
+
+    has_many :tags,
+        primary_key: :id,
+        foreign_key: :story_id,
+        class_name: :Tag
 end

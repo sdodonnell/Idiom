@@ -27,9 +27,9 @@ class StoryForm extends React.Component {
         this.props.action({
             title: this.state.title,
             body: this.state.body,
-            user_id: this.props.user.id,
-            title_preview: this.state.titlePreview,
-            body_preview: this.state.bodyPreview
+            userId: this.props.user.id,
+            titlePreview: this.state.titlePreview,
+            bodyPreview: this.state.bodyPreview
         })
         this.props.history.push('/')
     }

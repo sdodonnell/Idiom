@@ -17,21 +17,19 @@
 
 * {
     background-color: inherit;
-    font-family: 'Open Sans';
+    font-family: 'Source Sans Pro'
 }
 
 h1, h2, h3, p, a {
     margin: 0;
-}
-
-h1 {
-    font-family: 'Vesper Libre'
+    font-family: inherit;
 }
 
 #site-title {
     color: black;
     margin: 0;
     font-size: 1.75em;
+    font-family: 'Vesper Libre'
 }
 
 button:link, button:visited, button:active, button:focus {

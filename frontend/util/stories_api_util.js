@@ -1,10 +1,11 @@
+import { decamelizeKeys } from 'humps';
+
 export const fetchStory = id => (
     $.ajax({
         method: 'GET',
         url: `api/stories/${id}`
     })
 )
-
 
 export const fetchStories = userId => (
     $.ajax({
@@ -18,7 +19,7 @@ export const createStory = story => (
     $.ajax({
         method: 'POST',
         url: 'api/stories',
-        data: {story}
+        data: {story: decamelizeKeys(story)}
     })
 )
 

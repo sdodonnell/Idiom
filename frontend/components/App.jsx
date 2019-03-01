@@ -8,6 +8,7 @@ import HomePage from './home_page'
 import CreateStoryContainer from '../containers/create_story_form_container';
 import EditStoryContainer from '../containers/edit_story_form_container';
 import StoriesIndexContainer from '../containers/stories_index_container'
+import StoryComponentContainer from '../containers/story_component_container';
 
 const App = () => (
     <>
@@ -24,7 +25,7 @@ const App = () => (
             <ProtectedRoute path="/users/:id/stories" component={StoriesIndexContainer}/>
             <ProtectedRoute path="/stories/new" component={CreateStoryContainer}/>
             <ProtectedRoute path="/stories/edit" component={EditStoryContainer}/>
-            {/* <Route path="/stories/:id" component={StoryComponent}/> */}
+            <Route path="/stories/:id" component={StoryComponentContainer}/>
             <Redirect to="/"/>
         </Switch>
     </>
