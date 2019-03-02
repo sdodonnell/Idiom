@@ -23,7 +23,7 @@ class StoryForm extends React.Component {
         return e =>
         this.setState({
             [field]: e.target.value,
-            [field + "Preview"]: e.target.value.slice(0, 100)
+            [field + "Preview"]: e.target.value.slice(0, 200)
         })
     }
 
