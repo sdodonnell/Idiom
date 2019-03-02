@@ -1,5 +1,5 @@
 import React from 'react';
-import { Prompt } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class StoryForm extends React.Component {
 
@@ -13,6 +13,10 @@ class StoryForm extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.togglePublishModal = this.togglePublishModal.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    componentDidMount() {
+        this.props.fetchStory(this.props.storyId)
     }
 
     handleChange(field) {
@@ -44,6 +48,9 @@ class StoryForm extends React.Component {
     }
 
     render() {
+        if (!this.props.story) {
+            return <div></div>
+        } else {
         return(
             <>
             <a onClick={this.togglePublishModal} className={`close-button ${this.state.modalClassName}`}><i className="fas fa-times"></i></a>
@@ -86,9 +93,9 @@ class StoryForm extends React.Component {
                 <button id="story-modal-button">Publish Now</button>
             </form>
             </>
-        )
+        )}
     }
 
 }
 
-export default StoryForm
+export default withRouter(StoryForm)
