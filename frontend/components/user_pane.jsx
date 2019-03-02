@@ -26,7 +26,7 @@ class UserPane extends React.Component {
                 <NavLink to="/stories/new">New Story</NavLink>
                 <NavLink to={`/users/${this.props.currentUser.id}/stories`}>Stories</NavLink>
                 <a>Reading List</a>
-                <a>Profile</a>
+                <NavLink to={`/users/${this.props.currentUser.id}`}>Profile</NavLink>
                 <a onClick={this.props.logout}>Sign Out</a>
             </div>
         )
