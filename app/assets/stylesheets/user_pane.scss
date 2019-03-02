@@ -7,18 +7,19 @@
     top: 65px;
     right: 10px;
     width: 200px;
-    border: 1px solid rgb(136, 135, 135);
+    border: 1px solid rgba(136, 135, 135, 0.5);
     border-radius: 6px;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     z-index: 2;
     color: rgb(167, 166, 164);
     background-color: rgba(255, 255, 255, 0.87);
+    box-shadow: .5px .5px 1px 2px rgba(196, 196, 196, 0.5);
+    overflow: hidden;
 }
 
 .user-pane-visible a {
     padding: 10px 15px;
-    overflow: hidden;
     border-radius: inherit;
     font-family: "Open Sans";
     font-size: 14px;
@@ -27,7 +28,6 @@
 .user-pane-visible p {
     padding: 10px 15px;
     color: black;
-    overflow: hidden;
     font-family: "Open Sans";
     font-size: 12px;
     font-weight: bold;
