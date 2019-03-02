@@ -4,7 +4,7 @@ import SignupContainer from '../containers/signup_container';
 import LoginContainer from '../containers/login_container';
 import { AuthRoute, ProtectedRoute } from '../util/auth_util';
 import AuthNavContainer from '../containers/auth_nav_container';
-import HomePage from './home_page'
+import HomePage from './HomePage/home_page'
 import CreateStoryContainer from '../containers/create_story_form_container';
 import EditStoryContainer from '../containers/edit_story_form_container';
 import StoriesIndexContainer from '../containers/stories_index_container'

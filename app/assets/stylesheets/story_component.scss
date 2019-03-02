@@ -1,12 +1,45 @@
 .story-wrapper {
-    margin: 0 80px;
+    margin-top: 10px;
     display: grid;
-    grid-template-rows: 400px 300px auto 100px 200px;
-    margin: 0 15%;
+    grid-template-rows: 400px auto auto 100px 200px;
+    // margin: 0 15%;
+    width: 100%
+}
+
+.story-image {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.story-title {
+    margin: 50px 20%;
+    font-family: 'Lora';
+    display: grid;
+    grid-template-rows: auto 100px;
+    align-content: start;
+}
+
+.story-title > h1 {
+    font-weight: 300;
+    padding-bottom: 30px;
+}
+
+.author-bio {
+    justify-self: start;
+    display: grid;
+    grid-template-columns: 1fr 2fr
+}
+
+.story-title .user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid black;
+    text-align: center;
 }
 
 .story-body {
-
+    margin: 0 20%;
 }
 
 .story-body p {
@@ -15,4 +48,5 @@
     line-height: 2rem;
     font-family: "Merriweather";
     font-weight: 300
+
 }

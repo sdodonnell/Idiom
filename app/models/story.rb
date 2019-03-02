@@ -23,4 +23,6 @@ class Story < ApplicationRecord
         primary_key: :id,
         foreign_key: :story_id,
         class_name: :Tag
+
+    has_many_attached :images
 end

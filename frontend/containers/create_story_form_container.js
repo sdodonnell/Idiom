@@ -1,6 +1,6 @@
 import { createStory } from '../actions/story_actions';
 import { connect } from 'react-redux';
-import StoryForm from '../components/story_form'
+import StoryForm from '../components/Story/story_form'
 
 const mstp = state => ({
     user: state.entities.users[state.session.id],

@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import UserProfile from "../components/user_profile";
+import UserProfile from "../components/UserProfile/user_profile";
 import { fetchStoriesByUser } from "../reducers/selectors";
 import { fetchStories } from '../actions/story_actions'
 

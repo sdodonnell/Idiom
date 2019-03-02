@@ -1,4 +1,4 @@
-import StoriesIndex from "../components/stories_index";
+import StoriesIndex from "../components/StoryIndex/stories_index";
 import { connect } from 'react-redux';
 import { fetchStories, deleteStory } from '../actions/story_actions';
 
