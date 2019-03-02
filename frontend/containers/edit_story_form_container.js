@@ -3,9 +3,9 @@ import { updateStory } from '../actions/story_actions';
 import { connect } from 'react-redux';
 import StoryForm from '../components/story_form'
 
-const mstp = state => ({
+const mstp = (state, ownProps) => ({
     user: state.entities.users[state.session.id],
-    story: state.entities,
+    story: state.entities.stories[ownProps.match.params.id],
     formType: 'edit'
 })
 

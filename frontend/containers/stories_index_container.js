@@ -1,14 +1,15 @@
 import StoriesIndex from "../components/stories_index";
 import { connect } from 'react-redux';
-import { fetchStories } from '../actions/story_actions';
+import { fetchStories, deleteStory } from '../actions/story_actions';
 
-const mstp = state => ({
+const mstp = (state) => ({
     stories: state.entities.stories,
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
 })
 
 const mdtp = dispatch => ({
-    fetchStories: userId => dispatch(fetchStories(userId))
+    fetchStories: userId => dispatch(fetchStories(userId)),
+    deleteStory: id => dispatch(deleteStory(id))
 })
 
 export default connect(mstp, mdtp)(StoriesIndex)

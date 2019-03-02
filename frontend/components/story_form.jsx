@@ -6,8 +6,8 @@ class StoryForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: this.props.title,
-            body: this.props.body,
+            title: this.props.story.title,
+            body: this.props.story.body,
             modalClassName: "hidden"
         }
         this.handleChange = this.handleChange.bind(this);
@@ -30,7 +30,8 @@ class StoryForm extends React.Component {
             body: this.state.body,
             userId: this.props.user.id,
             titlePreview: this.state.titlePreview,
-            bodyPreview: this.state.bodyPreview
+            bodyPreview: this.state.bodyPreview,
+            id: this.props.story.id
         })
         this.props.history.push('/')
     }

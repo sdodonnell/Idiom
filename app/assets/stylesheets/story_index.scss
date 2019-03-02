@@ -22,6 +22,8 @@
 .stories-index-buttons {
     justify-self: end;
     align-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .stories-index-buttons .button:first-child {
@@ -61,4 +63,26 @@
 .story-index-item p {
     color: rgba(0, 0, 0, 0.507);
     font-size: 14px;
+    display: inline-block;
 }
+
+.story-index-item p i {
+    font-size: 12px;
+    padding-left: 3px
+}
+
+.story-index-dropdown-visible {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: start;
+    width: 130px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.479);
+}
+
+.story-index-dropdown-hidden {
+    display: none;
+}
+
+
+

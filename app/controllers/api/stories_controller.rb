@@ -19,19 +19,24 @@ class Api::StoriesController < ApplicationController
         end
     end
 
-    def edit
+    def update
         @story = Story.find(params[:id])
+        if @story.update_attributes(story_params)
+            render 'api/stories/show'
+        else
+            render json: @story.errors.full_messages, status: 401
+        end
     end
 
     def delete
         @story = Story.find(params[:id])
-        @story.destroy!
+        @story.destroy
     end
 
     private
 
     def story_params
-        params.require(:story).permit(:title, :body, :tags, :user_id, :title_preview, :body_preview)
+        params.require(:story).permit(:id, :title, :body, :tags, :user_id, :title_preview, :body_preview)
     end
 
 end

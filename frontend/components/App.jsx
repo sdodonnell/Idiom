@@ -24,7 +24,7 @@ const App = () => (
             <Route exact path="/" component={HomePage}/>
             <ProtectedRoute path="/users/:id/stories" component={StoriesIndexContainer}/>
             <ProtectedRoute path="/stories/new" component={CreateStoryContainer}/>
-            <ProtectedRoute path="/stories/edit" component={EditStoryContainer}/>
+            <ProtectedRoute path="/stories/:id/edit" component={EditStoryContainer}/>
             <Route path="/stories/:id" component={StoryComponentContainer}/>
             <Redirect to="/"/>
         </Switch>
