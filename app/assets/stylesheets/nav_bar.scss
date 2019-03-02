@@ -7,8 +7,8 @@
 }
 
 .auth-nav {
+    display: inline-block;
     justify-self: end;
-    display: inline;
     color: #039E74;
     padding-bottom: 8px;
 }
@@ -16,9 +16,10 @@
 .nav-bar-link {
     padding: 7px 10px;
     border: 1px solid #039E74;
-    margin: 0 5px;
+    margin: 0;
     border-radius: 7px;
     font-size: 14px;
+    width: 75px;
 }
 
 #signin-button {
@@ -29,6 +30,10 @@
     border-color: rgb(20, 128, 97);
     cursor: pointer;
     color: rgb(20, 128, 97);
+}
+
+.auth-nav-buttons {
+    display: inline-block;
 }
 
 .auth-nav button {
