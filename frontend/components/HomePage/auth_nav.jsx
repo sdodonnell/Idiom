@@ -41,6 +41,7 @@ class AuthNav extends React.Component {
                         currentUser={this.props.currentUser}
                         logout={this.props.logout}
                         toggleUserPane={this.toggleUserPane}
+                        history={this.props.history}
                         />
                 </div>
             )

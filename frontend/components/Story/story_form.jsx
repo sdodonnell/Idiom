@@ -16,7 +16,9 @@ class StoryForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchStory(this.props.storyId)
+        if (this.props.formType === 'edit') {
+            this.props.fetchStory(this.props.storyId)
+        }
     }
 
     handleChange(field) {

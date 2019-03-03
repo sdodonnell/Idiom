@@ -18,27 +18,29 @@ class StoryComponent extends React.Component {
         )
     }
 
-    render() {        
+    render() {
         if (!this.props.story) {
             return (
                 <div></div>
                 )
             } else {
-                const mainPhoto = <img src={this.props.story.photoUrls[0]} />;
+                let story = this.props.story;
+                const storyDate = new Date(story.updatedAt);
+                const storyDateString = storyDate.toDateString();
             return(
                 <div className="story-wrapper">
                     <div className="story-image">
-                        {mainPhoto}
+                        <img src={story.photoUrls[0]} />                    
                     </div>
                     <div className="story-title">
-                        <h1>{this.props.story.title}</h1>
+                        <h1>{story.title}</h1>
                         <div className="author-bio">
                             <div className="user-icon">
                                 {/* {this.props.author.name[0]} */}
                             </div>
                             <div className="author-bio-text">
-                                {/* {this.props.author.name} */}
-                                {this.props.story.updatedAt}
+                                <p>Michel de Montaigne</p>
+                                {storyDateString.slice(3)}
                             </div>
                         </div>
                     </div>

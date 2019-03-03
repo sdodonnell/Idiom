@@ -4,8 +4,10 @@ import StoryForm from '../components/Story/story_form'
 
 const mstp = state => ({
     user: state.entities.users[state.session.id],
-    title: "",
-    body: "",
+    story: {
+        title: "",
+        body: ""
+    },
     formType: 'create'
 })
 

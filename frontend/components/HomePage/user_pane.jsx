@@ -18,6 +18,7 @@ class UserPane extends React.Component {
                 display: "hidden"
             })
     }
+
     
     render(){
         return (
