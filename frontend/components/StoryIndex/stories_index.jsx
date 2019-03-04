@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class StoriesIndex extends React.Component {
 
     componentDidMount() {
-        this.props.fetchStories(this.props.currentUser.id)
+        this.props.fetchStoriesByUser(this.props.currentUser.id)
     }
     
     render() {

@@ -8,4 +8,6 @@ export const fetchStoriesByUser = ({stories}, userId) => {
 	return result;
 };
 
-};
+export const fetchNotCurrentUsers = ({users}, userId) => {
+	
+}

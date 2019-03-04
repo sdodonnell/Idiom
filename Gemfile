@@ -28,7 +28,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem "aws-sdk-s3"
-gem 'guard-livereload'
 
 
 # Use ActiveStorage variant

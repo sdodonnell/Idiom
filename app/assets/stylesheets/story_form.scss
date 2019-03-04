@@ -22,7 +22,8 @@
 
 .story-body-input {
     font-size: 20px;
-    color: rgba(0, 0, 0, 0.555)
+    color: rgba(0, 0, 0, 0.555);
+    resize: none;
 }
 
 .publish-button {
@@ -33,7 +34,7 @@
     height: 30px;
     color: rgb(40, 206, 137);
     top: 22px;
-    right: 285px;
+    right: 240px;
 }
 
 .publish-button:hover {

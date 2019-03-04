@@ -9,7 +9,8 @@ class Feed extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchStories()
+        this.props.fetchStories();
+        this.props.fetchUsers();
     }
 
     renderStoriesList() {
@@ -39,7 +40,13 @@ class Feed extends React.Component {
         return array;
     
         };
-        const storiesList = Object.values(this.props.stories).map( story => <FeedItem story={story}/>)
+        const storiesList = 
+            Object.values(this.props.stories)
+                  .map(story => 
+                    <FeedItem 
+                        key={story.id}
+                        story={story}
+                        author={this.props.users[story.userId]}/>)
         return shuffle(storiesList)
 
     }
@@ -49,7 +56,7 @@ class Feed extends React.Component {
             return <div></div>
         } else {
             return (
-                <div className="home-page-section">
+                <div className="feed-wrapper">
                     {this.renderStoriesList()}
                 </div>
             ) 

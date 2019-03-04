@@ -14,7 +14,7 @@ export const fetchStories = () => (
     })
 )
 
-export const fetchStoriesByUser = () => (
+export const fetchStoriesByUser = userId => (
     $.ajax({
         method: 'GET',
         url: 'api/stories',
