@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import UserProfile from "../components/UserProfile/user_profile";
-import { fetchStories } from '../actions/story_actions'
 import { fetchUser } from "../actions/user_actions";
+import { fetchStoriesByUser } from "../actions/story_actions";
 
 const mstp = (state, ownProps) => {
     const userId = ownProps.match.params.id;
@@ -14,7 +14,7 @@ const mstp = (state, ownProps) => {
 
 const mdtp = dispatch => ({
     fetchUser: id => dispatch(fetchUser(id)),
-    fetchStories: id => dispatch(fetchStories(id))
+    fetchStoriesByUser: id => dispatch(fetchStoriesByUser(id))
 })
 
 export default connect(mstp, mdtp)(UserProfile)

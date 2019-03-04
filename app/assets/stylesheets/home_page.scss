@@ -98,7 +98,6 @@
     display: grid;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: auto 150px;
-    grid-row-gap: .5rem;
     grid-column-gap: .5rem;
 }
 
@@ -113,9 +112,24 @@
 
 .feed-item-wrapper h1 {
     font-size: 23px;
+    padding-bottom: 8px;
 }
 
 .feed-item-wrapper p {
     font-size: 15px;
     color: rgba(0, 0, 0, 0.527);
+    padding-bottom: 8px;
+}
+
+.feed-item-wrapper p:last-child {
+    align-self: start;
+}
+
+.feed-item-author-link {
+    color: black;
+    font-size: 16px;
+}
+
+.feed-item-author-link:hover {
+    text-decoration: underline
 }

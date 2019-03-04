@@ -11,13 +11,19 @@ class FeedItem extends React.Component {
             const storyDate = new Date(story.updatedAt);
             const storyDateString = storyDate.toDateString();
             return (
-                <Link to={`/stories/${story.id}`} className="feed-item-wrapper">
-                    <h1>{story.titlePreview}</h1>
+                <div className="feed-item-wrapper">
+                    <Link to={`/stories/${story.id}`}>
+                        <h1>{story.titlePreview}</h1>
+                    </Link>
                     <img src={story.photoUrls[0]}/>
                     <p>{story.bodyPreview.slice(0, 175) + '...'}</p>
-                    <p>{this.props.author.fullname}</p>
+                    <Link 
+                        to={`/users/${this.props.author.id}`} 
+                        className="feed-item-author-link">
+                        {this.props.author.fullname}
+                    </Link>
                     <p>{storyDateString}</p>
-                </Link>
+                </div>
             )
         }
     }

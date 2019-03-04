@@ -5,9 +5,9 @@ import CommentsIndexContainer from '../../containers/comments_index_container';
 
 class StoryComponent extends React.Component {
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.fetchStory(this.props.storyId);
-        // this.props.fetchUser(this.props.story.userId)
+        this.props.fetchUser(this.props.story.userId)
     }
 
     renderText() {
@@ -42,7 +42,7 @@ class StoryComponent extends React.Component {
                                 {/* {this.props.author.name[0]} */}
                             </div>
                             <div className="author-bio-text">
-                                <p>Michel de Montaigne</p>
+                                <p>{this.props.user}</p>
                                 {storyDateString.slice(3)}
                             </div>
                         </div>

@@ -12,7 +12,7 @@ class UserProfile extends React.Component {
 
     componentDidMount() {
         this.props.fetchUser(this.props.userId);
-        this.props.fetchStories(this.props.userId)
+        this.props.fetchStoriesByUser(this.props.userId)
     }
 
     renderStories() {

@@ -8,6 +8,13 @@ export const fetchStoriesByUser = ({stories}, userId) => {
 	return result;
 };
 
-export const fetchNotCurrentUsers = ({users}, userId) => {
-	
+export const fetchUserByStory = (story, users) => {
+	let fullname;
+	Object.values(users).forEach( user => {
+		if (user.id === story.userId) {
+			fullname = user.fullname;
+		}
+	});
+
+	return fullname
 }
