@@ -1,5 +1,6 @@
 import React from 'react';
 import UserProfileStoryItem from './user_profile_story_item';
+import UserProfileBio from './user_profile_bio';
 
 class UserProfile extends React.Component {
 
@@ -29,9 +30,8 @@ class UserProfile extends React.Component {
         } else {
             return(
                 <div className="user-profile-wrapper">
-                    <div>User Profile</div>
+                    <UserProfileBio user={this.props.user} />
                     {this.renderStories()}
-                    <div></div>
                     <div></div>
                 </div>
             )

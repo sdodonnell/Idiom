@@ -1,6 +1,64 @@
+.user-profile-wrapper {
+    box-shadow: inset 0px 2px 10px 0px rgba(173, 172, 172, 0.425);    display: grid;
+    margin: 10px -10px
+}
+
+.user-profile-bio {
+    display: grid;
+    grid-template-columns: [line1] 150px [line2] auto [line3] 200px [line4];
+    grid-template-rows: [line1] 2rem [line2] auto [line3] auto [line4];
+    grid-gap: .75rem;
+    margin: 50px 20%;
+    color: rgba(0, 0, 0, 0.753);
+}
+
+.user-profile-bio h1 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+.user-profile-bio div:first-child {
+    grid-row: 1 / 4;
+    grid-column: 3 / 4
+}
+
+.user-profile-bio button {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    border: 1px solid #039E74;
+    border-radius: 4px;
+    color: #039E74;
+    width: 50px;
+    font-size: 12px;
+    align-self: center;
+}
+
+.user-profile-bio button:hover {
+    border-color: rgb(20, 128, 97);
+    cursor: pointer;
+    color: rgb(20, 128, 97);
+}
+
+.user-profile-bio-biography {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    font-size: 18px;
+}
+
+.user-profile-bio-follows {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+    justify-content: start;
+    font-size: 13px;
+}
+
 .profile-story-item {
     display: grid;
-    grid-template-rows: 100px 175px auto auto 50px;
+    grid-template-rows: 100px 175px auto minmax(50px, 75px) 60px;
     margin: 30px 20%;
     border: 1px solid rgba(196, 195, 195, 0.493);
     border-radius: 5px;
@@ -37,9 +95,20 @@
 }
 
 .profile-story-item-footer {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-between
+}
+
+.profile-story-item-footer #claps {
+    background-image: url(./images/imageedit_8_8396919418.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    color: gray;
+}
+
+.profile-story-item-footer div:last-child {
+    justify-self: end;
+    color: rgba(128, 128, 128, 0.541);
 }

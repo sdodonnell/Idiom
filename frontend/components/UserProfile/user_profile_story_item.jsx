@@ -4,7 +4,9 @@ import StoryAuthorBio from '../Story/story_author_bio';
 const UserProfileStoryItem = ({story, author}) => (
     <div className="profile-story-item">
         <StoryAuthorBio story={story} author={author}/>
-        <div className="profile-story-item-picture"></div>
+        <div className="profile-story-item-picture">
+            {story.photoUrls[0]}
+        </div>
         <div className="profile-story-item-title">
             {story.titlePreview}
         </div>
@@ -12,8 +14,8 @@ const UserProfileStoryItem = ({story, author}) => (
             {story.bodyPreview}
         </div>
         <div className="profile-story-item-footer">
-            <div>claps</div>
-            <div>responses and bookmark</div>
+            <div id="claps"></div>
+            <div id="bookmark"><i className="far fa-bookmark"></i></div>
         </div>
     </div>
 )
