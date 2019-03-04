@@ -23,7 +23,7 @@ class UserPane extends React.Component {
     render(){
         return (
             <div onClick={this.props.toggleUserPane} className={`user-pane-${this.state.display}`}>
-                <p>{this.props.currentUser.username}</p>
+                <p>{this.props.currentUser.fullname}</p>
                 <NavLink to="/stories/new">New Story</NavLink>
                 <NavLink to={`/users/${this.props.currentUser.id}/stories`}>Stories</NavLink>
                 <a>Reading List</a>

@@ -10,7 +10,8 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchStories(this.props.user.id)
+        this.props.fetchUser(this.props.userId)
+        this.props.fetchStories(this.props.userId)
     }
 
     renderStories() {
@@ -21,14 +22,18 @@ class UserProfile extends React.Component {
     }
 
     render() {
-        return(
-            <div className="user-profile-wrapper">
-                <div>User Profile</div>
-                {this.renderStories()}
-                <div></div>
-                <div></div>
-            </div>
-        )
+        if (!this.props.user) {
+            return <div></div>
+        } else {
+            return(
+                <div className="user-profile-wrapper">
+                    <div>User Profile</div>
+                    {this.renderStories()}
+                    <div></div>
+                    <div></div>
+                </div>
+            )
+        }
     }
 }
 
