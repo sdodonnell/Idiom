@@ -12,7 +12,7 @@ export const createComment = comment => (
     $.ajax({
         method: 'POST',
         url: 'api/comments',
-        data: {comment: decamelizeKeys(comment)
+        data: {comment: decamelizeKeys(comment)}
     })
 )
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import StoryAuthorBio from './story_author_bio';
+import CommentsIndex from '../Comments/comments_index';
 
 
 class StoryComponent extends React.Component {
@@ -47,7 +48,9 @@ class StoryComponent extends React.Component {
                     </div>
                     {this.renderText()}
                     <div className="story-author-bio"></div>
-                    <div className="story-read-next"></div>
+                    <div className="story-comments">
+                        <CommentsIndex story={this.props.story}/>
+                    </div>
                 </div>
             )
         }
