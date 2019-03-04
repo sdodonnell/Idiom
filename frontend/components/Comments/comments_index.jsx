@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import CommentComponent from './comment_component'
 
 class CommentsIndex extends React.Component {
     
@@ -7,12 +8,8 @@ class CommentsIndex extends React.Component {
         this.renderComments = this.renderComments.bind(this)
     }
 
-    componentDidMount() {
-        this.props.fetchComments(this.props.story.id)
-    }
-
     renderComments() {
-        return this.props.comments.map( comment => <Comment comment={comment}/>)
+        return Object.values(this.props.comments).map( comment => <CommentComponent comment={comment}/>)
     }
 
     render() {

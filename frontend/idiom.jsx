@@ -9,7 +9,6 @@ import { fetchStories } from "./util/stories_api_util";
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
-    
     // Boostrapping current user
     if (window.currentUser) {
         const preloadedState = {

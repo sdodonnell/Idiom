@@ -22,11 +22,18 @@ const removeStory = id => ({
     storyId: id
 })
 
-export const fetchStory = id => dispatch => (
-    StoryApiUtil.fetchStory(id).then(story => dispatch(receiveStory(story)))
+export const fetchStory = id => dispatch => {
+    
+    return StoryApiUtil.fetchStory(id).then(story => {
+        dispatch(receiveStory(story))
+    })
+}
+
+export const fetchStoriesByUser = userId => dispatch => (
+    StoryApiUtil.fetchStoriesByUser(userId).then(stories => dispatch(receiveStories(stories)))
 )
-export const fetchStories = userId => dispatch => (
-    StoryApiUtil.fetchStories(userId).then(stories => dispatch(receiveStories(stories)))
+export const fetchStories = () => dispatch => (
+    StoryApiUtil.fetchStories().then(stories => dispatch(receiveStories(stories)))
 )
 export const createStory = story => dispatch => (
     StoryApiUtil.createStory(story).then(story => dispatch(receiveStory(story)))

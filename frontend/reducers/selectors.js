@@ -7,3 +7,5 @@ export const fetchStoriesByUser = ({stories}, userId) => {
 	}
 	return result;
 };
+
+};

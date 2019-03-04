@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import StoryComponent from '../components/Story/story_component';
 import { fetchStory } from '../actions/story_actions';
+import { fetchUser } from '../actions/user_actions'
 
 const mstp = (state, ownProps) => {
     let storyId = ownProps.match.params.id;

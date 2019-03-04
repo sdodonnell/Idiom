@@ -1,12 +1,13 @@
 import React from 'react';
 import StoryAuthorBio from './story_author_bio';
-import CommentsIndex from '../Comments/comments_index';
+import CommentsIndexContainer from '../../containers/comments_index_container';
 
 
 class StoryComponent extends React.Component {
 
     componentDidMount() {
         this.props.fetchStory(this.props.storyId);
+        // this.props.fetchUser(this.props.story.userId)
     }
 
     renderText() {
@@ -49,7 +50,7 @@ class StoryComponent extends React.Component {
                     {this.renderText()}
                     <div className="story-author-bio"></div>
                     <div className="story-comments">
-                        <CommentsIndex story={this.props.story}/>
+                        <CommentsIndexContainer story={this.props.story}/>
                     </div>
                 </div>
             )

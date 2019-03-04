@@ -7,7 +7,14 @@ export const fetchStory = id => (
     })
 )
 
-export const fetchStories = userId => (
+export const fetchStories = () => (
+    $.ajax({
+        method: 'GET',
+        url: 'api/stories',
+    })
+)
+
+export const fetchStoriesByUser = () => (
     $.ajax({
         method: 'GET',
         url: 'api/stories',
@@ -36,4 +43,3 @@ export const updateStory = story => (
         data: {story: decamelizeKeys(story)}
     })
 )
-

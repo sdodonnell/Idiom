@@ -1,10 +1,10 @@
 import { decamelizeKeys } from "humps";
 
-export const fetchComments = userId => (
+export const fetchComments = storyId => (
     $.ajax({
         method: 'GET',
         url: 'api/comments',
-        data: {comment: {user_id: userId}}
+        data: {comment: {story_id: storyId}}
     })
 )
 

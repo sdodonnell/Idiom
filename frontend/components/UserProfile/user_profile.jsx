@@ -30,8 +30,10 @@ class UserProfile extends React.Component {
         } else {
             return(
                 <div className="user-profile-wrapper">
-                    <UserProfileBio user={this.props.user} />
-                    {this.renderStories()}
+                    <div className="user-profile-bio-wrapper">
+                        <UserProfileBio user={this.props.user} />
+                        {this.renderStories()}
+                    </div>
                     <div></div>
                 </div>
             )

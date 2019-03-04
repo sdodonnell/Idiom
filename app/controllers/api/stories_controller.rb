@@ -1,7 +1,11 @@
 class Api::StoriesController < ApplicationController
 
     def index
-        @stories = Story.where(user_id: params[:story][:user_id])
+        if (params[:story])
+            @stories = Story.where(user_id: params[:story][:user_id])
+        else
+            @stories = Story.all
+        end
         render 'api/stories/index'
     end
 
