@@ -10,13 +10,15 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchUser(this.props.userId)
+        this.props.fetchUser(this.props.userId);
         this.props.fetchStories(this.props.userId)
     }
 
     renderStories() {
-        return this.props.stories.map(story =>
+        return Object.values(this.props.stories).map(story =>
             <UserProfileStoryItem 
+                author={this.props.user}
+                key={story.id}
                 story={story}/>
         )
     }

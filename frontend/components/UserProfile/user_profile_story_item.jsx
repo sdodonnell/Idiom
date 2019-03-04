@@ -1,8 +1,9 @@
 import React from 'react'
+import StoryAuthorBio from '../Story/story_author_bio';
 
-const UserProfileStoryItem = ({story}) => (
+const UserProfileStoryItem = ({story, author}) => (
     <div className="profile-story-item">
-        <div className="profile-story-item-header"></div>
+        <StoryAuthorBio story={story} author={author}/>
         <div className="profile-story-item-picture"></div>
         <div className="profile-story-item-title">
             {story.titlePreview}

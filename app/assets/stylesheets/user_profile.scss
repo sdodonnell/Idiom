@@ -1,0 +1,45 @@
+.profile-story-item {
+    display: grid;
+    grid-template-rows: 100px 175px auto auto 50px;
+    margin: 30px 20%;
+    border: 1px solid rgba(196, 195, 195, 0.493);
+    border-radius: 5px;
+    box-shadow: .5px .5px 1px 1px rgba(184, 182, 182, 0.623);
+}
+
+.profile-story-item-header,
+.profile-story-item-picture,
+.profile-story-item-title,
+.profile-story-item-description,
+.profile-story-item-footer {
+    margin: 0 20px 0 20px
+}
+
+.profile-story-item-header {
+    margin-top: 25px
+}
+
+.profile-story-item-picture {
+    border: 1px solid black;
+}
+
+.profile-story-item-title {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    align-self: end;
+}
+
+.profile-story-item-description {
+    margin-top: 5px;
+    font-size: 20px;
+    color: gray
+}
+
+.profile-story-item-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import StoryAuthorBio from './story_author_bio';
 
 
 class StoryComponent extends React.Component {
