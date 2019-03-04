@@ -19,10 +19,16 @@ class Story < ApplicationRecord
         foreign_key: :user_id,
         class_name: :User
 
+    has_many :comments,
+        primary_key: :id,
+        foreign_key: :story_id,
+        class_name: :Comment
+
     has_many :tags,
         primary_key: :id,
         foreign_key: :story_id,
         class_name: :Tag
+
 
     has_many_attached :images
 end
