@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
 
     def index
-        @users = User.all
+        @users = User.joins(:comments).where(comments: {story_id: params[:storyId]})
         render 'api/users/index'
     end
 

@@ -20,9 +20,9 @@ const App = () => (
             <AuthNavContainer />
         </div>
         <Switch>
+            <Route exact path="/" component={HomePage}/>
             <AuthRoute path="/signup" component={SignupContainer}/>
             <AuthRoute path="/login" component={LoginContainer}/>
-            <Route exact path="/" component={HomePage}/>
             <ProtectedRoute path="/users/:id/stories" component={StoriesIndexContainer}/>
             <ProtectedRoute path="/stories/new" component={CreateStoryContainer}/>
             <ProtectedRoute path="/stories/:id/edit" component={EditStoryContainer}/>

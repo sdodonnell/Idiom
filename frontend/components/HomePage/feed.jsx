@@ -9,8 +9,7 @@ class Feed extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchStories();
-        this.props.fetchUsers();
+        this.props.fetchStories()
     }
 
     renderStoriesList() {
@@ -46,7 +45,8 @@ class Feed extends React.Component {
                     <FeedItem 
                         key={story.id}
                         story={story}
-                        author={this.props.users[story.userId]}/>)
+                        authorId={story.authorId}
+                        authorName={story.authorName}/>)
         return shuffle(storiesList)
 
     }

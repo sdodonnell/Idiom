@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 class StoryComponent extends React.Component {
 
     componentDidMount() {
-        this.props.fetchStory(this.props.storyId)
+        this.props.fetchStory(this.props.storyId).then( () => this.props.fetchUser(this.props.story.userId))
         // this.props.fetchUser(this.props.story.userId)
     }
 

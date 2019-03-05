@@ -1,4 +1,5 @@
 import * as CommentsApiUtil from '../util/comments_api_util';
+import { camelizeKeys } from 'humps';
 
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
@@ -6,12 +7,12 @@ export const REMOVE_COMMENT = 'REMOVE_COMMENTS';
 
 const receiveComment = comment => ({
     type: RECEIVE_COMMENT,
-    comment
+    comment: camelizeKeys(comment)
 })
 
 const receiveComments = comments => ({
     type: RECEIVE_COMMENTS,
-    comments
+    comments: camelizeKeys(comments)
 })
 
 const removeComment = commentId => ({

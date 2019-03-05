@@ -20,9 +20,9 @@ class FeedItem extends React.Component {
                     </div>
                     <p>{story.bodyPreview.slice(0, 175) + '...'}</p>
                     <Link 
-                        to={`/users/${this.props.author.id}`} 
+                        to={`/users/${this.props.authorId}`} 
                         className="feed-item-author-link">
-                        {this.props.author.fullname}
+                        {this.props.authorName}
                     </Link>
                     <p>{storyDateString}</p>
                 </div>
