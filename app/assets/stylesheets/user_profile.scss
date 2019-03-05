@@ -90,6 +90,15 @@
     margin-top: 25px;
 }
 
+.author-bio-text p:first-child {
+    color: rgba(0,0,0,.8);
+    font-weight: 600;
+}
+
+.author-bio-text p:first-child:hover {
+    text-decoration: underline;
+}
+
 .profile-story-item-picture {
     display: flex;
     justify-content: center;

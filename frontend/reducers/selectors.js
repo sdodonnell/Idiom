@@ -9,12 +9,12 @@ export const fetchStoriesByUser = ({stories}, userId) => {
 };
 
 export const fetchUserByStory = (story, users) => {
-	let fullname;
+	let userId;
 	Object.values(users).forEach( user => {
 		if (user.id === story.userId) {
-			fullname = user.fullname;
+			userId = user.id;
 		}
 	});
 
-	return fullname
+	return userId
 }

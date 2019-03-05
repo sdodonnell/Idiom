@@ -7,9 +7,10 @@ import { fetchUserByStory } from '../reducers/selectors';
 const mstp = (state, ownProps) => {
     let storyId = ownProps.match.params.id;
     const story = state.entities.stories[storyId]
+    const userId = fetchUserByStory(story, state.entities.users)
     return ({
         story,
-        user: fetchUserByStory(story, state.entities.users),
+        user: state.entities.users[userId],
         storyId
     })
 }
