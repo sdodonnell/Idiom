@@ -145,10 +145,10 @@ seneca_stories = [
 ]
 
 seneca_stories[0].images.attach(io: open(IMAGES[0]), filename: IMAGES[0].remove(aws_path))
-seneca_stories[0].save!
+seneca_stories[0].save
 
 seneca_stories[1].images.attach(io: open(IMAGES[1]), filename: IMAGES[1].remove(aws_path))
-seneca_stories[1].save!
+seneca_stories[1].save
 
 plutarch_stories = [ 
     Story.create!({    
