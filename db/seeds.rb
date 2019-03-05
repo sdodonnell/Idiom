@@ -145,6 +145,7 @@ seneca_story_2 =
         user_id: User.find_by(username: "Seneca").id
     })
 
+print IMAGES
 seneca_story_1.images.attach(io: open(IMAGES[0]), filename: IMAGES[0].remove(aws_path))
 seneca_story_1.save
 
