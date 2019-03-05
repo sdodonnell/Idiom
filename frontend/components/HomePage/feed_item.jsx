@@ -15,7 +15,9 @@ class FeedItem extends React.Component {
                     <Link to={`/stories/${story.id}`}>
                         <h1>{story.titlePreview}</h1>
                     </Link>
-                    <img src={story.photoUrls[0]}/>
+                    <div className="feed-item-image">
+                        <img src={story.photoUrls[0]}/>
+                    </div>
                     <p>{story.bodyPreview.slice(0, 175) + '...'}</p>
                     <Link 
                         to={`/users/${this.props.author.id}`} 

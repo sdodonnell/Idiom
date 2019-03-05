@@ -101,12 +101,20 @@
     grid-column-gap: .7rem;
 }
 
-.feed-item-wrapper img {
+.feed-item-image {
     grid-row: 1 / 5;
     grid-column: 2 / 3;
     width: 90%;
     height: 90%;
     margin: auto;
+    overflow: hidden;
+}
+
+.feed-item-wrapper img {
+    position: relative;
+    right: 35px;
+    width: 150%;
+    height: 100%;
 }
 
 .feed-item-wrapper h1 {
