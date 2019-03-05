@@ -59,4 +59,28 @@
     grid-template-columns: auto auto;
 }
 
+.create-comment {
+    border: 1px solid rgba(197, 196, 196, 0.568);
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 50px minmax(100px, auto);
+    grid-gap: 1rem;
+    align-content: center;
+    padding: 1rem 1.2rem;
+}
+
+// .create-comment .expanded {
+//     height: auto;
+//     max-height: 600px;
+//     transition:max-height 0.3s ease-out
+// }
+
+.create-comment textarea {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    font-family: 'Merriweather';
+    line-height: 1.5rem;
+    resize: none;
+}
 

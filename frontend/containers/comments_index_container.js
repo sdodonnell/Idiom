@@ -5,7 +5,8 @@ import { fetchUsers } from "../actions/user_actions";
 
 const mstp = (state) => ({
     comments: state.entities.comments,
-    users: fetchUsersByComments(state.entities, state.entities)
+    users: fetchUsersByComments(state.entities, state.entities),
+    currentUser: state.entities.users[state.session.id]
 })
 
 const mdtp = dispatch => ({

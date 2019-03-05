@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentComponent from './comment_component'
+import CreateCommentComponent from './create_comment_component';
 
 class CommentsIndex extends React.Component {
     
@@ -29,7 +30,8 @@ class CommentsIndex extends React.Component {
         } else {
             return (
                 <div className="comments-index-wrapper">
-                    <CreateCommentComponent />
+                    <CreateCommentComponent 
+                        currentUser={this.props.currentUser}/>
                     {this.renderComments()}
                 </div>
             )
