@@ -15,8 +15,8 @@ const UserProfileStoryItem = ({story, author}) => (
             {story.bodyPreview}
         </div>
         <div className="profile-story-item-footer">
-            <div id="claps"></div>
-            <div id="bookmark"><i className="far fa-bookmark"></i></div>
+            <div className="claps"></div>
+            <div className="bookmark"><i className="far fa-bookmark"></i></div>
         </div>
     </div>
 )

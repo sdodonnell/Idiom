@@ -15,7 +15,7 @@ class CommentsIndex extends React.Component {
 
     renderComments() {
         const commentAuthor = comment => this.props.users.find( user => user.id === comment.userId)
-        return Object.values(this.props.comments).map( comment => 
+        return Object.values(this.props.comments).reverse().map( comment => 
             <CommentComponent 
                 key={comment.id} 
                 comment={comment}
@@ -24,6 +24,7 @@ class CommentsIndex extends React.Component {
             )
     }
 
+
     render() {
         if (!this.props.users) {
             return <div></div>
@@ -31,7 +32,10 @@ class CommentsIndex extends React.Component {
             return (
                 <div className="comments-index-wrapper">
                     <CreateCommentComponent 
-                        currentUser={this.props.currentUser}/>
+                        currentUser={this.props.currentUser}
+                        createComment={this.props.createComment}
+                        storyId={this.props.story.id}
+                        />
                     {this.renderComments()}
                 </div>
             )

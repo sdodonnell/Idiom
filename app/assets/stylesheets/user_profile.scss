@@ -30,9 +30,10 @@
     grid-row: 1 / 4;
     grid-column: 4 / 5;
     border: 1px solid black;
-    width: 40%;
-    height: 80%;
-    border-radius: 300px
+    width: 50%;
+    height: 100%;
+    border-radius: 300px;
+    justify-self: end
 }
 
 .user-profile-bio button {
@@ -73,9 +74,9 @@
     grid-template-rows: 100px 175px auto auto 60px;
     // grid-template-columns: minmax(650px, 800px);
     margin: 30px auto;
-    border: 1px solid rgba(196, 195, 195, 0.493);
+    border: .5px solid rgba(196, 195, 195, 0.493);
     border-radius: 5px;
-    box-shadow: .5px .5px 1px 1px rgba(184, 182, 182, 0.623);
+    box-shadow: .5px .5px 1px 0px rgba(184, 182, 182, 0.623);
 }
 
 .profile-story-item-header,

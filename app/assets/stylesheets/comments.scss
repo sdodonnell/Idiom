@@ -63,7 +63,7 @@
     border: 1px solid rgba(197, 196, 196, 0.568);
     border-radius: 5px;
     display: grid;
-    grid-template-rows: 50px minmax(100px, auto);
+    grid-template-rows: 50px minmax(150px, auto);
     grid-gap: 1rem;
     align-content: center;
     padding: 1rem 1.2rem;
@@ -75,12 +75,30 @@
 //     transition:max-height 0.3s ease-out
 // }
 
+.create-comment form {
+    display: grid;
+    grid-template-rows: auto 35px;
+}
+
 .create-comment textarea {
     width: 100%;
     border: none;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Merriweather';
     line-height: 1.5rem;
     resize: none;
+    color: rgba(0, 0, 0, 0.692);
+}
+
+.create-comment button {
+    padding: 8px 0;
+    width: 100px;
+    border: 1px solid #039E74;
+    color: #039E74
+}
+
+.create-comment button:hover {
+    border-color: rgb(20, 128, 97);
+    color: rgb(20, 128, 97)
 }
 
