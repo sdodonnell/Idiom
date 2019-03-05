@@ -121,7 +121,7 @@ fanon = User.create!(
 )
 
 
-seneca_stories = [
+seneca_story_1 = 
     Story.create!({    
         title: "On Crowds",
         body: "1. Do you ask me what you should regard as especially to be avoided? I say, crowds; for as yet you cannot trust yourself to them with safety. I shall admit my own weakness, at any rate; for I never bring back home the same character that I took abroad with me. Something of that which I have forced to be calm within me is disturbed; some of the foes that I have routed return again. Just as the sick man, who has been weak for a long time, is in such a condition that he cannot be taken out of the house without suffering a relapse, so we ourselves are affected when our souls are recovering from a lingering disease. 2. To consort with the crowd is harmful; there is no person who does not make some vice attractive to us, or stamp it upon us, or taint us unconsciously therewith. Certainly, the greater the mob with which we mingle, the greater the danger.\n
@@ -132,7 +132,9 @@ seneca_stories = [
         title_preview: "On Crowds",
         body_preview: "To consort with the crowd is harmful; there is no person who does not make some vice attractive to us, or stamp it upon us, or taint us unconsciously therewith. Certainly, the greater the mob with which we mingle, the greater the danger.",
         user_id: User.find_by(username: "Seneca").id
-    }),
+    })
+
+seneca_story_2 = 
     Story.create!({    
         title: "On Progress",
         body: "1. I have been asking about you, and inquiring of everyone who comes from your part of the country, what you are doing, and where you are spending your time, and with whom. You cannot deceive me; for I am with you. Live just as if I were sure to get news of your doings, nay, as if I were sure to behold them. And if you wonder what particularly pleases me that I hear concerning you, it is that I hear nothing, that most of those whom I ask do not know what you are doing.\n
@@ -142,13 +144,12 @@ seneca_stories = [
         body_preview: "Would you know what makes men greedy for the future? It is because no one has yet found himself.",
         user_id: User.find_by(username: "Seneca").id
     })
-]
 
-seneca_stories[0].images.attach(io: open(IMAGES[0]), filename: IMAGES[0].remove(aws_path))
-seneca_stories[0].save
+seneca_story_1.images.attach(io: open(IMAGES[0]), filename: IMAGES[0].remove(aws_path))
+seneca_story_1.save
 
-seneca_stories[1].images.attach(io: open(IMAGES[1]), filename: IMAGES[1].remove(aws_path))
-seneca_stories[1].save
+seneca_story_2.images.attach(io: open(IMAGES[1]), filename: IMAGES[1].remove(aws_path))
+seneca_story_2.save
 
 plutarch_stories = [ 
     Story.create!({    
