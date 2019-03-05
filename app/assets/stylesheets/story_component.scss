@@ -2,7 +2,6 @@
     margin-top: 10px;
     display: grid;
     grid-template-rows: 400px auto auto 100px 200px;
-    // margin: 0 15%;
     width: 100%
 }
 
@@ -19,12 +18,14 @@
 }
 
 .story-title {
-    margin: 50px 20% 20px 20%;
+    margin: 50px 0 20px 0;
     font-family: 'Lora';
     display: grid;
     grid-template-rows: auto 75px;
     grid-gap: 1.5rem;
     align-content: start;
+    grid-template-columns: minmax(200px, 700px);
+    justify-content: center;
 }
 
 .story-title > h1 {
@@ -53,7 +54,9 @@
 }
 
 .story-body {
-    margin: 0 20%;
+    display: grid;
+    grid-template-columns: minmax(200px, 700px);
+    justify-content: center;
 }
 
 .story-body p {

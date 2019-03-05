@@ -1,16 +1,17 @@
 import * as UsersApiUtil from '../util/users_api_util';
+import { camelizeKeys } from 'humps';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const RECEIVE_USERS = 'RECEIVE_USERS';
 
 const receiveUser = user => ({
     type: RECEIVE_USER,
-    user
+    user: camelizeKeys(user)
 })
 
 const receiveUsers = users => ({
     type: RECEIVE_USERS,
-    users
+    users: camelizeKeys(users)
 })
 
 export const fetchUser = id => dispatch => (

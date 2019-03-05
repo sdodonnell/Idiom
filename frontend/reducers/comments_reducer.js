@@ -1,16 +1,11 @@
-import { RECEIVE_COMMENTS, RECEIVE_COMMENT, REMOVE_COMMENT } from "../actions/comment_actions";
+import { REMOVE_COMMENT } from "../actions/comment_actions";
 import { RECEIVE_STORY } from "../actions/story_actions";
-import { merge } from 'lodash';
 
 const commentsReducer = (state={}, action) => {
     Object.freeze(state)
     switch(action.type) {
         case RECEIVE_STORY:
             return action.story.comments
-        case RECEIVE_COMMENTS:
-            return action.comments;
-        case RECEIVE_COMMENT:
-            return merge({}, state, {[action.comment.id]: action.comment});
         case REMOVE_COMMENT:
             let newState = state;
             delete newState[action.commentId];

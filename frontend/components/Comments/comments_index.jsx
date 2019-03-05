@@ -8,16 +8,30 @@ class CommentsIndex extends React.Component {
         this.renderComments = this.renderComments.bind(this)
     }
 
+    componentDidMount() {
+        this.props.fetchUsers()
+    }
+
     renderComments() {
-        return Object.values(this.props.comments).map( comment => <CommentComponent comment={comment}/>)
+        const commentAuthor = comment => this.props.users.find( user => user.id === comment.userId)
+        return Object.values(this.props.comments).map( comment => 
+            <CommentComponent 
+                key={comment.id} 
+                comment={comment}
+                author={commentAuthor(comment)}
+                />
+            )
     }
 
     render() {
-        if (!this.props.comments) {
+        if (!this.props.users) {
             return <div></div>
         } else {
             return (
-                this.renderComments()
+                <div className="comments-index-wrapper">
+                    <CreateCommentComponent />
+                    {this.renderComments()}
+                </div>
             )
         }
     }

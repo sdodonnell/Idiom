@@ -1,13 +1,15 @@
 import { connect } from "react-redux";
 import CommentsIndex from "../components/Comments/comments_index";
-import { fetchComments } from "../actions/comment_actions";
+import { fetchUsersByComments } from "../reducers/selectors";
+import { fetchUsers } from "../actions/user_actions";
 
 const mstp = (state) => ({
-    comments: state.entities.comments
+    comments: state.entities.comments,
+    users: fetchUsersByComments(state.entities, state.entities)
 })
 
 const mdtp = dispatch => ({
-    fetchComments: storyId => dispatch(fetchComments(storyId))
+    fetchUsers: () => dispatch(fetchUsers())
 })
 
 export default connect(mstp, mdtp)(CommentsIndex)

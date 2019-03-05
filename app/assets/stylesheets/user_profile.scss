@@ -130,14 +130,15 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.profile-story-item-footer #claps {
+
+.claps {
     background-image: url(./images/imageedit_8_8396919418.png);
     background-size: 25px;
     background-repeat: no-repeat;
     color: gray;
 }
 
-.profile-story-item-footer div:last-child {
+.bookmark {
     justify-self: end;
     color: rgba(128, 128, 128, 0.541);
 }

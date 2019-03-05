@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 
 class StoryComponent extends React.Component {
 
-    componentWillMount() {
-        this.props.fetchStory(this.props.storyId);
-        this.props.fetchUser(this.props.story.userId)
+    componentDidMount() {
+        this.props.fetchStory(this.props.storyId)
+        // this.props.fetchUser(this.props.story.userId)
     }
 
     renderText() {
@@ -39,10 +39,10 @@ class StoryComponent extends React.Component {
                         <h1>{story.title}</h1>
                         <div className="author-bio">
                             <div className="user-icon">
-                                {this.props.user.username[0]}
+                                {/* {this.props.user.username[0]} */}
                             </div>
                             <div className="author-bio-text">
-                                <Link to={`/users/${this.props.user.id}`}><p>{this.props.user.fullname}</p></Link>
+                                {/* <Link to={`/users/${this.props.user.id}`}><p>{this.props.user.fullname}</p></Link> */}
                                 {storyDateString.slice(3)}
                             </div>
                         </div>
