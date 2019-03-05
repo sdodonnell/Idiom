@@ -39,10 +39,10 @@ class StoryComponent extends React.Component {
                         <h1>{story.title}</h1>
                         <div className="author-bio">
                             <div className="user-icon">
-                                {/* {this.props.author.name[0]} */}
+                                {this.props.user.name[0]}
                             </div>
                             <div className="author-bio-text">
-                                <p>{this.props.user}</p>
+                                <Link to={`/users/${this.props.user.id}`}><p>{this.props.user}</p></Link>
                                 {storyDateString.slice(3)}
                             </div>
                         </div>

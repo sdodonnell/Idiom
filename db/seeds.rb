@@ -144,11 +144,11 @@ seneca_stories = [
     })
 ]
 
+seneca_stories[0].images.attach(io: open(IMAGES[0]), filename: IMAGES[0].remove(aws_path))
+seneca_stories[0].save!
+
 seneca_stories[1].images.attach(io: open(IMAGES[1]), filename: IMAGES[1].remove(aws_path))
 seneca_stories[1].save!
-
-seneca_stories[2].images.attach(io: open(IMAGES[2]), filename: IMAGES[2].remove(aws_path))
-seneca_stories[2].save!
 
 plutarch_stories = [ 
     Story.create!({    
@@ -177,11 +177,11 @@ plutarch_stories = [
     })
 ]
 
+plutarch_stories[0].images.attach(io: open(IMAGES[2]), filename: IMAGES[2].remove(aws_path))
+plutarch_stories[0].save!
+
 plutarch_stories[1].images.attach(io: open(IMAGES[3]), filename: IMAGES[3].remove(aws_path))
 plutarch_stories[1].save!
-
-plutarch_stories[2].images.attach(io: open(IMAGES[4]), filename: IMAGES[4].remove(aws_path))
-plutarch_stories[2].save!
 
 erasmus_stories = Story.create([
     {    
@@ -216,11 +216,11 @@ montaigne_stories = [
     })
 ]
 
+montaigne_stories[0].images.attach(io: open(IMAGES[4]), filename: IMAGES[4].remove(aws_path))
+montaigne_stories[0].save!
+
 montaigne_stories[1].images.attach(io: open(IMAGES[5]), filename: IMAGES[5].remove(aws_path))
 montaigne_stories[1].save!
-
-montaigne_stories[2].images.attach(io: open(IMAGES[6]), filename: IMAGES[6].remove(aws_path))
-montaigne_stories[2].save!
 
 twain_stories = Story.create([
     {    
@@ -367,11 +367,11 @@ goldman_stories = [
     })
 ]
 
+goldman_stories[0].images.attach(io: open(IMAGES[6]), filename: IMAGES[6].remove(aws_path))
+goldman_stories[0].save!
+
 goldman_stories[1].images.attach(io: open(IMAGES[7]), filename: IMAGES[7].remove(aws_path))
 goldman_stories[1].save!
-
-goldman_stories[2].images.attach(io: open(IMAGES[8]), filename: IMAGES[8].remove(aws_path))
-goldman_stories[2].save!
 
 beerbohm_stories = Story.create([
     {    
