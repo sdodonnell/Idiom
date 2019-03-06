@@ -10,7 +10,9 @@ if (story) {
             <div className="homepage-image">
                 <img src={story.photoUrls[0]}/>
             </div>
-            <h2>{story.titlePreview}</h2>
+            <Link to={`/stories/${story.id}`}>
+                <h2>{story.titlePreview}</h2>
+            </Link>            
             <p>{story.bodyPreview.slice(0, 175) + "..."}</p>
             <div>
                 <Link 

@@ -10,7 +10,9 @@ const FeaturedStoryItem = ({story}) => {
                 <div className="homepage-image">
                     <img src={story.photoUrls[0]}/>
                 </div>
-                <h3>{story.titlePreview}</h3>
+                <Link to={`/stories/${story.id}`}>
+                    <h3>{story.titlePreview}</h3>
+                </Link>
                 <p>{story.bodyPreview.slice(0, 100) + "..."}</p>
                 <div>
                     <Link 
