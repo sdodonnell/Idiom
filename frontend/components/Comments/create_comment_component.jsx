@@ -6,21 +6,12 @@ class CreateCommentComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // expanded: "expanded",
             body: "",
-            userId: this.props.newProps.currentUser.id,
-            storyId: this.props.newProps.storyId
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
-    
-    // toggleCreateComment() {
-    //     this.setState({
-    //         expanded: this.state.expanded === "" ? "expanded" : ""
-    //     })
-    // }
 
     handleChange() {
         return e => 
@@ -31,7 +22,11 @@ class CreateCommentComponent extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.newProps.createComment(this.state);
+        this.props.newProps.createComment({
+            body: this.state.body,
+            userId: this.props.newProps.currentUser.id,
+            storyId: this.props.newProps.storyId
+        });
         this.setState({
             body: ""
         })

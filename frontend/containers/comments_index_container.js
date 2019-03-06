@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 import CommentsIndex from "../components/Comments/comments_index";
-import { fetchUsersByComments } from "../reducers/selectors";
-import { fetchUsers } from "../actions/user_actions";
+import { fetchUsers, fetchUser } from "../actions/user_actions";
 import { createComment } from "../actions/comment_actions"
 
 const mstp = (state) => ({
@@ -11,7 +10,7 @@ const mstp = (state) => ({
 })
 
 const mdtp = dispatch => ({
-    fetchUsers: (storyId) => dispatch(fetchUsers(storyId)),
+    fetchUsers: storyId => dispatch(fetchUsers(storyId)),
     createComment: comment => dispatch(createComment(comment))
 })
 

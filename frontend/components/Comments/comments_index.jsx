@@ -41,9 +41,8 @@ class CommentsIndex extends React.Component {
                 <div className="comments-index-wrapper">
                     <HiddenRoute
                         path="/stories/:id"
-                        render={ (props) => (
+                        render={ () => (
                             <CreateCommentComponent 
-                                // {...props}
                                 currentUser={this.props.currentUser}
                                 createComment={this.props.createComment}
                                 storyId={this.props.story.id}/>

@@ -22,7 +22,7 @@ const Protected = ({ component: Component, path, loggedIn, exact}) => (
     )}/>
   );
 
-const Hidden = ({ render, path, loggedIn, exact}) => {
+const Hidden = ({ render, path, loggedIn, exact }) => {
   const newProps = render().props;
   const Component = render().type;
   return(
