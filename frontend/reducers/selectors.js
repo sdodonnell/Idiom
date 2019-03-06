@@ -20,15 +20,6 @@ export const fetchUserByStory = (story, users) => {
 	return userId
 }
 
-// export const fetchUsersByComments = ({users}, {comments}) => {
-// 	let commentAuthors = [];
-// 	for (let id in comments) {
-// 		commentAuthors.push(users[comments[id].userId])
-// 	}
-// 	if (commentAuthors.includes(undefined)) return null
-// 	return commentAuthors
-// }
-
 export const selectRandomFourStories = (stories) => {
 	let randomStories = []
 	let keys = Object.keys(stories)
