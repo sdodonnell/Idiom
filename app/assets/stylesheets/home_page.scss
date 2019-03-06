@@ -21,11 +21,25 @@
     grid-row: 1 / 4;
     grid-column: 1 / 2;
     border: 1px solid black;
+    display: grid;
+    grid-template-rows: 100px repeat(4, auto)
 }
 
 .featured-story-item {
     grid-column: 2 / 3;
-    border: 1px solid black
+    border: 1px solid black;
+    display: grid;
+}
+
+.homepage-image {
+    overflow: hidden;
+}
+
+.main-featured-story-item img,
+.featured-story-item img {
+    width: 100%;
+    position: relative;
+    bottom: 50%;
 }
 
 .welcome {
