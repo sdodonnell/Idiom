@@ -1,45 +1,94 @@
 .wrapper {
     display: grid;
     grid-template-columns: 8fr 3fr;
-    grid-template-rows: [row1-start] 350px [row1-end] 350px [third-line] 1600px [fourth-line] auto [last-line];
+    grid-template-rows: [row1-start] 380px [row1-end] 350px [third-line] 1600px [fourth-line] auto [last-line];
     grid-gap: 2.5rem;
     justify-items: stretch;
     padding: 1em 5rem;
     background-color: rgb(255, 255, 255)
 }
 
-.featured {
+.featured-wrapper {
     grid-column: 1 / 4;
+    grid-row: 1 / 2;
     border-bottom: 1px solid rgb(180, 180, 180);
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 5fr 4fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1.5rem;
+    padding-bottom: 20px;
 }
 
 .main-featured-story-item {
-    grid-row: 1 / 4;
     grid-column: 1 / 2;
-    border: 1px solid black;
+    grid-row: 1 / 4;
     display: grid;
-    grid-template-rows: 100px repeat(4, auto)
+    grid-template-rows: 200px repeat(3, auto) 
 }
 
 .featured-story-item {
     grid-column: 2 / 3;
-    border: 1px solid black;
     display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: .75rem;
+}
+
+.featured-story-item:nth-child(2) {
+    grid-row: 1 / 2
+}
+
+.featured-story-item:nth-child(3) {
+    grid-row: 2 / 3
+}
+
+.featured-story-item:nth-child(4) {
+    grid-row: 3 / 4
+}
+
+.featured-story-item h3 {
+    font-size: 17px;
 }
 
 .homepage-image {
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
-.main-featured-story-item img,
-.featured-story-item img {
+.featured-story-item .homepage-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4
+}
+
+.featured-story-item div:last-child {
+    align-self: end;
+}
+
+.main-featured-story-item img {
     width: 100%;
     position: relative;
     bottom: 50%;
+}
+
+.featured-story-item img {
+    height: 100%;
+    width: 100%
+}
+
+.main-featured-story-item p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.featured-story-item p {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.main-featured-story-item h2 {
+    font-size: 25px;
+    align-self: end;
 }
 
 .welcome {
@@ -158,12 +207,12 @@
     align-self: start;
 }
 
-.feed-item-author-link {
+.author-link {
     color: black;
     font-size: 14px;
 }
 
-.feed-item-author-link:hover {
+.author-link:hover {
     text-decoration: underline
 }
 

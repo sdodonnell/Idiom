@@ -13,7 +13,7 @@ class Featured extends React.Component {
             return <div></div>
         } else {
             return(
-                <div className="home-page-section featured">
+                <div className="home-page-section featured-wrapper">
                     <MainFeaturedStoryItem story={this.props.stories[0]}/>
                     <FeaturedStoryItem story={this.props.stories[1]}/>
                     <FeaturedStoryItem story={this.props.stories[2]}/>

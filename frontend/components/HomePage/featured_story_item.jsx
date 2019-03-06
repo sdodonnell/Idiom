@@ -1,14 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
 
-const FeaturedStoryItem = props => {
-    if (props.story) {
+const FeaturedStoryItem = ({story}) => {
+    if (story) {
+        const storyDate = new Date(story.updatedAt);
+        const storyDateString = storyDate.toDateString();
         return (
             <div className="featured-story-item">
                 <div className="homepage-image">
-                    <img src={props.story.photoUrls[0]}/>
+                    <img src={story.photoUrls[0]}/>
                 </div>
-                <h3>{props.story.titlePreview}</h3>
-                <p>{props.story.bodyPreview}</p>
+                <h3>{story.titlePreview}</h3>
+                <p>{story.bodyPreview.slice(0, 100) + "..."}</p>
+                <div>
+                    <Link 
+                        to={`/users/${story.authorId}`}
+                        className="author-link">
+                        {story.authorName}
+                    </Link>
+                    <p>{storyDateString}</p>
+                </div>
             </div>
         )} else {
             return <div></div>
