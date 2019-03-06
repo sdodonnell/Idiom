@@ -1,14 +1,14 @@
-import StoriesIndex from "../components/StoryIndex/stories_index";
 import { connect } from 'react-redux';
-import { fetchStories, deleteStory } from '../actions/story_actions';
+import Featured from "../components/HomePage/featured";
+import { selectRandomFourStories } from '../reducers/selectors';
+import { fetchStories } from '../actions/story_actions';
 
-const mstp = (state) => ({
-    stories: state.entities.stories,
-    currentUser: state.entities.users[state.session.id],
+const mstp = state => ({
+    stories: selectRandomFourStories(state.entities.stories)
 })
 
 const mdtp = dispatch => ({
-    deleteStory: id => dispatch(deleteStory(id))
+    fetchStories: () => dispatch(fetchStories())
 })
 
-export default connect(mstp, mdtp)(StoriesIndex)
+export default connect(mstp, mdtp)(Featured)

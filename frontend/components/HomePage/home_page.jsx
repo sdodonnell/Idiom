@@ -1,5 +1,5 @@
 import React from 'react'
-import Featured from "./featured";
+import FeaturedContainer from "../../containers/featured_container";
 import FeedContainer from "../../containers/feed_container";
 import Sidebar from "./sidebar";
 import WelcomeBanner from './welcome_banner';
@@ -7,7 +7,7 @@ import { AuthRoute } from '../../util/auth_util'
 
 const HomePage = () => (
     <div className="wrapper">
-        <Featured />
+        <FeaturedContainer />
         <AuthRoute path="/" component={WelcomeBanner} />
         <FeedContainer />
         <Sidebar />

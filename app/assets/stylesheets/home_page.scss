@@ -1,19 +1,31 @@
 .wrapper {
     display: grid;
     grid-template-columns: 8fr 3fr;
-    grid-template-rows: [row1-start] 400px [row1-end] 350px [third-line] 1600px [fourth-line] auto [last-line];
+    grid-template-rows: [row1-start] 350px [row1-end] 350px [third-line] 1600px [fourth-line] auto [last-line];
     grid-gap: 2.5rem;
     justify-items: stretch;
     padding: 1em 5rem;
     background-color: rgb(255, 255, 255)
 }
 
-.home-page-section {
-}
-
 .featured {
     grid-column: 1 / 4;
     border-bottom: 1px solid rgb(180, 180, 180);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.main-featured-story-item {
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+    border: 1px solid black;
+}
+
+.featured-story-item {
+    grid-column: 2 / 3;
+    border: 1px solid black
 }
 
 .welcome {
@@ -123,7 +135,7 @@
 }
 
 .feed-item-wrapper p {
-    font-size: 15px;
+    font-size: 14px;
     color: rgba(0, 0, 0, 0.527);
     padding-bottom: 8px;
 }
@@ -134,7 +146,7 @@
 
 .feed-item-author-link {
     color: black;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .feed-item-author-link:hover {
