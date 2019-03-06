@@ -32,6 +32,7 @@ class CommentsIndex extends React.Component {
             )
     }
 
+
     render() {
         if (this.state.loading) {
             return <div></div>
@@ -39,13 +40,14 @@ class CommentsIndex extends React.Component {
             return (
                 <div className="comments-index-wrapper">
                     <HiddenRoute
-                        render={ (props) => 
+                        path="/stories/:id"
+                        render={ (props) => (
                             <CreateCommentComponent 
-                                {...props}
+                                // {...props}
                                 currentUser={this.props.currentUser}
                                 createComment={this.props.createComment}
                                 storyId={this.props.story.id}/>
-                        }
+                        )}
                     />
                     {this.renderComments()}
                 </div>

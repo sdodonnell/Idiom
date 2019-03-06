@@ -7,7 +7,6 @@ class StoryComponent extends React.Component {
 
     componentDidMount() {
         this.props.fetchStory(this.props.storyId).then( () => this.props.fetchUser(this.props.story.userId))
-        // this.props.fetchUser(this.props.story.userId)
     }
 
     renderText() {
@@ -39,10 +38,10 @@ class StoryComponent extends React.Component {
                         <h1>{story.title}</h1>
                         <div className="author-bio">
                             <div className="user-icon">
-                                {/* {this.props.user.username[0]} */}
+                                {this.props.story.authorName[0]}
                             </div>
                             <div className="author-bio-text">
-                                {/* <Link to={`/users/${this.props.user.id}`}><p>{this.props.user.fullname}</p></Link> */}
+                                <Link to={`/users/${this.props.story.authorId}`}><p>{this.props.story.authorName}</p></Link>
                                 {storyDateString.slice(3)}
                             </div>
                         </div>

@@ -22,17 +22,20 @@ const Protected = ({ component: Component, path, loggedIn, exact}) => (
     )}/>
   );
 
-const Hidden = ({ component: Component, path, loggedIn, exact}) => (
+const Hidden = ({ render, path, loggedIn, exact}) => {
+  const newProps = render().props;
+  const Component = render().type;
+  return(
     <Route path={path} exact={exact} render={(props) => (
       loggedIn ? (
-        <Component {...props} />
+        <Component {...props} newProps={newProps} />
       ) : (
         null
       )
     )}/>
-  );
+  )};
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return { loggedIn: Boolean(state.session.id) };
 }
 

@@ -8,8 +8,8 @@ class CreateCommentComponent extends React.Component {
         this.state = {
             // expanded: "expanded",
             body: "",
-            userId: this.props.currentUser.id,
-            storyId: this.props.storyId
+            userId: this.props.newProps.currentUser.id,
+            storyId: this.props.newProps.storyId
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -31,7 +31,7 @@ class CreateCommentComponent extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createComment(this.state);
+        this.props.newProps.createComment(this.state);
         this.setState({
             body: ""
         })
@@ -43,9 +43,9 @@ class CreateCommentComponent extends React.Component {
                 <div className="comment-author-bio">
                     <img/>
                     <NavLink 
-                        to={`users/${this.props.currentUser.id}`}
+                        to={`users/${this.props.newProps.currentUser.id}`}
                         className="author-name">
-                        <p>{this.props.currentUser.fullname}</p>
+                        <p>{this.props.newProps.currentUser.fullname}</p>
                     </NavLink>
                     <p>{new Date().toDateString().slice(3)}</p>
                 </div>
