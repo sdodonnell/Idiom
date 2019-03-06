@@ -1,7 +1,7 @@
 import React from 'react'
 import FeaturedContainer from "../../containers/featured_container";
 import FeedContainer from "../../containers/feed_container";
-import Sidebar from "./sidebar";
+import Sidebar from "./Sidebar/sidebar";
 import WelcomeBanner from './welcome_banner';
 import { AuthRoute } from '../../util/auth_util'
 

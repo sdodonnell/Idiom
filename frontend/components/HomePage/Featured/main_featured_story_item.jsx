@@ -20,7 +20,7 @@ if (story) {
                     className="author-link">
                     {story.authorName}
                 </Link>
-                <p>{storyDateString}</p>
+                <p>{storyDateString.slice(3)}</p>
             </div>
         </div>
     )} else {

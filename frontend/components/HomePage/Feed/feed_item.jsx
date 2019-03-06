@@ -24,7 +24,7 @@ class FeedItem extends React.Component {
                         className="author-link">
                         {this.props.authorName}
                     </Link>
-                    <p>{storyDateString}</p>
+                    <p>{storyDateString.slice(3)}</p>
                 </div>
             )
         }

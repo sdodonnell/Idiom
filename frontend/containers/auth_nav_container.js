@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import AuthNav from '../components/HomePage/auth_nav'
+import AuthNav from '../components/HomePage/NavBar/auth_nav'
 import { logout } from '../actions/session_actions'
 import { createStory } from "../actions/story_actions";
 

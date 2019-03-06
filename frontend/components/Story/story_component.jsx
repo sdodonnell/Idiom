@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentsIndexContainer from '../../containers/comments_index_container';
 import { Link } from 'react-router-dom'
+import StorySidebar from './story_sidebar';
 
 
 class StoryComponent extends React.Component {
@@ -30,6 +31,7 @@ class StoryComponent extends React.Component {
                 const storyDate = new Date(story.updatedAt);
                 const storyDateString = storyDate.toDateString();
             return(
+                <>
                 <div className="story-wrapper">
                     <div className="story-image">
                         <img src={story.photoUrls[0]} />                    
@@ -52,6 +54,8 @@ class StoryComponent extends React.Component {
                         <CommentsIndexContainer story={this.props.story}/>
                     </div>
                 </div>
+                <StorySidebar />
+                </>
             )
         }
     }

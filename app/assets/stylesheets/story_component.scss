@@ -65,5 +65,36 @@
     line-height: 2rem;
     font-family: "Merriweather";
     font-weight: 300
-
 }
+
+.story-sidebar {
+    position: fixed;
+    top: 30%;
+    left: 70px;
+    width: 24px;
+    display: block;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.514);
+}
+
+.story-sidebar div:hover {
+    color: rgba(0, 0, 0, 0.856);
+    cursor: pointer;
+}
+
+.story-sidebar div {
+    margin-bottom: 17px;
+}
+
+.sidebar-claps {
+    background-image: url(./images/hands.png);
+    background-size: contain;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.sidebar-claps:hover {
+    background-image: url(./images/hands-black.png);
+    cursor: pointer;
+}
+

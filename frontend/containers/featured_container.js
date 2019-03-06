@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Featured from "../components/HomePage/featured";
+import Featured from "../components/HomePage/Featured/featured";
 import { selectRandomFourStories } from '../reducers/selectors';
 import { fetchStories } from '../actions/story_actions';
 

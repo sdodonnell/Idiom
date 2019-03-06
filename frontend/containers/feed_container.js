@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchStories } from '../actions/story_actions';
-import Feed from '../components/HomePage/feed';
+import Feed from '../components/HomePage/Feed/feed';
 import { fetchUsers } from '../actions/user_actions';
 
 const mstp = (state) => ({
