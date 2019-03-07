@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :stories, except: [:new]
     resources :comments, only: [:create, :index, :destroy]
-    resources :bookmarks, only: [:create, :destroy]
+    resources :bookmarks, only: [:index, :create, :destroy]
     resources :likes, only: [:create, :destroy]
     resources :user_follows, only: [:create, :destroy]
   end

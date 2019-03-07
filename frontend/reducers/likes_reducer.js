@@ -5,8 +5,9 @@ import { RECEIVE_LIKE, REMOVE_LIKE } from "../actions/like_actions";
 const likesReducer = (state={}, action) => {
     Object.freeze(state)
     switch(action.type) {
-        case RECEIVE_USER,
-             RECEIVE_STORY:
+        case RECEIVE_USER:
+            return action.user.likes;
+        case RECEIVE_STORY:
             return action.story.likes;
         case RECEIVE_LIKE:
             return Object.assign({}, state, {[action.like.id]: action.like});

@@ -49,7 +49,7 @@ class UserProfileStoryItem extends React.Component {
                 {story.bodyPreview}
             </div>
             <div className="profile-story-item-footer">
-                <div onClick={this.addLike} className="claps">{this.props.story.numLikes}</div>
+                <div onClick={this.addLike} className="claps">{this.props.story.numLikes || null}</div>
                 <div onClick={this.addBookmark} className="bookmark"><i className="far fa-bookmark"></i></div>
             </div>
         </div>)

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const StoryAuthorBio = props => {
-    const storyDate = new Date(props.story.updatedAt);
+    const storyDate = new Date(props.story.publishDate);
     const storyDateString = storyDate.toDateString();
     return (
         <div className="author-bio profile-story-item-header">

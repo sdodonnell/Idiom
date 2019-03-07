@@ -1,5 +1,8 @@
 class Api::BookmarksController < ApplicationController
 
+    def index
+    end
+
     def create
         @bookmark = Bookmark.new(bookmark_params)
         if @bookmark.save

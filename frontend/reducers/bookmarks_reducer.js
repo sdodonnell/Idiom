@@ -5,8 +5,9 @@ import { RECEIVE_BOOKMARK, REMOVE_BOOKMARK } from "../actions/bookmark_actions";
 const bookmarksReducer = (state={}, action) => {
     Object.freeze(state)
     switch(action.type) {
-        case RECEIVE_CURRENT_USER,
-             RECEIVE_STORY:
+        case RECEIVE_CURRENT_USER:
+            return action.user.bookmarks;
+        case RECEIVE_STORY:
             return action.story.bookmarks;
         case RECEIVE_BOOKMARK:
             return Object.assign({}, state, {[action.bookmark.id]: action.bookmark});
