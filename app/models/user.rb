@@ -37,7 +37,24 @@ class User < ApplicationRecord
         primary_key: :id,
         foreign_key: :user_id,
         class_name: :Like
+    
+    has_many :following_user_follows,
+        primary_key: :id,
+        foreign_key: :follower_id,
+        class_name: :UserFollow
+    
+    has_many :followed_user_follows,
+        primary_key: :id,
+        foreign_key: :followed_id,
+        class_name: :UserFollow
 
+    has_many :followers,
+        through: :followed_user_follows,
+        source: :follower
+
+    has_many :following,
+        through: :following_user_follows,
+        source: :followed
 
     attr_reader :password
 

@@ -13,12 +13,16 @@ class FeedItem extends React.Component {
             return (
                 <div className="feed-item-wrapper">
                     <Link to={`/stories/${story.id}`}>
-                        <h1>{story.titlePreview}</h1>
+                        <h1>{
+                            story.titlePreview.length > 100 ? 
+                                story.titlePreview.slice(0, 100) + "..." :
+                                story.titlePreview
+                            }</h1>
                     </Link>
                     <div className="feed-item-image">
                         <img src={story.imageUrl}/>
                     </div>
-                    <p>{story.bodyPreview.slice(0, 175) + '...'}</p>
+                    <p>{story.bodyPreview + "..."}</p>
                     <Link 
                         to={`/users/${this.props.authorId}`} 
                         className="author-link">

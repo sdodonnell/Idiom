@@ -24,7 +24,7 @@
     grid-column: 1 / 2;
     grid-row: 1 / 4;
     display: grid;
-    grid-template-rows: 200px repeat(3, auto) 
+    grid-template-rows: 200px minmax(auto, 100px) 61px auto;
 }
 
 .featured-story-item {
@@ -85,6 +85,10 @@
 .featured-story-item p {
     font-size: 12px;
     color: rgba(0, 0, 0, 0.5);
+}
+
+.main-featured-story-item-title {
+    align-self: end;
 }
 
 .main-featured-story-item h2 {
@@ -184,6 +188,7 @@
     height: 90%;
     margin: auto;
     overflow: hidden;
+    max-height: 150px;
 }
 
 .feed-item-wrapper img {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const MainFeaturedStoryItem = ({story}) => {
 if (story) {
@@ -10,9 +10,9 @@ if (story) {
             <div className="homepage-image">
                 <img src={story.imageUrl}/>
             </div>
-            <Link to={`/stories/${story.id}`}>
+            <NavLink to={`/stories/${story.id}`} className="main-featured-story-item-title">
                 <h2>{story.titlePreview}</h2>
-            </Link>            
+            </NavLink>            
             <p>{story.bodyPreview.slice(0, 175) + "..."}</p>
             <div>
                 <Link 
