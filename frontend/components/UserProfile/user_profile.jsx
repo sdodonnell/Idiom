@@ -10,6 +10,8 @@ class UserProfile extends React.Component {
         this.renderStories = this.renderStories.bind(this)
         this.isBookmarked = this.isBookmarked.bind(this)
         this.isLiked = this.isLiked.bind(this)
+        this.addFollow = this.addFollow.bind(this)
+        this.isFollows = this.isFollowed.bind(this)
     }
 
     componentDidMount() {
@@ -37,6 +39,20 @@ class UserProfile extends React.Component {
         return false
     }
 
+    isFollowed() {
+        const follows = this.props.follows
+        for (let id in follows) {
+            if (follows[id].followedId === this.props.user.id) {
+                return true;
+            }
+        }
+        return false
+    }
+
+    addFollow() {
+        this.props.addFollow({followerId: this.props.currentUser.id, followedId: this.props.user.id})
+    }
+
     renderStories() {
         return Object.values(this.props.stories).map(story =>
             <UserProfileStoryItem 
@@ -58,7 +74,10 @@ class UserProfile extends React.Component {
             return(
                 <div className="user-profile-wrapper">
                     <div className="user-profile-bio-wrapper">
-                        <UserProfileBio user={this.props.user} />
+                        <UserProfileBio 
+                            user={this.props.user}
+                            addFollow={this.addFollow}
+                            followed={this.isFollowed()}/>
                         {this.renderStories()}
                     </div>
                     <div></div>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :index, :destroy]
     resources :bookmarks, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
+    resources :user_follows, only: [:create, :destroy]
   end
   
 end

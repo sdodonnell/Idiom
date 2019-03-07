@@ -4,13 +4,15 @@ import storiesReducer from './stories_reducer';
 import commentsReducer from './comments_reducer';
 import bookmarksReducer from './bookmarks_reducer';
 import likesReducer from './likes_reducer';
+import followsReducer from './follows_reducer';
 
 const entitiesReducer = combineReducers({
     users: usersReducer,
     stories: storiesReducer,
     comments: commentsReducer,
     bookmarks: bookmarksReducer,
-    likes: likesReducer
+    likes: likesReducer,
+    follows: followsReducer
 })
 
 export default entitiesReducer
