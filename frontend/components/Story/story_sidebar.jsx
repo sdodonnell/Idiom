@@ -31,10 +31,12 @@ class StorySidebar extends React.Component {
         if (this.state.scrolled === true) {
             return(
                 <div className="story-sidebar animated fadeInUp">
-                    <div className="sidebar-claps"></div>
+                    <div className="sidebar-claps">
+                        <p>{this.props.bookmarks.length}</p>
+                    </div>
                     <div className="sidebar-bookmark"><i className="far fa-bookmark"></i></div>
-                    <div className="sidebar-twitter"><i class="fab fa-twitter"></i></div>
-                    <div className="sidebar-twitter"><i class="fab fa-facebook"></i></div>
+                    <div className="sidebar-twitter"><i className="fab fa-twitter"></i></div>
+                    <div className="sidebar-twitter"><i className="fab fa-facebook"></i></div>
                 </div>
             )
         } else {

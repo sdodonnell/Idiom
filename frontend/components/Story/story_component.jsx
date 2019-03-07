@@ -7,7 +7,7 @@ import StorySidebar from './story_sidebar';
 class StoryComponent extends React.Component {
 
     componentDidMount() {
-        this.props.fetchStory(this.props.storyId).then( () => this.props.fetchUser(this.props.story.userId))
+        this.props.fetchStory(this.props.storyId)
     }
 
     renderText() {
@@ -28,7 +28,7 @@ class StoryComponent extends React.Component {
                 )
             } else {
                 let story = this.props.story;
-                const storyDate = new Date(story.updatedAt);
+                const storyDate = new Date(story.publishDate);
                 const storyDateString = storyDate.toDateString();
             return(
                 <>
@@ -54,7 +54,7 @@ class StoryComponent extends React.Component {
                         <CommentsIndexContainer story={this.props.story}/>
                     </div>
                 </div>
-                <StorySidebar />
+                <StorySidebar bookmarks={Object.values(this.props.bookmarks)}/>
                 </>
             )
         }

@@ -29,5 +29,10 @@ class Story < ApplicationRecord
         foreign_key: :story_id,
         class_name: :Tag
 
+    has_many :bookmarks,
+        primary_key: :id,
+        foreign_key: :story_id,
+        class_name: :Bookmark
+
     has_one_attached :image
 end
