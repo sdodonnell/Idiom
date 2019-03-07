@@ -7,12 +7,13 @@ import { createBookmark } from '../actions/bookmark_actions'
 const mstp = (state, ownProps) => {
     let storyId = ownProps.match.params.id;
     const story = state.entities.stories[storyId]
+    const currentUser = state.entities.users[state.session.id]
     return ({
         story,
         storyId,
+        currentUser,
         bookmarks: state.entities.bookmarks,
-        likes: state.entities.likes,
-        currentUser: state.entities.users[state.session.id]
+        likes: state.entities.likes
     })
 }
 

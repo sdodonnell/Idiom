@@ -6,8 +6,8 @@ class StorySidebar extends React.Component {
         super(props);
         this.state = {
             scrolled: false,
-            liked: false,
-            bookmarked: true
+            liked: this.props.newProps.liked,
+            bookmarked: this.props.newProps.bookmarked
         }
 
         this.handleScroll = this.handleScroll.bind(this)

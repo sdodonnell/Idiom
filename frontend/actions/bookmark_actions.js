@@ -4,7 +4,7 @@ import { camelizeKeys } from 'humps';
 export const RECEIVE_BOOKMARK = 'RECEIVE_BOOKMARK';
 export const REMOVE_BOOKMARK= 'REMOVE_BOOKMARK';
 
-const receiveBookmark = comment => ({
+const receiveBookmark = bookmark => ({
     type: RECEIVE_BOOKMARK,
     bookmark: camelizeKeys(bookmark)
 })

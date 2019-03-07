@@ -22,6 +22,27 @@ class StoryComponent extends React.Component {
         )
     }
 
+    isLiked() {
+        const likes = this.props.likes;
+        for (let id in likes) {
+            if (likes[id].userId === this.props.currentUser.id) {
+                return true;
+            }
+        }
+        return false
+    }
+
+    isBookmarked() {
+        debugger
+        const bookmarks = this.props.bookmarks;
+        for (let id in bookmarks) {
+            if (bookmarks[id].userId === this.props.currentUser.id) {
+                return true;
+            }
+        }
+        return false
+    }
+
     render() {
         if (!this.props.story) {
             return (
@@ -63,7 +84,9 @@ class StoryComponent extends React.Component {
                                 storyId={this.props.story.id}
                                 userId={this.props.currentUser.id}
                                 addLike={this.props.addLike}
-                                addBookmark={this.props.addBookmark}/>
+                                addBookmark={this.props.addBookmark}
+                                liked={this.isLiked()}
+                                bookmarked={this.isBookmarked()}/>
                         )}
                     />
                 </>
