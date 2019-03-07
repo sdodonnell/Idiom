@@ -2,6 +2,7 @@ import React from 'react';
 import CommentsIndexContainer from '../../containers/comments_index_container';
 import { Link } from 'react-router-dom'
 import StorySidebar from './story_sidebar';
+import { HiddenRoute } from '../../util/auth_util';
 
 
 class StoryComponent extends React.Component {
@@ -54,7 +55,17 @@ class StoryComponent extends React.Component {
                         <CommentsIndexContainer story={this.props.story}/>
                     </div>
                 </div>
-                <StorySidebar bookmarks={Object.values(this.props.likes)}/>
+                <HiddenRoute
+                        path="/stories/:id"
+                        render={ () => (
+                            <StorySidebar 
+                                likes={Object.values(this.props.likes)}
+                                storyId={this.props.story.id}
+                                userId={this.props.currentUser.id}
+                                addLike={this.props.addLike}
+                                addBookmark={this.props.addBookmark}/>
+                        )}
+                    />
                 </>
             )
         }

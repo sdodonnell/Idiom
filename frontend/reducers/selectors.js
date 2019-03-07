@@ -33,7 +33,6 @@ export const selectRandomFourStories = (stories) => {
 }
 
 export const selectBookmarksByStory = (bookmarks, storyId) => {
-	debugger
 	let selectedBookmarks = [];
 	for (let id in bookmarks) {
 		if (bookmarks[id].storyId === storyId) {
