@@ -23,3 +23,12 @@ json.bookmarks do
     end
 end
 
+json.likes({})
+json.likes do
+    @story.likes.each do |like|
+        json.set! like.id do
+            json.extract! like, :user_id, :story_id
+        end
+    end
+end
+

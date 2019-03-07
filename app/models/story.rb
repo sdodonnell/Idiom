@@ -34,5 +34,10 @@ class Story < ApplicationRecord
         foreign_key: :story_id,
         class_name: :Bookmark
 
+    has_many :likes,
+        primary_key: :id,
+        foreign_key: :story_id,
+        class_name: :Like
+
     has_one_attached :image
 end

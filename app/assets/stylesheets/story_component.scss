@@ -70,8 +70,8 @@
 .story-sidebar {
     position: fixed;
     top: 30%;
-    left: 70px;
-    width: 24px;
+    left: 80px;
+    width: 46px;
     display: block;
     font-size: 24px;
     color: rgba(0, 0, 0, 0.514);
@@ -91,6 +91,9 @@
     background-size: contain;
     height: 24px;
     background-repeat: no-repeat;
+    text-align: right;
+    padding-bottom: 6px;
+    font-size: 18px;
 }
 
 .sidebar-claps:hover {

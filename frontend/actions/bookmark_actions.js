@@ -1,18 +1,12 @@
-import * as CommentsApiUtil from '../util/comments_api_util';
+import * as BookmarksApiUtil from '../util/bookmarks_api_util';
 import { camelizeKeys } from 'humps';
 
 export const RECEIVE_BOOKMARK = 'RECEIVE_BOOKMARK';
-export const RECEIVE_BOOKMARKS = 'RECEIVE_BOOKMARKS';
 export const REMOVE_BOOKMARK= 'REMOVE_BOOKMARK';
 
 const receiveBookmark = comment => ({
     type: RECEIVE_BOOKMARK,
-    comment: camelizeKeys(comment)
-})
-
-const receiveBookmarkss = comments => ({
-    type: RECEIVE_BOOKMARKS,
-    comments: camelizeKeys(comments)
+    bookmark: camelizeKeys(bookmark)
 })
 
 const removeBookmark = commentId => ({
@@ -20,14 +14,10 @@ const removeBookmark = commentId => ({
     commentId
 })
 
-export const fetchComments = storyId => dispatch => (
-    CommentsApiUtil.fetchComments(storyId).then( comments => dispatch(receiveComments(comments)))
+export const createBookmark = bookmark => dispatch => (
+    BookmarksApiUtil.createBookmark(bookmark).then( bookmark => dispatch(receiveBookmark(bookmark)))
 )
 
-export const createComment = comment => dispatch => (
-    CommentsApiUtil.createComment(comment).then( comment => dispatch(receiveComment(comment)))
-)
-
-export const deleteComment = commentId => dispatch => (
-    CommentsApiUtil.deleteComment(commentId).then( commentId => dispatch(removeComment(commentId)))
+export const deleteBookmark = bookmarkId => dispatch => (
+    BookmarksApiUtil.deleteBookmark(bookmarkId).then( bookmarkId => dispatch(removeBookmark(bookmarkId)))
 )

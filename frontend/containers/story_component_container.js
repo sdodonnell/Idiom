@@ -8,7 +8,8 @@ const mstp = (state, ownProps) => {
     return ({
         story,
         storyId,
-        bookmarks: state.entities.bookmarks
+        bookmarks: state.entities.bookmarks,
+        likes: state.entities.likes
     })
 }
 

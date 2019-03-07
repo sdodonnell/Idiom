@@ -54,7 +54,7 @@ class StoryComponent extends React.Component {
                         <CommentsIndexContainer story={this.props.story}/>
                     </div>
                 </div>
-                <StorySidebar bookmarks={Object.values(this.props.bookmarks)}/>
+                <StorySidebar bookmarks={Object.values(this.props.likes)}/>
                 </>
             )
         }

@@ -33,6 +33,11 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Bookmark
 
+    has_many :likes,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Like
+
 
     attr_reader :password
 
