@@ -26,10 +26,11 @@ class AuthNav extends React.Component {
         } else {
             return(
                 <div className="auth-nav">
-
                     <div className="auth-nav-buttons">
                         <button><i className="fas fa-search"></i></button>
-                        <button><i className="far fa-bookmark"></i></button>
+                        <NavLink to={`/users/${this.props.currentUser.id}/bookmarks`}>
+                            <button><i className="far fa-bookmark"></i></button>
+                        </NavLink>
                         <button><i className="far fa-bell"></i></button>
                         <button 
                             id="user-icon"

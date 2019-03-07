@@ -17,7 +17,7 @@
 
 * {
     background-color: inherit;
-    font-family: 'Source Sans Pro'
+    font-family: 'Source Sans Pro';
 }
 
 h1, h2, h3, p, a {
@@ -29,7 +29,8 @@ h1, h2, h3, p, a {
     color: black;
     margin: 0;
     font-size: 1.75em;
-    font-family: 'Lora'
+    font-family: 'Lora';
+    font-weight: 600;
 }
 
 button:link, button:visited, button:active, button:focus {
