@@ -5,7 +5,9 @@ class StorySidebar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            scrolled: false
+            scrolled: false,
+            liked: false,
+            bookmarked: true
         }
 
         this.handleScroll = this.handleScroll.bind(this)
@@ -38,11 +40,21 @@ class StorySidebar extends React.Component {
     }
 
     addLike() {
-        return this.props.newProps.addLike({userId: this.props.userId, storyId: this.storyId})
+        if (!this.state.liked) {
+            this.props.newProps.addLike({userId: this.props.newProps.userId, storyId: this.props.newProps.storyId})
+            this.setState({
+                liked: true
+            })
+        }
     }
 
     addBookmark() {
-        return this.props.newProps.addBookmark({userId: this.props.userId, storyId: this.storyId})
+        if (!this.state.bookmarked) {
+            this.props.newProps.addBookmark({userId: this.props.newProps.userId, storyId: this.props.newProps.storyId})
+            this.setState({
+                bookmarked: true
+            })
+        }
     }
 
     render() {

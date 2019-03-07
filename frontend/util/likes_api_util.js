@@ -1,3 +1,5 @@
+import { decamelizeKeys } from "humps";
+
 export const createLike = like => (
     $.ajax({
         method: 'POST',

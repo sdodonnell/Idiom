@@ -16,7 +16,7 @@ class Api::LikesController < ApplicationController
 
     private
 
-    def comment_params
+    def like_params
         params.require(:like).permit(:user_id, :story_id)
     end
 

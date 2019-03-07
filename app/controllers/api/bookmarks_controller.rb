@@ -16,7 +16,7 @@ class Api::BookmarksController < ApplicationController
 
     private
 
-    def comment_params
+    def bookmark_params
         params.require(:bookmark).permit(:user_id, :story_id)
     end
 

@@ -1,3 +1,5 @@
+import { decamelizeKeys } from "humps";
+
 export const createBookmark = bookmark => (
     $.ajax({
         method: 'POST',
