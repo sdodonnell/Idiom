@@ -81,7 +81,7 @@ class StoryComponent extends React.Component {
                             <StorySidebar 
                                 likes={Object.values(this.props.likes)}
                                 storyId={this.props.story.id}
-                                userId={this.props.currentUser.id}
+                                currentUser={this.props.currentUser}
                                 addLike={this.props.addLike}
                                 addBookmark={this.props.addBookmark}
                                 liked={this.isLiked()}
