@@ -8,7 +8,7 @@ if (story) {
     return (
         <div className="main-featured-story-item">
             <div className="homepage-image">
-                <img src={story.photoUrl}/>
+                <img src={story.imageUrl}/>
             </div>
             <Link to={`/stories/${story.id}`}>
                 <h2>{story.titlePreview}</h2>

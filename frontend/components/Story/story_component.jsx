@@ -33,7 +33,6 @@ class StoryComponent extends React.Component {
     }
 
     isBookmarked() {
-        debugger
         const bookmarks = this.props.bookmarks;
         for (let id in bookmarks) {
             if (bookmarks[id].userId === this.props.currentUser.id) {
@@ -56,7 +55,7 @@ class StoryComponent extends React.Component {
                 <>
                 <div className="story-wrapper">
                     <div className="story-image">
-                        <img src={story.photoUrl} />                    
+                        <img src={story.imageUrl} />                    
                     </div>
                     <div className="story-title">
                         <h1>{story.title}</h1>

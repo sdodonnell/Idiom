@@ -16,7 +16,7 @@ class FeedItem extends React.Component {
                         <h1>{story.titlePreview}</h1>
                     </Link>
                     <div className="feed-item-image">
-                        <img src={story.photoUrl}/>
+                        <img src={story.imageUrl}/>
                     </div>
                     <p>{story.bodyPreview.slice(0, 175) + '...'}</p>
                     <Link 

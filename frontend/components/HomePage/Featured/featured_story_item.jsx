@@ -8,7 +8,7 @@ const FeaturedStoryItem = ({story}) => {
         return (
             <div className="featured-story-item">
                 <div className="homepage-image">
-                    <img src={story.photoUrl}/>
+                    <img src={story.imageUrl}/>
                 </div>
                 <Link to={`/stories/${story.id}`}>
                     <h3>{story.titlePreview}</h3>
