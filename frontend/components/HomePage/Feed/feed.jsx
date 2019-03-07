@@ -9,7 +9,7 @@ class Feed extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchStories()
+        // this.props.fetchStories()
     }
 
     renderStoriesList() {

@@ -10,6 +10,7 @@ import EditStoryContainer from '../containers/edit_story_form_container';
 import StoriesIndexContainer from '../containers/stories_index_container'
 import StoryComponentContainer from '../containers/story_component_container';
 import UserProfileContainer from '../containers/user_profile_container'
+import HomePageContainer from '../containers/homepage_container';
 
 const App = () => (
     <>
@@ -20,7 +21,7 @@ const App = () => (
             <AuthNavContainer />
         </div>
         <Switch>
-            <Route exact path="/" component={HomePage}/>
+            <Route exact path="/" component={HomePageContainer}/>
             <AuthRoute path="/signup" component={SignupContainer}/>
             <AuthRoute path="/login" component={LoginContainer}/>
             <ProtectedRoute path="/users/:id/stories" component={StoriesIndexContainer}/>

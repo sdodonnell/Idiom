@@ -41,3 +41,8 @@ export const selectBookmarksByStory = (bookmarks, storyId) => {
 	}
 	return selectedBookmarks;
 }
+
+export const selectPopularStories = ({stories}) => {
+	const sortedStories = Object.values(stories).sort( (a, b) => a.numLikes - b.numLikes)
+	return sortedStories.slice(0, 4)
+}

@@ -8,6 +8,8 @@ class UserProfile extends React.Component {
         super(props)
 
         this.renderStories = this.renderStories.bind(this)
+        this.isBookmarked = this.isBookmarked.bind(this)
+        this.isLiked = this.isLiked.bind(this)
     }
 
     componentDidMount() {
@@ -15,12 +17,37 @@ class UserProfile extends React.Component {
         this.props.fetchStoriesByUser(this.props.userId)
     }
 
+    isLiked(story) {
+        const likes = story.likes;
+        for (let id in likes) {
+            if (likes[id].userId === this.props.user.id) {
+                return true;
+            }
+        }
+        return false
+    }
+
+    isBookmarked(story) {
+        const bookmarks = story.bookmarks;
+        for (let id in bookmarks) {
+            if (bookmarks[id].userId === this.props.user.id) {
+                return true;
+            }
+        }
+        return false
+    }
+
     renderStories() {
         return Object.values(this.props.stories).map(story =>
             <UserProfileStoryItem 
+                currentUser={this.props.currentUser}
                 author={this.props.user}
                 key={story.id}
-                story={story}/>
+                story={story}
+                liked={this.isLiked(story)}
+                bookmarked={this.isBookmarked(story)}
+                addLike={this.props.addLike}
+                addBookmark={this.props.addBookmark}/>
         )
     }
 

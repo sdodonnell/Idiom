@@ -5,7 +5,7 @@ import FeaturedStoryItem from './featured_story_item';
 class Featured extends React.Component {
 
     componentDidMount() {
-        this.props.fetchStories()
+        // this.props.fetchStories()
     }
 
     render() {

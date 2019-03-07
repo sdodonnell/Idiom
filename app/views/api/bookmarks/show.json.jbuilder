@@ -1,1 +1,1 @@
-json.extract! @bookmark, :user_id, :story_id
+json.extract! @bookmark, :id, :user_id, :story_id

@@ -4,5 +4,6 @@
         json.imageUrl url_for(story.image)
         json.authorId story.user.id
         json.authorName story.user.fullname
+        json.numLikes story.likes.length
     end
 end

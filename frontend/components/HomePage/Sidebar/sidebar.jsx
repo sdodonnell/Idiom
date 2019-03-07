@@ -1,21 +1,11 @@
 import React from 'react'
+import PopularStoriesContainer from '../../../containers/popular_stories_container';
+import ReadingList from './reading_list';
 
 const Sidebar = () => (
     <div className="home-page-section sidebars">
-        <div className="sidebar-1">
-            <h2>Popular on Idiom</h2>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div className="sidebar-2">
-            <h2>Reading List</h2>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <PopularStoriesContainer />
+        <ReadingList />
     </div>
 )
 

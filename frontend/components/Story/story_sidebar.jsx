@@ -39,9 +39,9 @@ class StorySidebar extends React.Component {
         }
     }
 
-    addLike() {
+    addLike() {    
         if (!this.state.liked) {
-            this.props.newProps.addLike({userId: this.props.newProps.userId, storyId: this.props.newProps.storyId})
+            this.props.newProps.addLike({userId: this.props.newProps.currentUser.id, storyId: this.props.newProps.storyId})
             this.setState({
                 liked: true
             })
@@ -50,7 +50,7 @@ class StorySidebar extends React.Component {
 
     addBookmark() {
         if (!this.state.bookmarked) {
-            this.props.newProps.addBookmark({userId: this.props.newProps.userId, storyId: this.props.newProps.storyId})
+            this.props.newProps.addBookmark({userId: this.props.newProps.currentUser.id, storyId: this.props.newProps.storyId})
             this.setState({
                 bookmarked: true
             })

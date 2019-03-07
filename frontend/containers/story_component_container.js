@@ -20,7 +20,7 @@ const mstp = (state, ownProps) => {
 const mdtp = dispatch => ({
     fetchStory: id => dispatch(fetchStory(id)),
     addLike: like => dispatch(createLike(like)),
-    addBookmark: bookmark => dispatch(createBookmark(bookmark)),
+    addBookmark: bookmark => dispatch(createBookmark(bookmark))
 })
 
 export default connect(mstp, mdtp)(StoryComponent)

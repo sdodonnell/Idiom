@@ -3,6 +3,7 @@ class Api::BookmarksController < ApplicationController
     def create
         @bookmark = Bookmark.new(bookmark_params)
         if @bookmark.save
+            @story = Story.find(@bookmark.story_id)
             render 'api/bookmarks/show'
         else
             render json: @bookmark.errors.full_messages, status: 401
