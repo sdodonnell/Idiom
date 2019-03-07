@@ -7,6 +7,7 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: "",
+            fullname: "",
             email: "",
             password: ""
         }
@@ -37,12 +38,14 @@ class SessionForm extends React.Component {
         )
     }
 
-    renderEmail() {
+    renderEmailandFullname() {
         if (this.props.formType === 'Log In') {
             return null
         } else {
             return (
                 <>
+                    <p>Fullname</p>
+                    <input type="text" onChange={this.handleChange("fullname")}/>
                     <p>Email</p>
                     <input type="email" onChange={this.handleChange("email")}/>
                 </>
@@ -86,8 +89,8 @@ class SessionForm extends React.Component {
     handleDemoLogin(e) {
         e.preventDefault();
         const demoUser = {
-            username: "MichelDeMontaigne",
-            password: "cannibalsrule"
+            username: "Phaedrus",
+            password: "deathofmemory"
         };
         this.props.action(demoUser)
     }
@@ -104,7 +107,7 @@ class SessionForm extends React.Component {
                         <p>Username</p>
                         <input type="text" onChange={this.handleChange("username")}/>
 
-                        {this.renderEmail()}
+                        {this.renderEmailandFullname()}
                         <p>Password</p>
                         <input type="password" onChange={this.handleChange("password")}/>
                         

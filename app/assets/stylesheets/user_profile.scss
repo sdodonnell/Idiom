@@ -136,13 +136,24 @@
 
 
 .claps {
+    justify-self: start;
     background-image: url(./images/hands.png);
     background-size: 25px;
     background-repeat: no-repeat;
     color: gray;
+    width: 24px;
+}
+
+.claps:hover {
+    background-image: url(./images/hands-black.png);
 }
 
 .bookmark {
     justify-self: end;
     color: rgba(128, 128, 128, 0.541);
+    font-size: 20px;
+}
+
+.bookmark:hover {
+    color: rgba(128, 128, 128, 0.74)
 }

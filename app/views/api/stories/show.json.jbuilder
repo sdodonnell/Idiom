@@ -1,6 +1,6 @@
 json.story do
-    json.extract! @story, :id, :title, :body, :user_id, :title_preview, :body_preview, :created_at, :updated_at
-    json.photoUrls @story.images.map { |image| url_for(image) }
+    json.extract! @story, :id, :title, :body, :user_id, :title_preview, :body_preview, :publish_date
+    json.photoUrl url_for(@story.image)
     json.authorId @story.user.id
     json.authorName @story.user.fullname
 end

@@ -10,7 +10,7 @@ class Api::StoriesController < ApplicationController
     end
 
     def show
-        @story = Story.with_attached_images.find(params[:id])
+        @story = Story.with_attached_image.find(params[:id])
         render 'api/stories/show'
     end
 
@@ -40,7 +40,7 @@ class Api::StoriesController < ApplicationController
     private
 
     def story_params
-        params.require(:story).permit(:id, :title, :body, :tags, :user_id, :title_preview, :body_preview, images: [])
+        params.require(:story).permit(:id, :title, :body, :tags, :user_id, :title_preview, :body_preview, :image)
     end
 
 end

@@ -26,7 +26,7 @@ class StoryIndexItem extends React.Component {
 
     render() {
         let story = this.props.story;
-        const storyDate = new Date(story.updatedAt);
+        const storyDate = new Date(story.publishDate);
         const storyDateString = storyDate.toDateString();
 
         return(
@@ -36,7 +36,7 @@ class StoryIndexItem extends React.Component {
             </Link>
             <h3 className="story-index-body">{story.bodyPreview}</h3>
             <p>
-                Published on {storyDateString} 
+                Published on {storyDateString.slice(3)} 
                 <a onClick={this.toggleDropDown}><i className="fas fa-chevron-down"></i></a>
             </p>
             <div className={`story-index-dropdown-${this.state.dropDownClass}`}>

@@ -29,6 +29,5 @@ class Story < ApplicationRecord
         foreign_key: :story_id,
         class_name: :Tag
 
-
-    has_many_attached :images
+    has_one_attached :image
 end

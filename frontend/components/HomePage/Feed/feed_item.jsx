@@ -8,7 +8,7 @@ class FeedItem extends React.Component {
             return <div></div>
         } else {
             const story = this.props.story
-            const storyDate = new Date(story.updatedAt);
+            const storyDate = new Date(story.publishDate);
             const storyDateString = storyDate.toDateString();
             return (
                 <div className="feed-item-wrapper">
@@ -16,7 +16,7 @@ class FeedItem extends React.Component {
                         <h1>{story.titlePreview}</h1>
                     </Link>
                     <div className="feed-item-image">
-                        <img src={story.photoUrls[0]}/>
+                        <img src={story.photoUrl}/>
                     </div>
                     <p>{story.bodyPreview.slice(0, 175) + '...'}</p>
                     <Link 

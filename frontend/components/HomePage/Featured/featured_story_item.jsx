@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 
 const FeaturedStoryItem = ({story}) => {
     if (story) {
-        const storyDate = new Date(story.updatedAt);
+        const storyDate = new Date(story.publishDate);
         const storyDateString = storyDate.toDateString();
         return (
             <div className="featured-story-item">
                 <div className="homepage-image">
-                    <img src={story.photoUrls[0]}/>
+                    <img src={story.photoUrl}/>
                 </div>
                 <Link to={`/stories/${story.id}`}>
                     <h3>{story.titlePreview}</h3>

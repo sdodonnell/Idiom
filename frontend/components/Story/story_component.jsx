@@ -34,7 +34,7 @@ class StoryComponent extends React.Component {
                 <>
                 <div className="story-wrapper">
                     <div className="story-image">
-                        <img src={story.photoUrls[0]} />                    
+                        <img src={story.photoUrl} />                    
                     </div>
                     <div className="story-title">
                         <h1>{story.title}</h1>

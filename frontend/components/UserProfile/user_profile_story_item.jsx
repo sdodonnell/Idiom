@@ -6,7 +6,7 @@ const UserProfileStoryItem = ({story, author}) => (
     <div className="profile-story-item">
         <StoryAuthorBio story={story} author={author}/>
         <div className="profile-story-item-picture">
-            <img src={story.photoUrls[0]}/>
+            <img src={story.photoUrl}/>
         </div>
         <div className="profile-story-item-title">
             <Link to={`/stories/${story.id}`}>{story.titlePreview}</Link>
