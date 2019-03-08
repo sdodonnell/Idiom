@@ -93,9 +93,9 @@ demo_user = User.create({
     password: "deathofmemory"
 })
 
-# Create 20 users
+# Create 10 users
 users = [demo_user]
-10.times do
+9.times do
     user = User.create!({
         username: Faker::Internet.username,
         fullname: Faker::Name.name,
@@ -104,6 +104,7 @@ users = [demo_user]
     })
     users << user
 end
+
 
 # Each user publishes 10 stories
 
@@ -157,7 +158,7 @@ end
     title = Faker::Quotes::Shakespeare.unique.king_richard_iii_quote[0...-1]
     body = text_selection
     story = Story.create!({
-        user_id: users[6].id,
+        user_id: users[5].id,
         title: title,
         body: body,
         title_preview: title,
@@ -173,7 +174,7 @@ end
 end
 
 
-users[7..9].each do |user|
+users[6..8].each do |user|
     8.times do
         title = Faker::TvShows::TwinPeaks.unique.quote[0...-1]
         body = text_selection
@@ -193,3 +194,6 @@ users[7..9].each do |user|
         count += 1
     end
 end
+
+
+
