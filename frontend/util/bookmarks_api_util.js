@@ -1,5 +1,13 @@
 import { decamelizeKeys } from "humps";
 
+export const fetchBookmarks = userId => (
+    $.ajax({
+        method: 'GET',
+        url: 'api/bookmarks',
+        data: {user_id: userId}
+    })
+)
+
 export const createBookmark = bookmark => (
     $.ajax({
         method: 'POST',

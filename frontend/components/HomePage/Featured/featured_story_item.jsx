@@ -11,7 +11,11 @@ const FeaturedStoryItem = ({story}) => {
                     <img src={story.imageUrl}/>
                 </div>
                 <Link to={`/stories/${story.id}`}>
-                    <h3>{story.titlePreview}</h3>
+                    <h3>{
+                        story.titlePreview.length > 100 ? 
+                            story.titlePreview.slice(0, 75) + "..." :
+                        story.titlePreview                        
+                        }</h3>
                 </Link>
                 <p>{story.bodyPreview.slice(0, 100) + "..."}</p>
                 <div>

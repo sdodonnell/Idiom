@@ -1,10 +1,10 @@
-import { RECEIVE_CURRENT_USER, RECEIVE_USER } from "../actions/user_actions";
+import { RECEIVE_CURRENT_USER} from "../actions/user_actions";
 import { RECEIVE_FOLLOW, REMOVE_FOLLOW } from "../actions/follow_actions";
 
 const followsReducer = (state={}, action) => {
     Object.freeze(state)
     switch(action.type) {
-        case RECEIVE_USER:
+        case RECEIVE_CURRENT_USER:
             return action.user.follows;
         case RECEIVE_FOLLOW:
             return Object.assign({}, state, {[action.follow.id]: action.follow});

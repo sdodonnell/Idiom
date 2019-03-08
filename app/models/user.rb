@@ -38,7 +38,7 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Like
     
-    has_many :following_user_follows,
+    has_many :follower_user_follows,
         primary_key: :id,
         foreign_key: :follower_id,
         class_name: :UserFollow
@@ -53,8 +53,12 @@ class User < ApplicationRecord
         source: :follower
 
     has_many :following,
-        through: :following_user_follows,
+        through: :follower_user_follows,
         source: :followed
+
+    has_many :followed_stories,
+        through: :following,
+        source: :stories
 
     attr_reader :password
 

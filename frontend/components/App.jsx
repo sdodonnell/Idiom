@@ -4,6 +4,7 @@ import SignupContainer from '../containers/signup_container';
 import LoginContainer from '../containers/login_container';
 import { AuthRoute, ProtectedRoute } from '../util/auth_util';
 import AuthNavContainer from '../containers/auth_nav_container';
+import SectionNavBar from '../components/HomePage/section_nav_bar';
 import CreateStoryContainer from '../containers/create_story_form_container';
 import EditStoryContainer from '../containers/edit_story_form_container';
 import StoriesIndexContainer from '../containers/stories_index_container'
@@ -20,6 +21,7 @@ const App = () => (
                 <h1 id="site-title">Idiom</h1>
             </NavLink>
             <AuthNavContainer />
+            <Route exact path="/" component={SectionNavBar} />
         </div>
         <Switch>
             <Route exact path="/" component={HomePageContainer}/>

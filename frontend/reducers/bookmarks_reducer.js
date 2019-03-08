@@ -1,10 +1,12 @@
 import { RECEIVE_STORY } from "../actions/story_actions";
-import { RECEIVE_USER, RECEIVE_CURRENT_USER } from "../actions/user_actions";
-import { RECEIVE_BOOKMARK, REMOVE_BOOKMARK } from "../actions/bookmark_actions";
+import { RECEIVE_CURRENT_USER } from "../actions/user_actions";
+import { RECEIVE_BOOKMARK, REMOVE_BOOKMARK, RECEIVE_BOOKMARKS } from "../actions/bookmark_actions";
 
 const bookmarksReducer = (state={}, action) => {
     Object.freeze(state)
     switch(action.type) {
+        case RECEIVE_BOOKMARKS:
+            return action.bookmarks
         case RECEIVE_CURRENT_USER:
             return action.user.bookmarks;
         case RECEIVE_STORY:

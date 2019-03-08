@@ -22,6 +22,13 @@ export const fetchStoriesByUser = userId => (
     })
 )
 
+export const fetchFollowedUserStories = () => (
+    $.ajax({
+        method: 'GET',
+        url: 'stories/following'
+    })
+)
+
 export const createStory = story => (
     $.ajax({
         method: 'POST',

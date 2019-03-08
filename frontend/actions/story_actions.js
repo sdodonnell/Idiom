@@ -31,6 +31,9 @@ export const fetchStory = id => dispatch => {
 export const fetchStoriesByUser = userId => dispatch => (
     StoryApiUtil.fetchStoriesByUser(userId).then(stories => dispatch(receiveStories(stories)))
 )
+export const fetchFollowedUserStories = () => dispatch => (
+    StoryApiUtil.fetchFollowedUserStories().then(stories => dispatch(receiveStories(stories)))
+)
 export const fetchStories = () => dispatch => (
     StoryApiUtil.fetchStories().then(stories => dispatch(receiveStories(stories)))
 )

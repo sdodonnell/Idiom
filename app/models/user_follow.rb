@@ -18,6 +18,6 @@ class UserFollow < ApplicationRecord
 
     belongs_to :followed,
         primary_key: :id,
-        foreign_key: :follower_id,
+        foreign_key: :followed_id,
         class_name: :User
 end

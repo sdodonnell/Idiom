@@ -11,7 +11,11 @@ if (story) {
                 <img src={story.imageUrl}/>
             </div>
             <NavLink to={`/stories/${story.id}`} className="main-featured-story-item-title">
-                <h2>{story.titlePreview}</h2>
+                <h2>{
+                    story.titlePreview.length > 100 ? 
+                        story.titlePreview.slice(0, 100) + "..." :
+                    story.titlePreview
+                }</h2>
             </NavLink>            
             <p>{story.bodyPreview.slice(0, 175) + "..."}</p>
             <div>
