@@ -77,7 +77,6 @@ IMAGES = [
 ]
 
 # Select a portion of the master text
-# master_text = File.readlines(File.join(Rails.root, 'db', 'texts', 'republic.txt'))
 def text_selection
     master_text = File.readlines(File.join(Rails.root, 'db', 'texts', 'republic.txt'))
     slice_point = rand(master_text.length)
@@ -117,7 +116,6 @@ end
 
 
 # Each user publishes 10 stories
-
 count = 0
 
 # Stories with titles from Greek Philosophy
@@ -164,6 +162,7 @@ users[3..4].each do |user|
     end
 end
 
+# Stories with titles from Richard III
 8.times do
     title = Faker::Quotes::Shakespeare.unique.king_richard_iii_quote[0...-1]
     body = text_selection
@@ -183,7 +182,7 @@ end
     count += 1
 end
 
-
+# Stories with titles from Twin Peaks
 users[6..8].each do |user|
     8.times do
         title = Faker::TvShows::TwinPeaks.unique.quote[0...-1]

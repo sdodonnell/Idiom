@@ -9,7 +9,6 @@ class StoryComponent extends React.Component {
 
     componentWillMount() {
         this.props.fetchStory(this.props.storyId);
-        debugger
         this.props.fetchUserByStory(this.props.storyId)
     }
 

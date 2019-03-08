@@ -7,7 +7,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(550px, 650px);
-    justify-content: center;
+    justify-content: stretch;
 }
 
 .user-profile-bio {
@@ -165,4 +165,19 @@
 
 .bookmark:hover {
     color: rgba(128, 128, 128, 0.74)
+}
+
+.no-photo-icon {
+    grid-row: 1 / 4;
+    grid-column: 4 / 5;
+    border: 1px solid gray;
+    height: 84%;
+    width: 38%;
+    border-radius: 300px;
+    font-size: 40px;
+    justify-self: end;
+    background-color: purple;
+    text-align: center;
+    padding-top: 11px;
+    color: white;
 }

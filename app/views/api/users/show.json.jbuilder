@@ -1,7 +1,7 @@
 json.extract! @user, :id, :username, :email, :fullname, :bookmarks, :likes, :bio
 json.numFollowers @user.followers.count
 json.numFollowing @user.following.count
-json.profPicUrl url_for(@user.profile_image)
+json.profPicUrl url_for(@user.profile_image) if @user.profile_image.attached?
 
 json.bookmarks({})
 json.bookmarks do
