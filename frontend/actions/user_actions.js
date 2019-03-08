@@ -18,6 +18,10 @@ export const fetchUser = id => dispatch => (
     UsersApiUtil.fetchUser(id).then(user => dispatch(receiveUser(user)))
 )
 
-export const fetchUsers = (storyId) => dispatch => (
+export const fetchUsers = storyId => dispatch => (
     UsersApiUtil.fetchUsers(storyId).then(users => dispatch(receiveUsers(users)))
 )
+
+export const fetchUserByStory = storyId => dispatch => {
+    return UsersApiUtil.fetchUserByStory(storyId).then(user => dispatch(receiveUser(user)))
+}

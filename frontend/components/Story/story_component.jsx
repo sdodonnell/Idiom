@@ -7,8 +7,10 @@ import { HiddenRoute } from '../../util/auth_util';
 
 class StoryComponent extends React.Component {
 
-    componentDidMount() {
-        this.props.fetchStory(this.props.storyId)
+    componentWillMount() {
+        this.props.fetchStory(this.props.storyId);
+        debugger
+        this.props.fetchUserByStory(this.props.storyId)
     }
 
     renderText() {
@@ -43,7 +45,7 @@ class StoryComponent extends React.Component {
     }
 
     addFollow() {
-        this.props.addFollow({followerId: this.props.currentUser.id, followedId: this.props.story.userId})
+        this.props.addFollow({followerId: this.props.currentUser.id, followedId: this.props.story.authorId})
     }
 
     render() {

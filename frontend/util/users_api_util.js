@@ -12,3 +12,13 @@ export const fetchUsers = (storyId) => (
         data: {storyId}
     })
 )
+
+export const fetchUserByStory = storyId => {
+    return (
+        $.ajax({
+            method: 'GET',
+            url: 'users/story',
+            data: {story_id: storyId}
+        })
+    )
+}
