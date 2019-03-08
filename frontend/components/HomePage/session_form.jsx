@@ -92,6 +92,7 @@ class SessionForm extends React.Component {
             username: "Phaedrus",
             password: "deathofmemory"
         };
+        e
         this.props.action(demoUser)
     }
 

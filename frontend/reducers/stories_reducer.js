@@ -1,7 +1,6 @@
 import { RECEIVE_STORIES, RECEIVE_STORY, REMOVE_STORY } from "../actions/story_actions";
 import { merge } from 'lodash';
 import { RECEIVE_LIKE } from "../actions/like_actions";
-import { RECEIVE_FOLLOW } from "../actions/follow_actions";
 
 const storiesReducer = (state={}, action) => {
     Object.freeze(state)
