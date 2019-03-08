@@ -90,18 +90,28 @@ demo_user = User.create({
     username: "Phaedrus",
     fullname: "Phaedrus",
     email: "phaedrus@demo.com",
-    password: "deathofmemory"
+    password: "deathofmemory",
+    bio: "Sharing my thoughts with the world. And now the play is played out; and of rhetoric enough."
 })
+
+file = open(aws_path + "profile_10.jpg")
+demo_user.profile_image.attach(io: file, filename: "profile_10.jpg")
+demo_user.save
 
 # Create 10 users
 users = [demo_user]
-9.times do
+9.times do |i|
     user = User.create!({
         username: Faker::Internet.username,
         fullname: Faker::Name.name,
         email: Faker::Internet.email,
-        password: Faker::Internet.password(6, 10)
+        password: Faker::Internet.password(6, 10),
+        bio: Faker::Books::Dune.unique.quote
     })
+
+    file = open(aws_path + "profile_#{i}.jpg")
+    user.profile_image.attach(io: file, filename: "profile_#{i}.jpg")
+    user.save
     users << user
 end
 

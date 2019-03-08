@@ -12,8 +12,8 @@ const UserProfileBio = ({user, followed, addFollow}) => {
             <h1>{user.fullname}</h1>
             {button}
         </div>
-        <img />
-        <p className="user-profile-bio-biography">Here's where the biography goes.</p>
+        <img src={user.profPicUrl}/>
+        <p className="user-profile-bio-biography">{user.bio}</p>
         <div className="user-profile-bio-follows">
             <p>{user.numFollowing} Following</p>
             <p>{user.numFollowers} Followers</p>

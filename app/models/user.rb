@@ -18,6 +18,8 @@ class User < ApplicationRecord
     validates :password, length: {minimum: 6, allow_nil: true}
     before_validation :ensure_session_token
 
+    has_one_attached :profile_image
+
     has_many :stories,
         primary_key: :id,
         foreign_key: :user_id,
