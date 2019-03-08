@@ -31,13 +31,15 @@ class StoryForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        const date = new Date()
         this.props.action({
             title: this.state.title,
             body: this.state.body,
             userId: this.props.user.id,
             titlePreview: this.state.titlePreview,
             bodyPreview: this.state.bodyPreview,
-            id: this.props.story.id
+            id: this.props.story.id,
+            publishDate: date.toISOString().slice(0, 10)
         })
         this.props.history.push('/')
     }

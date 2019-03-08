@@ -1,6 +1,6 @@
 json.story do
     json.extract! @story, :id, :title, :body, :user_id, :title_preview, :body_preview, :publish_date
-    json.imageUrl url_for(@story.image)
+    json.imageUrl url_for(@story.image) if @story.image.attached?
     json.authorId @story.user.id
     json.authorName @story.user.fullname
     json.authorImageUrl url_for(@story.user.profile_image)

@@ -11,10 +11,11 @@ class UserProfile extends React.Component {
         this.isBookmarked = this.isBookmarked.bind(this)
         this.isLiked = this.isLiked.bind(this)
         this.addFollow = this.addFollow.bind(this)
-        this.isFollows = this.isFollowed.bind(this)
+        this.isFollowed = this.isFollowed.bind(this)
     }
 
-    componentDidMount() {
+    componentWillMount() {
+        debugger
         this.props.fetchUser(this.props.userId);
         this.props.fetchStoriesByUser(this.props.userId)
     }
@@ -47,7 +48,7 @@ class UserProfile extends React.Component {
         //     }
         // }
         // return false
-
+        debugger
         if (this.props.user.followerIds.includes(this.props.currentUser.id)) {
             return true
         }
