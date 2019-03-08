@@ -9,11 +9,12 @@ Idiom is a web app for reading and writing long-form articles based on Medium. I
 * A home page with all published stories publicly viewable, as well as a list of the most liked stories.
 * Users can comment on stories.
 * Users can like stories.
-Users can follow other users, and see recent stories published by users they follow.
+* Users can follow other users, and see recent stories published by users they follow.
 
 
-* Future developments
-* Adding photos and gifs
+## Future developments
+* Adding photos and gifs to stories
+* Adding photos upon user creation
 * Dynamic home page rendering
 * Highlighting
 

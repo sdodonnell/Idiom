@@ -21,10 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         store = configureStore();
       }
     //
-
-    window.getState = store.getState;
-    window.fetchBookmarks = fetchBookmarks;
-    window.dispatch = store.dispatch
     
     ReactDOM.render(
         <Root store={store}/>,
