@@ -15,8 +15,8 @@ const UserProfileBio = ({user, followed, addFollow}) => {
         <img />
         <p className="user-profile-bio-biography">Here's where the biography goes.</p>
         <div className="user-profile-bio-follows">
-            <p>80 Following</p>
-            <p>91 Followers</p>
+            <p>{user.numFollowing} Following</p>
+            <p>{user.numFollowers} Followers</p>
         </div>
         </div> 
     )
