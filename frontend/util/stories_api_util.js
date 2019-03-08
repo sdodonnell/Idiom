@@ -29,6 +29,13 @@ export const fetchFollowedUserStories = () => (
     })
 )
 
+export const fetchBookmarkedStories = () => (
+    $.ajax({
+        method: 'GET',
+        url: 'stories/bookmarked'
+    })
+)
+
 export const createStory = story => (
     $.ajax({
         method: 'POST',

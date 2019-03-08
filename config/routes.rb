@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'static_pages#root'
 
   get 'stories/following', to: 'api/stories#followed_stories_index'
+  get 'stories/bookmarked', to: 'api/stories#bookmarked_stories_index'
   
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :show, :index]

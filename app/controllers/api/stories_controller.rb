@@ -14,6 +14,11 @@ class Api::StoriesController < ApplicationController
         render 'api/stories/index'
     end
 
+    def bookmarked_stories_index
+        @stories = current_user.bookmarked_stories
+        render 'api/stories/index'
+    end
+
     def show
         @story = Story.with_attached_image.find(params[:id])
         render 'api/stories/show'

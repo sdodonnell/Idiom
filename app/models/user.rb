@@ -60,6 +60,10 @@ class User < ApplicationRecord
         through: :following,
         source: :stories
 
+    has_many :bookmarked_stories,
+        through: :bookmarks,
+        source: :story
+
     attr_reader :password
 
     def self.find_by_credentials(username, password)
