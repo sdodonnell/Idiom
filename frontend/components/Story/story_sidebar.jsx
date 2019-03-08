@@ -13,6 +13,7 @@ class StorySidebar extends React.Component {
         this.handleScroll = this.handleScroll.bind(this)
         this.addLike = this.addLike.bind(this)
         this.addBookmark = this.addBookmark.bind(this)
+        this.bookmarkClass = this.bookmarkClass.bind(this)
     }
 
     componentDidMount() {
@@ -57,6 +58,11 @@ class StorySidebar extends React.Component {
         }
     }
 
+    // Changes color of bookmark button if story is bookmarked
+    bookmarkClass() {
+        return this.state.bookmarked ? "sidebar-bookmark colored" : "sidebar-bookmark"
+    }
+
     render() {
         if (this.state.scrolled === true) {
             return(
@@ -64,7 +70,7 @@ class StorySidebar extends React.Component {
                     <div className="sidebar-claps" onClick={this.addLike}>
                         <p>{this.renderLikes()}</p>
                     </div>
-                    <div className="sidebar-bookmark" onClick={this.addBookmark}><i className="far fa-bookmark"></i></div>
+                    <div className={this.bookmarkClass()} onClick={this.addBookmark}><i className="far fa-bookmark"></i></div>
                     <div className="sidebar-twitter"><i className="fab fa-twitter"></i></div>
                     <div className="sidebar-twitter"><i className="fab fa-facebook"></i></div>
                 </div>

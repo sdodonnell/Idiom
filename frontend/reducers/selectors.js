@@ -32,17 +32,19 @@ export const selectRandomFourStories = (stories) => {
 	return randomStories
 }
 
-export const selectBookmarksByStory = (bookmarks, storyId) => {
-	let selectedBookmarks = [];
-	for (let id in bookmarks) {
-		if (bookmarks[id].storyId === storyId) {
-			selectedBookmarks.push(bookmarks[id]);
-		}
-	}
-	return selectedBookmarks;
-}
-
 export const selectPopularStories = ({stories}) => {
 	const sortedStories = Object.values(stories).sort( (a, b) => a.numLikes - b.numLikes)
 	return sortedStories.slice(0, 4)
+}
+
+export const selectBookmarkedStories = (state) => {
+	debugger
+	const bookmarkedStories = [];
+	const bookmarks = state.entities.bookmarks
+	for (let id in bookmarks) {
+		if (bookmarks[id] === state.session.id) {
+			bookmarkedStories.push(bookmarks[id])
+		}
+	}
+	return bookmarkedStories
 }

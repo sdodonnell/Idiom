@@ -17,7 +17,7 @@ class BookmarksIndex extends React.Component {
         const sortedStories = Object.values(this.props.stories).sort( (b, a) => 
             new Date(a.publishDate) - new Date(b.publishDate))
         return sortedStories.map( story => {
-            return <BookmarksIndexItem story={story}/>
+            return <BookmarksIndexItem key={story.id} story={story}/>
         })
     }
 

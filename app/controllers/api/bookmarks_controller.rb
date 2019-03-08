@@ -1,7 +1,8 @@
 class Api::BookmarksController < ApplicationController
 
     def index
-        @bookmarks = Bookmark.where(follower_id: params[:user_id])
+        @bookmarks = Bookmark.where(user_id: params[:user_id])
+        render 'api/bookmarks/index'
     end
 
     def create
