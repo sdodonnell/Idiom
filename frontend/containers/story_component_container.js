@@ -3,6 +3,7 @@ import StoryComponent from '../components/Story/story_component';
 import { fetchStory } from '../actions/story_actions';
 import { createLike } from '../actions/like_actions';
 import { createBookmark } from '../actions/bookmark_actions'
+import { createFollow } from '../actions/follow_actions';
 
 const mstp = (state, ownProps) => {
     let storyId = ownProps.match.params.id;
@@ -20,7 +21,8 @@ const mstp = (state, ownProps) => {
 const mdtp = dispatch => ({
     fetchStory: id => dispatch(fetchStory(id)),
     addLike: like => dispatch(createLike(like)),
-    addBookmark: bookmark => dispatch(createBookmark(bookmark))
+    addBookmark: bookmark => dispatch(createBookmark(bookmark)),
+    addFollow: follow => dispatch(createFollow(follow))
 })
 
 export default connect(mstp, mdtp)(StoryComponent)

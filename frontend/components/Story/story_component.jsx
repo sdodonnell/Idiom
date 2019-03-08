@@ -42,6 +42,10 @@ class StoryComponent extends React.Component {
         return false
     }
 
+    addFollow() {
+        this.props.addFollow({followerId: this.props.currentUser.id, followedId: this.props.story.userId})
+    }
+
     render() {
         if (!this.props.story) {
             return (
@@ -51,6 +55,9 @@ class StoryComponent extends React.Component {
                 let story = this.props.story;
                 const storyDate = new Date(story.publishDate);
                 const storyDateString = storyDate.toDateString();
+                const button = story.isFollowed === true ? 
+                    <button className="following-button">Following</button> :
+                    <button className="not-following-button" onClick={this.addFollow.bind(this)}>Follow</button>
             return(
                 <>
                 <div className="story-wrapper">
@@ -60,13 +67,12 @@ class StoryComponent extends React.Component {
                     <div className="story-title">
                         <h1>{story.title}</h1>
                         <div className="author-bio">
-                            <div className="user-icon">
-                            <img />
-                            </div>
+                            <img className="user-icon" src={story.authorImageUrl}/>
                             <div className="author-bio-text">
                                 <Link to={`/users/${this.props.story.authorId}`}><p>{this.props.story.authorName}</p></Link>
                                 {storyDateString.slice(3)}
                             </div>
+                            {button}
                         </div>
                     </div>
                     {this.renderText()}

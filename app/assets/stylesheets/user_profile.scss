@@ -33,8 +33,7 @@
 .user-profile-bio img {
     grid-row: 1 / 4;
     grid-column: 4 / 5;
-    border: 1px solid black;
-    width: 50%;
+    border: 1px solid gray;
     height: 100%;
     border-radius: 300px;
     justify-self: end
@@ -49,18 +48,18 @@
     align-self: center;
 }
 
-.user-profile-bio .not-following-button {
+.not-following-button {
     border: 1px solid #039E74;
     color: #039E74;
 }
 
-.user-profile-bio .not-following-button:hover {
+.not-following-button:hover {
     border-color: rgb(20, 128, 97);
     cursor: pointer;
     color: rgb(20, 128, 97);
 }
 
-.user-profile-bio .following-button {
+.following-button {
     border: 1px solid rgba(252, 57, 57, 0.836);
     color: rgba(252, 57, 57, 0.836);
     width: 75px;
@@ -68,7 +67,7 @@
 
 .user-profile-bio-biography {
     grid-row: 2 / 3;
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     font-size: 18px;
 }
 

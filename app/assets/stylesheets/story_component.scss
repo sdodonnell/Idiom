@@ -35,7 +35,7 @@
 .author-bio {
     justify-self: start;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     grid-gap: .8rem;
 }
 
@@ -45,11 +45,17 @@
     color: rgba(0, 0, 0, 0.75);
 }
 
+.author-bio button {
+    height: 19px;
+    margin-top: 6px;
+    border-radius: 2px;
+}
+
 .user-icon {
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    border: 1px solid black;
+    border: 1px solid rgba(128, 128, 128, 0.5);
     text-align: center;
 }
 

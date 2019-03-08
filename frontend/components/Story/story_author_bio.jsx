@@ -5,9 +5,7 @@ const StoryAuthorBio = props => {
     const storyDateString = storyDate.toDateString();
     return (
         <div className="author-bio profile-story-item-header">
-            <div className="user-icon">
-                {props.author.fullname[0]}
-            </div>
+            <img className="user-icon" src={props.author.profPicUrl} />
             <div className="author-bio-text">
                 <p>{props.author.fullname}</p>
                 {storyDateString.slice(3)}

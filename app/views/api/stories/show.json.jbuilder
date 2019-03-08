@@ -3,6 +3,8 @@ json.story do
     json.imageUrl url_for(@story.image)
     json.authorId @story.user.id
     json.authorName @story.user.fullname
+    json.authorImageUrl url_for(@story.user.profile_image)
+    json.isFollowed @story.user.followers.include?(current_user)
 end
 
 
