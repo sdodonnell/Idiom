@@ -15,8 +15,9 @@ class Feed extends React.Component {
     renderStoriesList() {
 
         const shuffle = array => {
-            const currentIndex = array.length;
-            const temporaryValue, randomIndex;
+            let currentIndex = array.length;
+            let temporaryValue;
+            let randomIndex;
     
             while (0 !== currentIndex) {
                 randomIndex = Math.floor(Math.random() * currentIndex);
