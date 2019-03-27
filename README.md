@@ -11,6 +11,9 @@ Idiom is a web app for reading and writing long-form articles based on Medium. I
 * Users can like stories.
 * Users can follow other users, and see recent stories published by users they follow.
 
+## Home Page
+![Idiom Home Page](https://github.com/Lycinus/Idiom/blob/master/app/assets/docs/Screen%20Shot%202019-03-08%20at%2011.16.40%20AM.png)
+
 ## Future developments
 * Adding photos and gifs to stories
 * Adding photos upon user creation
