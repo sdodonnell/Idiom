@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Footer = () => (
     <div className="footer">
-        <a>Help</a>
-        <a>Careers</a>
-        <a>Privacy</a>
-        <a>Terms</a>
-        <a>About</a>
+        <Link to="/about">Help</Link>
+        <Link to="/about">Careers</Link>
+        <Link to="/about">Privacy</Link>
+        <Link to="/about">Terms</Link>
+        <Link to="/about">About</Link>
     </div>
 )
 

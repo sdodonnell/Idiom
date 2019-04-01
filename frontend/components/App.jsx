@@ -13,6 +13,7 @@ import UserProfileContainer from '../containers/user_profile_container'
 import HomePageContainer from '../containers/homepage_container';
 import FollowersIndexContainer from '../containers/followers_index_container';
 import BookmarksIndexContainer from '../containers/bookmarks_index_container'
+import About from './HomePage/Sidebar/about';
 
 const App = () => (
     <>
@@ -34,6 +35,7 @@ const App = () => (
             <ProtectedRoute path="/stories/:id/edit" component={EditStoryContainer}/>
             <Route path="/users/:id" component={UserProfileContainer}/>
             <Route path="/stories/:id" component={StoryComponentContainer}/>
+            <Route path="/about" component={About} />
             <Redirect to="/"/>
         </Switch>
     </>

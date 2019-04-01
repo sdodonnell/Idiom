@@ -22,7 +22,7 @@ class HomePage extends React.Component {
                     <AuthRoute path="/" component={WelcomeBanner} />
                     <FeedContainer />
                     <Sidebar />
-                    <Footer />
+                    {/* <Footer /> */}
                 </div>
             )
         }
