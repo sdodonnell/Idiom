@@ -36,6 +36,14 @@ export const fetchBookmarkedStories = () => (
     })
 )
 
+export const fetchSearchedStories = query => (
+    $.ajax({
+        method: 'GET',
+        url: 'stories/search',
+        data: query
+    })
+)
+
 export const createStory = story => (
     $.ajax({
         method: 'POST',

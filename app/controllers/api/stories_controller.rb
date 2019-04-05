@@ -19,6 +19,15 @@ class Api::StoriesController < ApplicationController
         render 'api/stories/index'
     end
 
+    def search
+        stories_by_author = Story.includes(:users).where("user.username LIKE %?%", params[:query])
+        stories_by_title = Story.where("title LIKE %?%", params[:query])
+        stories_by_body = Story.where("body LIKE %?%", params[:query])
+
+        @stories = stories_by_author + stories_by_title + stories_by_body
+        render 'api/stories/index'
+    end
+
     def show
         @story = Story.with_attached_image.find(params[:id])
         render 'api/stories/show'
