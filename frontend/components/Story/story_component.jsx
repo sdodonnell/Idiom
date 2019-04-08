@@ -1,6 +1,6 @@
 import React from 'react';
 import CommentsIndexContainer from '../../containers/comments_index_container';
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import StorySidebar from './story_sidebar';
 import { HiddenRoute } from '../../util/auth_util';
 
@@ -24,6 +24,7 @@ class StoryComponent extends React.Component {
     }
 
     isLiked() {
+        if (!this.props.currentUser) return false;
         const likes = this.props.likes;
         for (let id in likes) {
             if (likes[id].userId === this.props.currentUser.id) {
@@ -34,6 +35,7 @@ class StoryComponent extends React.Component {
     }
 
     isBookmarked() {
+        if (!this.props.currentUser) return false;
         const bookmarks = this.props.bookmarks;
         for (let id in bookmarks) {
             if (bookmarks[id].userId === this.props.currentUser.id) {
@@ -44,7 +46,14 @@ class StoryComponent extends React.Component {
     }
 
     addFollow() {
-        this.props.addFollow({followerId: this.props.currentUser.id, followedId: this.props.story.authorId})
+        if (this.props.currentUser) {
+            this.props.addFollow({
+                followerId: this.props.currentUser.id, 
+                followedId: this.props.story.authorId
+            })
+        } else {
+            <Redirect to="/login"/>
+        }
     }
 
     render() {
