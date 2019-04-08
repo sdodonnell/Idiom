@@ -38,6 +38,7 @@ export const selectPopularStories = ({stories}) => {
 }
 
 export const selectBookmarkedStories = (state) => {
+	debugger
 	const bookmarkedStories = [];
 	const bookmarks = state.entities.bookmarks
 	for (let id in bookmarks) {

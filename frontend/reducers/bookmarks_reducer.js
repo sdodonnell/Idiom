@@ -1,5 +1,5 @@
 import { RECEIVE_STORY } from "../actions/story_actions";
-import { RECEIVE_CURRENT_USER } from "../actions/user_actions";
+import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 import { RECEIVE_BOOKMARK, REMOVE_BOOKMARK, RECEIVE_BOOKMARKS } from "../actions/bookmark_actions";
 
 const bookmarksReducer = (state={}, action) => {

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ReadingList from '../components/HomePage/Sidebar/reading_list';
 import { selectBookmarkedStories } from '../reducers/selectors';
-import { fetchBookmarkedStories } from '../actions/bookmark_actions';
+import { fetchBookmarks } from '../actions/bookmark_actions';
 
 const mstp = state => ({
     userId: state.session.id,
@@ -9,7 +9,7 @@ const mstp = state => ({
 })
 
 const mdtp = dispatch => ({
-    // fetchBookmarkedStories: () => dispatch(fetchBookmarkedStories())
+    fetchBookmarks: () => dispatch(fetchBookmarks())
 })
 
 
