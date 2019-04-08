@@ -4,7 +4,8 @@ import { camelizeKeys } from 'humps';
 export const RECEIVE_STORIES = 'RECEIVE_STORIES';
 export const RECEIVE_STORY = 'RECEIVE_STORY';
 export const REMOVE_STORY = 'REMOVE_STORY';
-export const RECEIVE_SEARCH_STORIES = 'RECEIVE_SEARCH_STORIES'
+export const RECEIVE_SEARCH_STORIES = 'RECEIVE_SEARCH_STORIES';
+export const CLEAR_SEARCH_STORIES = 'CLEAR_SEARCH_STORIES'
 
 const receiveStory = story => ({
     type: RECEIVE_STORY,
@@ -26,11 +27,13 @@ const receiveSearchStories = stories => ({
     stories: camelizeKeys(stories)
 })
 
-export const fetchStory = id => dispatch => {
-    return StoryApiUtil.fetchStory(id).then(story => {
-        dispatch(receiveStory(story))
-    })
-}
+export const clearSearchStories = () => ({
+    type: CLEAR_SEARCH_STORIES
+})
+
+export const fetchStory = id => dispatch => (
+    StoryApiUtil.fetchStory(id).then(story => dispatch(receiveStory(story)))
+)
 
 export const fetchStoriesByUser = userId => dispatch => (
     StoryApiUtil.fetchStoriesByUser(userId).then(stories => dispatch(receiveStories(stories)))

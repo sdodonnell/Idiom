@@ -92,7 +92,50 @@ button i:hover {
 
 .search-results {
     position: absolute;
-    width: 175px;
+    width: 200px;
     border: 1px solid gray;
     padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 3;
+    p {
+        color: black;
+        font-size: 12px;
+        padding: 1px
+    }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .5rem;
+    a {
+        padding: 2px
+    }
+    a:hover {
+        border: 1px solid rgb(20, 128, 97);
+        border-radius: 5px
+
+    }
+}
+
+.search-results p:last-child {
+    font-size: 10px
+}
+
+.search-results p:nth-child(2) {
+    font-weight: 600
+}
+
+
+// .search-result:hover {
+//     border: 1px solid rgb(20, 128, 97);
+//     border-radius: 5px
+// }
+
+.search-results-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: transparent
 }

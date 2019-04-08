@@ -38,7 +38,7 @@ export default class Search extends Component {
 
   renderResults() {
     let results = this.props.results
-    if (results !== {}) return <SearchResults results={results}/>
+    if (Object.keys(results).length > 0) return <SearchResults clear={this.props.clearResults} results={results}/>
     else return null
   }
   
