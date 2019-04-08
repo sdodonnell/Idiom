@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SearchResults from './search_results';
 
 export default class Search extends Component {
   
@@ -11,6 +12,7 @@ export default class Search extends Component {
       this.toggle = this.toggle.bind(this)
       this.handleChange = this.handleChange.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
+      this.renderResults = this.renderResults.bind(this)
   }
 
   toggle() {
@@ -24,7 +26,6 @@ export default class Search extends Component {
   }
 
   handleChange(e) {
-
       this.setState({
         query: e.target.value
       })
@@ -33,6 +34,12 @@ export default class Search extends Component {
 
   handleSubmit() {
     this.props.fetchResults(this.state.query)
+  }
+
+  renderResults() {
+    let results = this.props.results
+    if (results !== {}) return <SearchResults results={results}/>
+    else return null
   }
   
   render() {
@@ -43,6 +50,7 @@ export default class Search extends Component {
           <form onSubmit={this.handleSubmit}>
             <input type="search" onChange={this.handleChange}/>
           </form>
+          {this.renderResults()}
         </div>
       </div>
     )
