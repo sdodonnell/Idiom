@@ -15,7 +15,6 @@ class UserProfile extends React.Component {
     }
 
     componentWillMount() {
-        debugger
         this.props.fetchUser(this.props.userId);
         this.props.fetchStoriesByUser(this.props.userId)
     }
@@ -48,7 +47,6 @@ class UserProfile extends React.Component {
         //     }
         // }
         // return false
-        debugger
         if (this.props.user.followerIds.includes(this.props.currentUser.id)) {
             return true
         }

@@ -40,7 +40,7 @@ export const fetchSearchedStories = query => (
     $.ajax({
         method: 'GET',
         url: 'stories/search',
-        data: query
+        data: {query}
     })
 )
 

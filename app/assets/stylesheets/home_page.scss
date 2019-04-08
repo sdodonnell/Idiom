@@ -1,6 +1,7 @@
 div#root {
     display: grid;
-    justify-content: stretch
+    justify-content: stretch;
+    min-width: 900px
 }
 
 .wrapper {

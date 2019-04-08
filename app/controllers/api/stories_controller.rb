@@ -20,10 +20,10 @@ class Api::StoriesController < ApplicationController
     end
 
     def search
-        stories_by_author = Story.includes(:users).where("user.username LIKE %?%", params[:query])
-        stories_by_title = Story.where("title LIKE %?%", params[:query])
-        stories_by_body = Story.where("body LIKE %?%", params[:query])
-
+        query = params[:query].downcase
+        stories_by_author = Story.joins(:user).where("LOWER(users.username) LIKE '%#{query}%'")
+        stories_by_title = Story.where("LOWER(title) LIKE '%#{query}%'")
+        stories_by_body = Story.where("LOWER(body) LIKE '%#{query}%'")
         @stories = stories_by_author + stories_by_title + stories_by_body
         render 'api/stories/index'
     end

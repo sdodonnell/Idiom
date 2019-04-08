@@ -67,3 +67,25 @@ button i:hover {
     font-size: 17px;
     font-family: Helvetica;
 }
+
+.nav-bar-search {
+    display: inline-block
+}
+
+.search-hidden {
+    display: none;
+}
+
+.search-visible {
+    display: inline-block;
+}
+
+.search-visible input {
+    border-radius: 5px;
+    border-style: solid;
+    border: 1px solid #d4d4d4;
+    height: 1.5rem;
+    width: 175px;
+    font-size: 14px;
+    padding: 0 5px;
+}

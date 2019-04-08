@@ -9,7 +9,7 @@ const WelcomeBanner = () => (
         </div>
         <div className="welcome-banner-button-container">
             <button className="welcome-banner-button"><NavLink to="/signup">Get Started</NavLink></button>
-            <button className="welcome-banner-button">Learn More</button>
+            <button className="welcome-banner-button"><NavLink to="/about">Learn More</NavLink></button>
         </div>
     </div>
 )
