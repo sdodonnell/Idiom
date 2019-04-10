@@ -21,6 +21,7 @@ Idiom is a web app for reading and writing long-form articles based on the websi
 ### Home Page 
 The home page displays a selection of four randomly chosen "featured" stories as well as a feed of all stories in the database randomized using the Fisher-Yates shuffle.
 
+
 ![Idiom Home Page](https://github.com/Lycinus/Idiom/blob/master/app/assets/docs/home-page.png)
 
 ```js
@@ -61,6 +62,7 @@ frontend/components/Feed/feed.jsx
 ### Rendering Stories
 Individual stories and groups of stories are rendered from the backend using custom routes. 
 
+
 ```ruby
 app/config/routes.rb
 
@@ -72,6 +74,7 @@ app/config/routes.rb
 ```
 
 The stories controller uses ActiveRecord to render selected stories as JSON objects via JBuilder.
+
 
 ```ruby
 app/controllers/api/stories_controller.rb
@@ -106,7 +109,8 @@ app/controllers/api/stories_controller.rb
 ```
 
 ### Story Page
-The story page incorporates a scroll event listener that renders a sidebar component when a user scrolls down 500 pixels. From the sidebar, a user can like and bookmark a story. The sidebar is animated using [Animate.css](https://github.com/daneden/animate.css)
+The story page incorporates a scroll event listener that renders a sidebar component when a user scrolls down 500 pixels. From the sidebar, a user can like and bookmark a story. The sidebar is animated using [Animate.css].(https://github.com/daneden/animate.css)
+
 
 ![Idiom story page](https://github.com/Lycinus/Idiom/blob/master/app/assets/docs/story-form.gif)
 
