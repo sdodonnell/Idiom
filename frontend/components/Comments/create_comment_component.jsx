@@ -36,7 +36,7 @@ class CreateCommentComponent extends React.Component {
         return (
             <div className="create-comment">
                 <div className="comment-author-bio">
-                    <img/>
+                    <img src={this.props.newProps.currentUser.profPicUrl}/>
                     <NavLink 
                         to={`users/${this.props.newProps.currentUser.id}`}
                         className="author-name">

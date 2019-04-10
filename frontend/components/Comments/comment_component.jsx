@@ -8,7 +8,7 @@ const CommentComponent = ({comment, author}) => {
     return (
         <div className="comments-index-item">
             <div className="comment-author-bio">
-                <img/>
+                <img src={author.profPicUrl}/>
                 <NavLink 
                     to={`users/${author.id}`}
                     className="author-name">
