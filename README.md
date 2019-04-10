@@ -19,7 +19,43 @@ Idiom is a web app for reading and writing long-form articles based on the websi
 * Users can follow other users, and see recent stories published by users they follow.
 
 ### Home Page 
-![Idiom Home Page](https://github.com/Lycinus/Idiom/blob/master/app/assets/docs/Screen%20Shot%202019-03-08%20at%2011.16.40%20AM.png)
+The home page displays a selection of four randomly chosen "featured" stories as well as a feed of all stories in the database randomized using the Fisher-Yates shuffle.
+
+```js
+
+    renderStoriesList() {
+
+        const shuffle = array => {
+            let currentIndex = array.length;
+            let temporaryValue;
+            let randomIndex;
+    
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+    
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+    
+        return array;
+        };
+
+        const storiesList = 
+            Object.values(this.props.stories)
+                  .map(story => 
+                    <FeedItem 
+                        key={story.id}
+                        story={story}
+                        authorId={story.authorId}
+                        authorName={story.authorName}/>)
+        return shuffle(storiesList)
+
+    }
+```
+
+![Idiom Home Page](https://github.com/Lycinus/Idiom/blob/master/app/assets/docs/home-page.png)
 
 ### Rendering Stories
 Individual stories and groups of stories are rendered from the backend using custom routes. 
@@ -65,8 +101,7 @@ The stories controller uses ActiveRecord to render selected stories as JSON obje
 ```
 
 ### Story Page
-
-### Story Form
+![Idiom story page](https://github.com/Lycinus/Idiom/blob/master/app/assets/docs/story-form.gif)
 
 ## Future developments
 * Adding photos and gifs to stories
