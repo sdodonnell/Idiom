@@ -107,10 +107,11 @@ button i:hover {
     grid-template-columns: 1fr;
     grid-gap: .5rem;
     a {
-        padding: 2px
+        padding: 2px;
+        border: 1px solid transparent
     }
     a:hover {
-        border: 1px solid rgb(20, 128, 97);
+        border: 1px solid rgba(20, 128, 97, .6);
         border-radius: 5px
 
     }
@@ -123,12 +124,6 @@ button i:hover {
 .search-results p:nth-child(2) {
     font-weight: 600
 }
-
-
-// .search-result:hover {
-//     border: 1px solid rgb(20, 128, 97);
-//     border-radius: 5px
-// }
 
 .search-results-overlay {
     position: fixed;
