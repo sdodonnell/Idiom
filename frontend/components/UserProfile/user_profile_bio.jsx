@@ -2,9 +2,9 @@ import React from 'react'
 
 const UserProfileBio = ({user, followed, addFollow}) => {
     
-    const button = followed === true ? 
-        <button className="following-button">Following</button> :
-        <button className="not-following-button" onClick={addFollow}>Follow</button>
+    const button = followed === "self" ? null :
+        (followed ? <button className="following-button">Following</button> : 
+            <button className="not-following-button" onClick={addFollow}>Follow</button>)
     
     const img = user.profPicUrl ? 
         <img src={user.profPicUrl} /> :

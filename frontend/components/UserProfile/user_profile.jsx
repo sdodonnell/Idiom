@@ -40,16 +40,12 @@ class UserProfile extends React.Component {
     }
 
     isFollowed() {
-        // const followers = this.props.follows
-        // for (let id in follows) {
-        //     if (follows[id].followedId === this.props.user.id) {
-        //         return true;
-        //     }
-        // }
-        // return false
-        if (this.props.user.followerIds.includes(this.props.currentUser.id)) {
+        if (this.props.user.id === this.props.currentUser.id) {
+            return "self"
+        } else if (this.props.user.followerIds.includes(this.props.currentUser.id)) {
             return true
         }
+
         return false
     }
 
