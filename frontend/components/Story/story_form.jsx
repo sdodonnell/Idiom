@@ -41,7 +41,7 @@ class StoryForm extends React.Component {
             id: this.props.story.id,
             publishDate: date.toISOString().slice(0, 10)
         })
-        this.props.history.push('/')
+        this.props.history.push(`/users/${this.props.user.id}/stories`)
     }
 
     togglePublishModal(e) {

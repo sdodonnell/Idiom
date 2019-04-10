@@ -21,7 +21,7 @@ class StoryIndexItem extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.deleteStory(this.props.story.id);
-        this.props.history.push('/stories')
+        location.reload()
     }
 
     render() {
