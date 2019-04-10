@@ -19,10 +19,6 @@ const removeFollow = commentId => ({
     commentId
 })
 
-// export const fetchFollows = follows => dispatch => (
-//     FollowsApiUtil.fetchFollows(follows).then ( follows => dispatch(receiveFollows(follows)))
-// )
-
 export const createFollow = follow => dispatch => (
     FollowsApiUtil.createFollow(follow).then( follow => dispatch(receiveFollow(follow)))
 )

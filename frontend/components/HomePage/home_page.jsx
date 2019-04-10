@@ -4,7 +4,6 @@ import FeedContainer from "../../containers/feed_container";
 import Sidebar from "./Sidebar/sidebar";
 import WelcomeBanner from './welcome_banner';
 import { AuthRoute } from '../../util/auth_util';
-import Footer from './Sidebar/footer';
 
 class HomePage extends React.Component {
 
@@ -22,7 +21,6 @@ class HomePage extends React.Component {
                     <AuthRoute path="/" component={WelcomeBanner} />
                     <FeedContainer />
                     <Sidebar />
-                    {/* <Footer /> */}
                 </div>
             )
         }

@@ -8,10 +8,6 @@ class Feed extends React.Component {
         this.renderStoriesList = this.renderStoriesList.bind(this)
     }
 
-    componentDidMount() {
-        // this.props.fetchStories()
-    }
-
     renderStoriesList() {
 
         const shuffle = array => {
