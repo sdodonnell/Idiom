@@ -109,7 +109,7 @@ app/controllers/api/stories_controller.rb
 ```
 
 ### Story Page
-The story page incorporates a scroll event listener that renders a sidebar component when a user scrolls down 500 pixels. From the sidebar, a user can like and bookmark a story. The sidebar is animated using [Animate.css].(https://github.com/daneden/animate.css)
+The story page incorporates a scroll event listener that renders a sidebar component when a user scrolls down 500 pixels. From the sidebar, a user can like and bookmark a story. The sidebar is animated using [Animate.css](https://github.com/daneden/animate.css).
 
 
 ![Idiom story page](https://github.com/Lycinus/Idiom/blob/master/app/assets/docs/story-form.gif)
