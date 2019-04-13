@@ -9,6 +9,7 @@ Idiom is a web app for reading and writing long-form articles based on the websi
 * HTML
 * CSS/SCSS
 * Amazon S3
+* Webpack
 
 ## Features
 * User authentication using BCrypt.
