@@ -26,7 +26,7 @@ The home page displays a selection of four randomly chosen "featured" stories as
 ![Idiom Home Page](https://github.com/Lycinus/Idiom/blob/master/app/assets/docs/home-page.png)
 
 ```js
-frontend/components/Feed/feed.jsx
+# frontend/components/Feed/feed.jsx
 
     renderStoriesList() {
 
@@ -65,7 +65,7 @@ Individual stories and groups of stories are rendered from the backend using cus
 
 
 ```ruby
-app/config/routes.rb
+# app/config/routes.rb
 
   get 'stories/following', to: 'api/stories#followed_stories_index'
   get 'stories/bookmarked', to: 'api/stories#bookmarked_stories_index'
@@ -78,7 +78,7 @@ The stories controller uses ActiveRecord to render selected stories as JSON obje
 
 
 ```ruby
-app/controllers/api/stories_controller.rb
+# app/controllers/api/stories_controller.rb
 
     def index
         if (params[:story])
@@ -116,7 +116,7 @@ The story page incorporates a scroll event listener that renders a sidebar compo
 ![Idiom story page](https://github.com/Lycinus/Idiom/blob/master/app/assets/docs/story-form.gif)
 
 ```js
-frontend/components/Story/story_component.jsx
+# frontend/components/Story/story_component.jsx
 
     isLiked() {
         if (!this.props.currentUser) return false;
@@ -143,7 +143,7 @@ frontend/components/Story/story_component.jsx
 ```
 
 ```js
-frontend/components/Story/story_sidebar.jsx
+# frontend/components/Story/story_sidebar.jsx
 
    constructor(props) {
         super(props);
