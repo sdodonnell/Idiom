@@ -11,7 +11,7 @@
     "humps": "^2.0.1",
     "livereload-js": "^2.4.0",
     "livereloadx": "^0.3.10",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",
