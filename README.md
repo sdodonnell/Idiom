@@ -3,6 +3,8 @@
 
 Idiom is a web app for reading and writing long-form articles based on the website Medium. Idiom was built from the ground up with with Rails and PostgreSQL on the backend and React and Redux on the frontend.
 
+***Note: This was completed as a capstone project for App Academy's web development bootcamp completed in early 2019. It isn't actively maintained, and hence isn't a good example of my current interests or skill set. I'm keeping it here partly out of nostalgia, and partly as an example to other current bootcamp students of what a fullstack website clone might look like. Examples like this were invaluable to me when I was first learning to code.***
+
 ## Technologies
 * Backend: Rails/ActiveRecord/PostgreSQL
 * Frontend: React/Redux
